@@ -401,11 +401,11 @@ class Wp_Admin_Style {
 			<div class="tablenav">
 				<div class="tablenav-pages">
 					<span class="displaying-num"><?php _e( 'Example Markup for n items', $this -> get_textdomain() ); ?></span> 
-					<a class='first-page disabled' title='Go to the first page' href='http://bueltge.de/photos/wp-admin/edit.php'>&laquo;</a> 
-					<a class='prev-page disabled' title='Go to the previous page' href='http://bueltge.de/photos/wp-admin/edit.php?paged=1'>&lsaquo;</a> 
+					<a class='first-page disabled' title='Go to the first page' href='#'>&laquo;</a> 
+					<a class='prev-page disabled' title='Go to the previous page' href='#'>&lsaquo;</a> 
 					<span class="paging-input"><input class='current-page' title='Current page' type='text' name='paged' value='1' size='1' /> of <span class='total-pages'>5</span></span> 
-					<a class='next-page' title='Go to the next page' href='http://bueltge.de/photos/wp-admin/edit.php?paged=2'>&rsaquo;</a> 
-					<a class='last-page' title='Go to the last page' href='http://bueltge.de/photos/wp-admin/edit.php?paged=5'>&raquo;</a>
+					<a class='next-page' title='Go to the next page' href='#'>&rsaquo;</a> 
+					<a class='last-page' title='Go to the last page' href='#'>&raquo;</a>
 				</div>
 			</div>
 			
