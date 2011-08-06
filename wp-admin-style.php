@@ -403,12 +403,12 @@ class Wp_Admin_Style {
 &lt;/div&gt;</code> </pre>
 			<div class="tablenav">
 				<div class="tablenav-pages">
-					<span class="displaying-num"><?php _e( 'Example Markup for n items', $this->get_textdomain() ); ?></span>
-					<a class='first-page disabled' title='Go to the first page'>&laquo;</a>
-					<a class='prev-page disabled' title='Go to the previous page'>&lsaquo;</a>
-					<span class="paging-input"><input class='current-page' title='Current page' type='text' name='paged' value='1' size='1' /> of <span class='total-pages'>5</span></span>
-					<a class='next-page' title='Go to the next page' href='?paged=2'>&rsaquo;</a>
-					<a class='last-page' title='Go to the last page' href='?paged=5'>&raquo;</a>
+					<span class="displaying-num"><?php _e( 'Example Markup for n items', $this -> get_textdomain() ); ?></span> 
+					<a class='first-page disabled' title='Go to the first page' href='#'>&laquo;</a> 
+					<a class='prev-page disabled' title='Go to the previous page' href='#'>&lsaquo;</a> 
+					<span class="paging-input"><input class='current-page' title='Current page' type='text' name='paged' value='1' size='1' /> of <span class='total-pages'>5</span></span> 
+					<a class='next-page' title='Go to the next page' href='#pagination'>&rsaquo;</a> 
+					<a class='last-page' title='Go to the last page' href='#pagination'>&raquo;</a>
 				</div>
 			</div>
 			
@@ -427,7 +427,12 @@ class Wp_Admin_Style {
 					<tr valign="top">
 						<th scope="row">Input type text <code>.regular-text</code></label></th>
 						<td>
-							<input type="text" value="input type=&quot;text&quot; class=&quot;regular-text&quot;" class="regular-text" />
+							<input type="text" value="regular-text" class="regular-text" />
+						</td>
+					</tr>
+					<tr valign="top">
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;small-text&quot; class=&quot;small-text&quot; /&gt;</code>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -437,9 +442,19 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr valign="top">
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;large-text&quot; class=&quot;large-text&quot; /&gt;</code>
+						</td>
+					</tr>
+					<tr valign="top">
 						<th scope="row">Input type text <code>.large-text</code></label></th>
 						<td>
 							<input type="text" value="large-text" class="large-text" />
+						</td>
+					</tr>
+					<tr valign="top">
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;all-options&quot; class=&quot;all-options&quot; /&gt;</code>
 						</td>
 					</tr>
 					<tr valign="top">
