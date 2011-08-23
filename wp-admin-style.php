@@ -6,11 +6,11 @@
  * Domain Path: /languages
  * Description: Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author: Frank Bültge
- * Version: 0.0.1
+ * Version: 0.0.2
  * Licence: GPLv2
  * Author URI: http://bueltge.de
  * Upgrade Check: none
- * Last Change: 27.05.2011
+ * Last Change: 06.08.2011
  */
 
 /**
@@ -45,8 +45,8 @@ class Wp_Admin_Style {
 	
 	/**
 	 * construct
-	 * 
-	 * @uses 
+	 *
+	 * @uses
 	 * @access public
 	 * @since 0.0.1
 	 * @return void
@@ -59,7 +59,7 @@ class Wp_Admin_Style {
 	
 	/**
 	 * points the class
-	 * 
+	 *
 	 * @access public
 	 * @since 0.0.1
 	 * @return object
@@ -81,7 +81,7 @@ class Wp_Admin_Style {
 	
 	/**
 	 * return plugin comment data
-	 * 
+	 *
 	 * @uses   get_plugin_data
 	 * @access public
 	 * @since  0.0.1
@@ -100,7 +100,7 @@ class Wp_Admin_Style {
 	
 	public function add_menu_page () {
 		
-		add_menu_page( 
+		add_menu_page(
 			__( 'WordPress Admin Style', $this -> get_textdomain() ),
 			__( 'Admin Style', $this -> get_textdomain() ),
 			'read',
@@ -185,7 +185,7 @@ class Wp_Admin_Style {
 			<hr id="header_icons" />
 			
 			<h3><?php _e( 'Header Icons', $this -> get_textdomain() ); ?></h3>
-			<?php _e( 'php-function:' , $this -> get_textdomain() ) ?> <code>screen_icon( 'edit' );</code> 
+			<?php _e( 'php-function:' , $this -> get_textdomain() ) ?> <code>screen_icon( 'edit' );</code>
 			<?php _e( 'or via markup' , $this -> get_textdomain() ) ?>
 			<code>&lt;div id=&quot;icon-edit&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;</code>
 			<br />
@@ -228,33 +228,31 @@ class Wp_Admin_Style {
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="tables" />
-			
+
 			<h3><?php _e( 'Tables', $this -> get_textdomain() ); ?></h3>
-			<pre><code>&lt;table class=&quot;form-table&quot;&gt; 
-	&lt;tr&gt; 
-		&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt; 
-		&lt;th&gt;Table header cell #2&lt;/th&gt; 
-	&lt;tr /&gt;
-	&lt;tr&gt; 
-		&lt;tr valign=&quot;top&quot;&gt; 
-		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #2&lt;/td&gt; 
-	&lt;/tr&gt; 
-	&lt;tr valign=&quot;top&quot; class=&quot;alternate&quot;&gt; 
-		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #4&lt;/td&gt; 
-	&lt;/tr&gt; 
-	&lt;tr valign=&quot;top&quot;&gt; 
-		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #5, with label&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #6&lt;/td&gt; 
-	&lt;/tr&gt; 
+			<pre><code>&lt;table class=&quot;form-table&quot;&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt;
+		&lt;th&gt;Table header cell #2&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr valign=&quot;top&quot;&gt;
+		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr valign=&quot;top&quot; class=&quot;alternate&quot;&gt;
+		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr valign=&quot;top&quot;&gt;
+		&lt;td scope=&quot;row&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #5, with label&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #6&lt;/td&gt;
+	&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
 			<table class="form-table">
 				<tr>
 					<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
 					<th><?php _e( 'Table header cell #2', $this -> get_textdomain() ); ?></th>
 				</tr>
-				<tr>
 				<tr valign="top">
 					<td scope="row"><label for="tablecell"><?php _e( 'Table data cell #1, with label', $this -> get_textdomain() ); ?></label></td>
 					<td><?php _e( 'Table Cell #2', $this -> get_textdomain() ); ?></td>
@@ -271,25 +269,27 @@ class Wp_Admin_Style {
 			
 			<br class="clear"/>
 			
-			<pre><code>&lt;table class=&quot;widefat&quot;&gt; 
-	&lt;tr&gt; 
-		&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt; 
-		&lt;th&gt;Table header cell #2&lt;/th&gt; 
-	&lt;tr /&gt;
-	&lt;tr&gt; 
-		&lt;tr&gt; 
-		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #2&lt;/td&gt; 
-	&lt;/tr&gt; 
-	&lt;tr class=&quot;alternate&quot;&gt; 
-		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #4&lt;/td&gt; 
-	&lt;/tr&gt; 
-	&lt;tr&quot;&gt; 
-		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #5, with label&lt;/label&gt;&lt;/td&gt; 
-		&lt;td&gt;Table Cell #6&lt;/td&gt; 
-	&lt;/tr&gt; 
+			<pre><code>&lt;table class=&quot;widefat&quot;&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt;
+		&lt;th&gt;Table header cell #2&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;tr&gt;
+		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class=&quot;alternate&quot;&gt;
+		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #5, with label&lt;/label&gt;&lt;/td&gt;
+		&lt;td&gt;Table Cell #6&lt;/td&gt;
+	&lt;/tr&gt;
 &lt;/table&gt;</code></pre>
+
+	<br/>
 			<table class="widefat">
 				<tr>
 					<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
@@ -311,34 +311,37 @@ class Wp_Admin_Style {
 			
 			<br class="clear"/>
 			
-			<pre><code>&lt;table class=&quot;widefat&quot;&gt; 
-	&lt;thead&gt; 
-		&lt;tr&gt; 
-			&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt; 
-			&lt;th&gt;Table header cell #2&lt;/th&gt; 
-		&lt;/tr&gt; 
-	&lt;/thead&gt; 
-	&lt;tbody&gt; 
-		&lt;tr&gt; 
-			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt; 
-			&lt;td&gt;Table Cell #2&lt;/td&gt; 
-		&lt;/tr&gt; 
-		&lt;tr class=&quot;alternate&quot;&gt; 
-			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt; 
-			&lt;td&gt;Table Cell #4&lt;/td&gt; 
-		&lt;/tr&gt; 
-		&lt;tr&gt; 
-			&lt;td class=&quot;row-title&quot;&gt;Table Cell #5, without label&lt;/td&gt; 
-			&lt;td&gt;Table Cell #6&lt;/td&gt; 
-		&lt;/tr&gt; 
-	&lt;/tbody&gt; 
-	&lt;tfoot&gt; 
-		&lt;tr&gt; 
-			&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt; 
-			&lt;th&gt;Table header cell #2&lt;/th&gt; 
-		&lt;/tr&gt; 
-	&lt;/tfoot&gt; 
+			<pre><code>&lt;table class=&quot;widefat&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt;
+			&lt;th&gt;Table header cell #2&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt;
+			&lt;td&gt;Table Cell #2&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr class=&quot;alternate&quot;&gt;
+			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt;
+			&lt;td&gt;Table Cell #4&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;row-title&quot;&gt;Table Cell #5, without label&lt;/td&gt;
+			&lt;td&gt;Table Cell #6&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt;
+			&lt;th&gt;Table header cell #2&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
+
+	<br/>
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -404,8 +407,8 @@ class Wp_Admin_Style {
 					<a class='first-page disabled' title='Go to the first page' href='#'>&laquo;</a> 
 					<a class='prev-page disabled' title='Go to the previous page' href='#'>&lsaquo;</a> 
 					<span class="paging-input"><input class='current-page' title='Current page' type='text' name='paged' value='1' size='1' /> of <span class='total-pages'>5</span></span> 
-					<a class='next-page' title='Go to the next page' href='#'>&rsaquo;</a> 
-					<a class='last-page' title='Go to the last page' href='#'>&raquo;</a>
+					<a class='next-page' title='Go to the next page' href='#pagination'>&rsaquo;</a> 
+					<a class='last-page' title='Go to the last page' href='#pagination'>&raquo;</a>
 				</div>
 			</div>
 			
@@ -414,36 +417,51 @@ class Wp_Admin_Style {
 			<hr id="form_elements" />
 			
 			<h3><?php _e( 'Form Elements', $this -> get_textdomain() ); ?></h3>
-			<form method="post" action="options.php"> 
-				<table class="form-table"> 
+			<form method="post" action="options.php">
+				<table class="form-table">
 					<tr valign="top">
 						<td colspan="2">
 							<code>&lt;input name="" id="" type="text" value="" class="regular-text" /&gt;</code>
 						</td>
 					</tr>
-					<tr valign="top"> 
-						<th scope="row">Input type text <code>.regular-text</code></label></th> 
+					<tr valign="top">
+						<th scope="row">Input type text <code>.regular-text</code></label></th>
 						<td>
-							<input type="text" value="input type=&quot;text&quot; class=&quot;regular-text&quot;" class="regular-text" />
-						</td> 
+							<input type="text" value="regular-text" class="regular-text" />
+						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.small-text</code></label></th> 
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;small-text&quot; class=&quot;small-text&quot; /&gt;</code>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">Input type text <code>.small-text</code></label></th>
 						<td>
 							<input type="text" value="small-text" class="small-text" />
-						</td> 
+						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.large-text</code></label></th> 
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;large-text&quot; class=&quot;large-text&quot; /&gt;</code>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">Input type text <code>.large-text</code></label></th>
 						<td>
 							<input type="text" value="large-text" class="large-text" />
-						</td> 
+						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.all-options</code></label></th> 
+						<td colspan="2">
+							<code>&lt;input type=&quot;text&quot; value=&quot;all-options&quot; class=&quot;all-options&quot; /&gt;</code>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">Input type text <code>.all-options</code></label></th>
 						<td>
 							<input type="text" value="all-options" class="all-options" />
-						</td> 
+						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
@@ -452,11 +470,11 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.regular-text</code> <?php _e( 'with description', $this -> get_textdomain() ); ?></th> 
+						<th scope="row">Input type text <code>.regular-text</code> <?php _e( 'with description', $this -> get_textdomain() ); ?></th>
 						<td>
-							<input type="text" value="Example string" class="regular-text" /> 
+							<input type="text" value="Example string" class="regular-text" />
 							<span class="description"><?php _e( 'Here is the description for an form element', $this -> get_textdomain() ); ?></span>
-						</td> 
+						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
@@ -465,49 +483,49 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.regular-text code</code></th> 
+						<th scope="row">Input type text <code>.regular-text code</code></th>
 						<td>
-							<input type="text" value="Example string for code" class="regular-text code" /> 
-						</td> 
+							<input type="text" value="Example string for code" class="regular-text code" />
+						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
 <pre><code>&lt;fieldset&gt;
 	&lt;legend class=&quot;screen-reader-text&quot;&gt;&lt;span&gt;Fieldset Example&lt;/span&gt;&lt;/legend&gt;
-	&lt;label for=&quot;users_can_register&quot;&gt; 
+	&lt;label for=&quot;users_can_register&quot;&gt;
 		&lt;input name=&quot;users_can_register&quot; type=&quot;checkbox&quot; id=&quot;users_can_register&quot; value=&quot;1&quot;  /&gt;
-	&lt;/label&gt; 
+	&lt;/label&gt;
 &lt;/fieldset&gt;
 </code></pre>
 						</td>
 					</tr>
-					<tr valign="top"> 
-						<th scope="row">Input type checkbox</th> 
+					<tr valign="top">
+						<th scope="row">Input type checkbox</th>
 						<td>
 							<fieldset>
 								<legend class="screen-reader-text"><span>Fieldset Example</span></legend>
-								<label for="users_can_register"> 
+								<label for="users_can_register">
 									<input name="" type="checkbox" id="" value="1" />
-								</label> 
+								</label>
 							</fieldset>
 						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
-						<pre><code>&lt;select name=&quot;&quot; id=&quot;&quot;&gt; 
-	&lt;option selected=&quot;selected&quot; value=&quot;&quot;&gt;Example option&lt;/option&gt; 
-	&lt;option value=&quot;&quot;&gt;foo&lt;/option&gt; 
+						<pre><code>&lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+	&lt;option selected=&quot;selected&quot; value=&quot;&quot;&gt;Example option&lt;/option&gt;
+	&lt;option value=&quot;&quot;&gt;foo&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><label for="">Select list</label></th> 
-						<td> 
-							<select name="" id=""> 
-								<option selected="selected" value="">Example option</option> 
-								<option value="">foo</option> 
-							</select> 
-						</td> 
+						<th scope="row"><label for="">Select list</label></th>
+						<td>
+							<select name="" id="">
+								<option selected="selected" value="">Example option</option>
+								<option value="">foo</option>
+							</select>
+						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
@@ -519,13 +537,24 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">Input type radio</th> 
-						<td> 
+						<th scope="row">Input type radio</th>
+						<td>
 							<fieldset><legend class="screen-reader-text"><span>input type="radio"</span></legend>
 								<label title='g:i a'><input type="radio" name="example" value="" /> <span>description</span></label><br />
 								<label title='g:i a'><input type="radio" name="example" value="" /> <span>description #2</span></label>
-							</fieldset> 
-						</td> 
+							</fieldset>
+						</td>
+					</tr>
+					<tr valign="top">
+						<td colspan="2">
+							<pre><code>&lt;textarea id=&quot;&quot; name=&quot;&quot; cols=&quot;80&quot; rows=&quot;10&quot;&gt;without class&lt;/textarea&gt;</code></pre>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row"><label for="">Textarea</label></th>
+						<td>
+							<textarea id="" name="" cols="80" rows="10">without class</textarea>
+						</td>
 					</tr>
 					<tr valign="top">
 						<td colspan="2">
@@ -533,22 +562,21 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><label for="">Textarea</label></th> 
-						<td> 
-							<textarea id="" name="" cols="80" rows="10">without class</textarea>
-						</td> 
-					</tr>
-					<tr valign="top">
-						<th scope="row"><label for="">Textarea <code>.large-text</code></label></th> 
-						<td> 
+						<th scope="row"><label for="">Textarea <code>.large-text</code></label></th>
+						<td>
 							<textarea id="" name="" cols="80" rows="10" class="large-text">.large-text</textarea>
-						</td> 
+						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><label for="">Textarea <code>.all-options</code></label></th> 
-						<td> 
+						<td colspan="2">
+							<pre><code>&lt;textarea id=&quot;&quot; name=&quot;&quot; cols=&quot;80&quot; rows=&quot;10&quot; class=&quot;all-options&quot;&gt;.all-options&lt;/textarea&gt;</code></pre>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row"><label for="">Textarea <code>.all-options</code></label></th>
+						<td>
 							<textarea id="" name="" cols="80" rows="10" class="all-options">.all-options</textarea>
-						</td> 
+						</td>
 					</tr>
 				</table>
 			</form>
