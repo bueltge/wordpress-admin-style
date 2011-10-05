@@ -125,7 +125,7 @@ class Wp_Admin_Style {
 						<div class="handlediv" title="<?php _e('Click to toggle'); ?>"><br/></div>
 						<h3 class="hndle" id="about-sidebar"><?php _e('About the plugin', $this -> get_textdomain() ) ?></h3>
 						<div class="inside">
-							<p><?php _e('Please read more about this small plugin on github.', $this -> get_textdomain() ); ?></p>
+							<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this -> get_textdomain() ); ?></p>
 							<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
 						</div>
 					</div>
