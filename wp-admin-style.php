@@ -582,6 +582,19 @@ class Wp_Admin_Style {
 			</form>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
 			
+			<h3><?php _e( 'Tabs', $this -> get_textdomain() ); ?></h3>
+			<pre><code>&lt;h2 class="nav-tab-wrapper"&gt;
+	&lt;a href="#" class="nav-tab">Tab #1&lt;/a&gt;
+	&lt;a href="#" class="nav-tab nav-tab-active">Tab #2&lt;/a&gt;
+	&lt;a href="#" class="nav-tab">Tab #2&lt;/a&gt;
+&lt;/h2&gt;</code></pre>
+			<h2 class="nav-tab-wrapper">
+				<a href="#" class="nav-tab">Tab #1</a>
+				<a href="#" class="nav-tab nav-tab-active">Tab #2</a>
+				<a href="#" class="nav-tab">Tab #2</a>
+			</h2>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			
 		</div>
 		<?php
 	}
