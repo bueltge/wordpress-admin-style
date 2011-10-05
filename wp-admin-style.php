@@ -6,11 +6,11 @@
  * Domain Path: /languages
  * Description: Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author: Frank Bültge
- * Version: 0.0.2
+ * Version: 0.0.3
  * Licence: GPLv2
  * Author URI: http://bueltge.de
  * Upgrade Check: none
- * Last Change: 06.08.2011
+ * Last Change: 05.10.2011
  */
 
 /**
@@ -163,6 +163,9 @@ class Wp_Admin_Style {
 									</tr>
 									<tr>
 										<td class="row-title"><a href="#form_elements"><?php _e('Form Elements', $this -> get_textdomain() ); ?></a></td>
+									</tr>
+									<tr>
+										<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this -> get_textdomain() ); ?></a></td>
 									</tr>
 								</table>
 							</div>
@@ -581,6 +584,8 @@ class Wp_Admin_Style {
 				</table>
 			</form>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<code>&lt;hr /&gt;</code>
+			<hr id="tabs" />
 			
 			<h3><?php _e( 'Tabs', $this -> get_textdomain() ); ?></h3>
 			<pre><code>&lt;h2 class="nav-tab-wrapper"&gt;
