@@ -130,7 +130,6 @@ class Wp_Admin_Style {
 		?>
 		
 		<div class="wrap">
-			<code>&lt;div class="wrap"&gt;</code>
 			
 			<div id="icon-options-general" class="icon32"></div>
 			<h2><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
@@ -157,6 +156,9 @@ class Wp_Admin_Style {
 							<div class="inside">
 								
 								<table class="widefat" cellspacing="0">
+									<tr>
+										<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a>, <small><?php _e('see more in <a href="http://www.satoripress.com/2011/10/wordpress/plugin-development/clean-2-column-page-layout-for-plugins-70/">this tutorial</a>', $this -> get_textdomain() ); ?></small></td>
+									</tr>
 									<tr class="alternate">
 										<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
 									</tr>
@@ -194,7 +196,7 @@ class Wp_Admin_Style {
 				
 			</div> <!-- .metabox-holder -->
 			
-			<br class="clear"/>
+			<br id="two_column" class="clear"/>
 <pre><code>&lt;div class=&quot;wrap&quot;&gt;
 	
 	&lt;div id=&quot;icon-options-general&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;
