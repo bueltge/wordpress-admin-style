@@ -98,6 +98,14 @@ class Wp_Admin_Style {
 	}
 	
 	
+	/**
+	 * Add Menu item on WP Backend
+	 * 
+	 * @uses   add_menu_page
+	 * @access public
+	 * @since  0.0.1
+	 * @return void
+	 */
 	public function add_menu_page () {
 		
 		add_menu_page(
