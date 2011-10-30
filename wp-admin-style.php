@@ -118,6 +118,14 @@ class Wp_Admin_Style {
 	}
 	
 	
+	/**
+	 * Echo Marku examples
+	 * 
+	 * @uses   
+	 * @access public
+	 * @since  0.0.1
+	 * @return void
+	 */
 	public function get_style_examples () {
 		?>
 		
