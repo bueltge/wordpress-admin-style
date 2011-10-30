@@ -6,11 +6,11 @@
  * Domain Path: /languages
  * Description: Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author: Frank Bültge
- * Version: 0.0.3
+ * Version: 0.0.4
  * Licence: GPLv2
  * Author URI: http://bueltge.de
  * Upgrade Check: none
- * Last Change: 05.10.2011
+ * Last Change: 30.10.2011
  */
 
 /**
@@ -34,7 +34,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 Requirement
 ==============================================================================
-This plugin requires WordPress >= 3.0 and tested with PHP Interpreter >= 5.3.1
+This plugin requires WordPress >= 3.3-beta and tested with PHP Interpreter >= 5.3.1
 */
 
 class Wp_Admin_Style {
@@ -111,34 +111,35 @@ class Wp_Admin_Style {
 	
 	
 	public function get_style_examples () {
-		
-		screen_icon( 'themes' );
 		?>
+		
 		<div class="wrap">
 			<code>&lt;div class="wrap"&gt;</code>
-			<h2><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
-		<div id="poststuff" class="metabox-holder has-right-sidebar">
 			
-			<div id="side-info-column" class="inner-sidebar">
-				<div class="meta-box-sortables">
-					<div id="about" class="postbox ">
-						<div class="handlediv" title="<?php _e('Click to toggle'); ?>"><br/></div>
-						<h3 class="hndle" id="about-sidebar"><?php _e('About the plugin', $this -> get_textdomain() ) ?></h3>
+			<div id="icon-options-general" class="icon32"></div>
+			<h2><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
+			
+			<div class="metabox-holder has-right-sidebar">
+				
+				<div class="inner-sidebar">
+					
+					<div class="postbox">
+						<h3><span><?php _e('About the plugin', $this -> get_textdomain() ); ?></span></h3>
 						<div class="inside">
 							<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this -> get_textdomain() ); ?></p>
 							<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
 						</div>
 					</div>
-				</div>
-			</div>
-			
-			<div id="post-body" class="has-sidebar">
-				<div id="post-body-content" class="has-sidebar-content">
-					<div id="normal-sortables" class="meta-box-sortables">
-						<div id="about" class="postbox ">
-							<div class="handlediv" title="<?php _e('Click to toggle'); ?>"><br/></div>
-							<h3 class="hndle" id="menu"><?php _e('MiniMenu', $this -> get_textdomain() ) ?></h3>
+					
+				</div> <!-- .inner-sidebar -->
+				
+				<div id="post-body">
+					<div id="post-body-content">
+
+						<div class="postbox">
+							<h3><span><?php _e('MiniMenu', $this -> get_textdomain() ); ?></span></h3>
 							<div class="inside">
+								
 								<table class="widefat" cellspacing="0">
 									<tr class="alternate">
 										<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
@@ -168,13 +169,51 @@ class Wp_Admin_Style {
 										<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this -> get_textdomain() ); ?></a></td>
 									</tr>
 								</table>
-							</div>
+								
+							</div> <!-- .inside -->
 						</div>
-					</div>
-				</div>
-			</div>
+
+					</div> <!-- #post-body-content -->
+				</div> <!-- #post-body -->
+				
+			</div> <!-- .metabox-holder -->
+			
 			<br class="clear"/>
-		</div>
+<pre><code>&lt;div class=&quot;wrap&quot;&gt;
+	
+	&lt;div id=&quot;icon-options-general&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;
+	&lt;h2&gt;&lt;?php echo $this -&gt; get_plugin_data( 'Name' ) ?&gt;&lt;/h2&gt;
+	
+	&lt;div class=&quot;metabox-holder has-right-sidebar&quot;&gt;
+	
+		&lt;div class="inner-sidebar"&gt;
+			
+			&lt;div class=&quot;postbox&quot;&gt;
+				&lt;h3&gt;&lt;span&gt;&lt;?php _e('About the plugin', 'Your_Textdomain' ); ?&gt;&lt;/span&gt;&lt;/h3&gt;
+				&lt;div class=&quot;inside&quot;&gt;
+					&lt;p&gt;&lt;?php _e('Please read ...', 'Your_Textdomain' ); ?&gt;&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+		&lt;/div&gt; &lt;!-- .inner-sidebar --&gt;
+		
+		&lt;div id=&quot;post-body&quot;&gt;
+			&lt;div id=&quot;post-body-content&quot;&gt;
+
+				&lt;div class=&quot;postbox&quot;&gt;
+					&lt;h3&gt;&lt;span&gt;&lt;?php _e('MiniMenu', 'Your_Textdomain' ); ?&gt;&lt;/span&gt;&lt;/h3&gt;
+					&lt;div class=&quot;inside&quot;&gt;
+					Your Content and Markup
+					&lt;/div&gt; &lt;!-- .inside --&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt; &lt;!-- #post-body-content --&gt;
+		&lt;/div&gt; &lt;!-- #post-body --&gt;
+
+	&lt;/div&gt; &lt;!-- .metabox-holder --&gt;
+	
+&lt;/div&gt; &lt;!-- .wrap --&gt;
+</code></pre>
 			
 			<code>&lt;hr /&gt;</code>
 			<hr id="headers" />
@@ -600,7 +639,7 @@ class Wp_Admin_Style {
 			</h2>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
 			
-		</div>
+		</div> <!-- .wrap -->
 		<?php
 	}
 } // end class
