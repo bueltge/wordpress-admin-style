@@ -157,7 +157,7 @@ class Wp_Admin_Style {
 								
 								<table class="widefat" cellspacing="0">
 									<tr>
-										<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a>, <small><?php _e('see more in <a href="http://www.satoripress.com/2011/10/wordpress/plugin-development/clean-2-column-page-layout-for-plugins-70/">this tutorial</a>', $this -> get_textdomain() ); ?></small></td>
+										<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a></td>
 									</tr>
 									<tr class="alternate">
 										<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
@@ -197,6 +197,8 @@ class Wp_Admin_Style {
 			</div> <!-- .metabox-holder -->
 			
 			<br id="two_column" class="clear"/>
+			<h3><?php _e( '2 Column Layout', $this -> get_textdomain() ); ?></h3>
+			
 <pre><code>&lt;div class=&quot;wrap&quot;&gt;
 	
 	&lt;div id=&quot;icon-options-general&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;
@@ -213,6 +215,8 @@ class Wp_Admin_Style {
 				&lt;/div&gt;
 			&lt;/div&gt;
 			
+			&lt;!-- more postboxes (optional) --&gt;
+			
 		&lt;/div&gt; &lt;!-- .inner-sidebar --&gt;
 		
 		&lt;div id=&quot;post-body&quot;&gt;
@@ -224,6 +228,8 @@ class Wp_Admin_Style {
 					Your Content and Markup
 					&lt;/div&gt; &lt;!-- .inside --&gt;
 				&lt;/div&gt;
+				
+				&lt;!-- more postboxes (optional) --&gt;
 
 			&lt;/div&gt; &lt;!-- #post-body-content --&gt;
 		&lt;/div&gt; &lt;!-- #post-body --&gt;
@@ -232,6 +238,12 @@ class Wp_Admin_Style {
 	
 &lt;/div&gt; &lt;!-- .wrap --&gt;
 </code></pre>
+
+			<br/>
+
+			<?php _e('Read <a href="http://www.satoripress.com/2011/10/wordpress/plugin-development/clean-2-column-page-layout-for-plugins-70/">this tutorial</a> for details.', $this -> get_textdomain() ); ?>
+			
+			<br/><br/>
 			
 			<code>&lt;hr /&gt;</code>
 			<hr id="headers" />
