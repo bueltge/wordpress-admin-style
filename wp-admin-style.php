@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: WordPress Admin Style
- * Plugin URI: http://bueltge.de/
- * Text Domain: wp_admin_style
- * Domain Path: /languages
- * Description: Shows the WordPress admin styles on one page to help you to develop WordPress compliant
- * Author: Frank Bültge
- * Version: 0.0.4
- * Licence: GPLv2
- * Author URI: http://bueltge.de
+ * Plugin Name:   WordPress Admin Style
+ * Plugin URI:    http://bueltge.de/
+ * Text Domain:   wp_admin_style
+ * Domain Path:   /languages
+ * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
+ * Author:        Frank Bültge
+ * Version:       0.0.5
+ * Licence:       GPLv3
+ * Author URI:    http://bueltge.de
  * Upgrade Check: none
- * Last Change: 30.10.2011
+ * Last Change:   04/26/2012
  */
 
 /**
@@ -51,7 +51,7 @@ class Wp_Admin_Style {
 	 * @since 0.0.1
 	 * @return void
 	 */
-	public function __construct () {
+	public function __construct() {
 		
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
 	}
@@ -64,7 +64,7 @@ class Wp_Admin_Style {
 	 * @since 0.0.1
 	 * @return object
 	 */
-	public function get_object () {
+	public function get_object() {
 		
 		if ( NULL === self :: $classobj )
 			self :: $classobj = new self;
@@ -89,7 +89,7 @@ class Wp_Admin_Style {
 	 *         Name, PluginURI, Version, Description, Author, AuthorURI, TextDomain, DomainPath, Network, Title
 	 * @return string
 	 */
-	private function get_plugin_data ( $value = 'Version' ) {
+	private function get_plugin_data( $value = 'Version' ) {
 		
 		$plugin_data = get_plugin_data ( __FILE__ );
 		$plugin_value = $plugin_data[$value];
@@ -106,7 +106,7 @@ class Wp_Admin_Style {
 	 * @since  0.0.1
 	 * @return void
 	 */
-	public function add_menu_page () {
+	public function add_menu_page() {
 		
 		add_menu_page(
 			__( 'WordPress Admin Style', $this -> get_textdomain() ),
@@ -126,7 +126,7 @@ class Wp_Admin_Style {
 	 * @since  0.0.1
 	 * @return void
 	 */
-	public function get_style_examples () {
+	public function get_style_examples() {
 		?>
 		
 		<div class="wrap">
@@ -134,107 +134,132 @@ class Wp_Admin_Style {
 			<div id="icon-options-general" class="icon32"></div>
 			<h2><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
 			
-			<div class="metabox-holder has-right-sidebar">
-				
-				<div class="inner-sidebar">
+			<div id="poststuff">
+				<div id="post-body" class="metabox-holder columns-2">
 					
-					<div class="postbox">
-						<h3><span><?php _e('About the plugin', $this -> get_textdomain() ); ?></span></h3>
-						<div class="inside">
-							<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this -> get_textdomain() ); ?></p>
-							<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
-						</div>
-					</div>
-					
-				</div> <!-- .inner-sidebar -->
-				
-				<div id="post-body">
+					<!-- main content -->
 					<div id="post-body-content">
-
-						<div class="postbox">
-							<h3><span><?php _e('MiniMenu', $this -> get_textdomain() ); ?></span></h3>
-							<div class="inside">
+						
+						<div class="meta-box-sortables ui-sortable">
+							
+							<div class="postbox">
+							
+								<h3><span><?php _e('MiniMenu', $this -> get_textdomain() ); ?></span></h3>
+								<div class="inside">
+									
+									<table class="widefat" cellspacing="0">
+										<tr>
+											<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr class="alternate">
+											<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#header_icons"><?php _e('Header Icons', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr class="alternate">
+											<td class="row-title"><a href="#buttons"><?php _e('Buttons', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#tables"><?php _e('Tables', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr class="alternate">
+											<td class="row-title"><a href="#admin_notices"><?php _e('Admin Notices', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#alternative_colours"><?php _e('Alternative Colours', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr class="alternate">
+											<td class="row-title"><a href="#pagination"><?php _e('Pagination', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#form_elements"><?php _e('Form Elements', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this -> get_textdomain() ); ?></a></td>
+										</tr>
+									</table>
+									
+								</div> <!-- .inside -->
+							
+							</div> <!-- .postbox -->
+							
+						</div> <!-- .meta-box-sortables .ui-sortable -->
+						
+					</div> <!-- post-body-content -->
+					
+					<!-- sidebar -->
+					<div id="postbox-container-1" class="postbox-container">
+						
+						<div class="meta-box-sortables">
+							
+							<div class="postbox">
 								
-								<table class="widefat" cellspacing="0">
-									<tr>
-										<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr class="alternate">
-										<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr>
-										<td class="row-title"><a href="#header_icons"><?php _e('Header Icons', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr class="alternate">
-										<td class="row-title"><a href="#buttons"><?php _e('Buttons', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr>
-										<td class="row-title"><a href="#tables"><?php _e('Tables', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr class="alternate">
-										<td class="row-title"><a href="#admin_notices"><?php _e('Admin Notices', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr>
-										<td class="row-title"><a href="#alternative_colours"><?php _e('Alternative Colours', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr class="alternate">
-										<td class="row-title"><a href="#pagination"><?php _e('Pagination', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr>
-										<td class="row-title"><a href="#form_elements"><?php _e('Form Elements', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-									<tr>
-										<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this -> get_textdomain() ); ?></a></td>
-									</tr>
-								</table>
+								<h3><span><?php _e('About the plugin', $this -> get_textdomain() ); ?></span></h3>
+								<div class="inside">
+									<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this -> get_textdomain() ); ?></p>
+									<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
+								</div>
 								
-							</div> <!-- .inside -->
-						</div>
-
-					</div> <!-- #post-body-content -->
-				</div> <!-- #post-body -->
-				
-			</div> <!-- .metabox-holder -->
+							</div> <!-- .postbox -->
+							
+						</div> <!-- .meta-box-sortables -->
+						
+					</div> <!-- #postbox-container-1 .postbox-container -->
+					
+				</div>
+				<br class="clear">
+			</div>
 			
 			<br id="two_column" class="clear"/>
 			<h3><?php _e( '2 Column Layout', $this -> get_textdomain() ); ?></h3>
 			
-<pre><code>&lt;div class=&quot;wrap&quot;&gt;
+<pre><code>
+&lt;div class=&quot;wrap&quot;&gt;
 	
 	&lt;div id=&quot;icon-options-general&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;
-	&lt;h2&gt;&lt;?php echo $this -&gt; get_plugin_data( 'Name' ) ?&gt;&lt;/h2&gt;
+	&lt;h2&gt;Name String&lt;/h2&gt;
 	
-	&lt;div class=&quot;metabox-holder has-right-sidebar&quot;&gt;
+	&lt;div id=&quot;poststuff&quot;&gt;
 	
-		&lt;div class="inner-sidebar"&gt;
-			
-			&lt;div class=&quot;postbox&quot;&gt;
-				&lt;h3&gt;&lt;span&gt;&lt;?php _e('About the plugin', 'Your_Textdomain' ); ?&gt;&lt;/span&gt;&lt;/h3&gt;
-				&lt;div class=&quot;inside&quot;&gt;
-					&lt;p&gt;&lt;?php _e('Please read ...', 'Your_Textdomain' ); ?&gt;&lt;/p&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			
-			&lt;!-- more postboxes (optional) --&gt;
-			
-		&lt;/div&gt; &lt;!-- .inner-sidebar --&gt;
+		&lt;div id=&quot;post-body&quot; class=&quot;metabox-holder columns-2&quot;&gt;
 		
-		&lt;div id=&quot;post-body&quot;&gt;
+			&lt;!-- main content --&gt;
 			&lt;div id=&quot;post-body-content&quot;&gt;
-
-				&lt;div class=&quot;postbox&quot;&gt;
-					&lt;h3&gt;&lt;span&gt;&lt;?php _e('MiniMenu', 'Your_Textdomain' ); ?&gt;&lt;/span&gt;&lt;/h3&gt;
-					&lt;div class=&quot;inside&quot;&gt;
-					Your Content and Markup
-					&lt;/div&gt; &lt;!-- .inside --&gt;
-				&lt;/div&gt;
 				
-				&lt;!-- more postboxes (optional) --&gt;
-
-			&lt;/div&gt; &lt;!-- #post-body-content --&gt;
-		&lt;/div&gt; &lt;!-- #post-body --&gt;
-
-	&lt;/div&gt; &lt;!-- .metabox-holder --&gt;
+				&lt;div class=&quot;meta-box-sortables ui-sortable&quot;&gt;
+					
+					&lt;div class=&quot;postbox&quot;&gt;
+					
+						&lt;h3&gt;&lt;span&gt;Main Content Header&lt;/span&gt;&lt;/h3&gt;
+						&lt;div class=&quot;inside&quot;&gt;
+							Content space
+						&lt;/div&gt; &lt;!-- .inside --&gt;
+					
+					&lt;/div&gt; &lt;!-- .postbox --&gt;
+					
+				&lt;/div&gt; &lt;!-- .meta-box-sortables .ui-sortable --&gt;
+				
+			&lt;/div&gt; &lt;!-- post-body-content --&gt;
+			
+			&lt;!-- sidebar --&gt;
+			&lt;div id=&quot;postbox-container-1&quot; class=&quot;postbox-container&quot;&gt;
+				
+				&lt;div class=&quot;meta-box-sortables&quot;&gt;
+					
+					&lt;h3&gt;&lt;span&gt;Sidebar Content Header&lt;/span&gt;&lt;/h3&gt;
+					&lt;div class=&quot;postbox&quot;&gt;
+						Content space
+					&lt;/div&gt; &lt;!-- .postbox --&gt;
+					
+				&lt;/div&gt; &lt;!-- .meta-box-sortables --&gt;
+				
+			&lt;/div&gt; &lt;!-- #postbox-container-1 .postbox-container --&gt;
+			
+		&lt;/div&gt; &lt;!-- #post-body .metabox-holder .columns-2 --&gt;
+		
+		&lt;br class=&quot;clear&quot;&gt;
+	&lt;/div&gt; &lt;!-- #poststuff --&gt;
 	
 &lt;/div&gt; &lt;!-- .wrap --&gt;
 </code></pre>
@@ -676,4 +701,3 @@ class Wp_Admin_Style {
 
 if ( function_exists( 'add_action' ) && class_exists( 'Wp_Admin_Style' ) )
 	add_action( 'plugins_loaded', array( 'Wp_Admin_Style', 'get_object' ) );
-?>
