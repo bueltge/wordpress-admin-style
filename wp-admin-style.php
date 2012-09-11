@@ -91,10 +91,19 @@ class Wp_Admin_Style {
 	 */
 	private function get_plugin_data( $value = 'Version' ) {
 		
-		$plugin_data = get_plugin_data ( __FILE__ );
+		static $plugin_data = array ();
+		
+		// fetch the data just once.
+		if ( isset( $plugin_data[ $value ] ) )
+			return $plugin_data[ $value ];
+		
+		if ( ! function_exists( 'get_plugin_data' ) )
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+		
+		$plugin_data  = get_plugin_data( __FILE__ );
 		$plugin_value = $plugin_data[$value];
 		
-		return $plugin_value;
+		return empty ( $plugin_data[ $value ] ) ? '' : $plugin_data[ $value ];
 	}
 	
 	
