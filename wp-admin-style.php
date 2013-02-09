@@ -429,13 +429,21 @@ class Wp_Admin_Style {
 			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #1, with label&lt;/label&gt;&lt;/td&gt;
 			&lt;td&gt;Table Cell #2&lt;/td&gt;
 		&lt;/tr&gt;
-				&lt;tr class=&quot;alternate&quot;&gt;
+		&lt;tr class=&quot;alternate&quot;&gt;
 			&lt;td class=&quot;row-title&quot;&gt;&lt;label for=&quot;tablecell&quot;&gt;Table Cell #3, with label and class &lt;code&gt;alternate&lt;/code&gt;&lt;/label&gt;&lt;/td&gt;
 			&lt;td&gt;Table Cell #4&lt;/td&gt;
 		&lt;/tr&gt;
 		&lt;tr&gt;
 			&lt;td class=&quot;row-title&quot;&gt;Table Cell #5, without label&lt;/td&gt;
 			&lt;td&gt;Table Cell #6&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;alt&quot;&gt;
+			&lt;td class=&quot;row-title&quot;&gt;Table Cell #7, without label and with class &lt;code&gt;alt&lt;/code&gt;&lt;/td&gt;
+			&lt;td&gt;Table Cell #8&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;form-invalid&quot;&gt;
+			&lt;td class=&quot;row-title&quot;&gt;Table Cell #9, without label and with class &lt;code&gt;form-invalid&lt;/code&gt;&lt;/td&gt;
+			&lt;td&gt;Table Cell #10&lt;/td&gt;
 		&lt;/tr&gt;
 	&lt;/tbody&gt;
 	&lt;tfoot&gt;
@@ -468,6 +476,14 @@ class Wp_Admin_Style {
 						<td class="row-title"><?php _e( 'Table Cell #5, without label', $this -> get_textdomain() ); ?></td>
 						<td><?php _e( 'Table Cell #6', $this -> get_textdomain() ); ?></td>
 					</tr>
+					<tr class="alt">
+						<td class="row-title"><?php _e( 'Table Cell #7, without label and with class', $this -> get_textdomain() ); ?> <code>alt</code></td>
+						<td><?php _e( 'Table Cell #8', $this -> get_textdomain() ); ?></td>
+					</tr>
+					<tr class="form-invalid">
+						<td class="row-title"><?php _e( 'Table Cell #9, without label and with class', $this -> get_textdomain() ); ?> <code>form-invalid</code></td>
+						<td><?php _e( 'Table Cell #10', $this -> get_textdomain() ); ?></td>
+					</tr>
 				</tbody>
 				<tfoot>
 					<tr>
@@ -493,8 +509,10 @@ class Wp_Admin_Style {
 			
 			<h3><?php _e( 'Alternative Colours', $this -> get_textdomain() ); ?></h3>
 			<div style="width:99%; padding: 5px;" ><?php _e( 'without class', $this -> get_textdomain() ); ?></div>
-			<div style="width:99%; padding: 5px;" class="alternate">.alternate</div>
-			<div style="width:99%; padding: 5px;" class="form-invalid">.form-invalid</div>
+			<div style="width:99%; padding: 5px;" class="updated">class .updated</div>
+			<div style="width:99%; padding: 5px;" class="alternate">class .alternate</div>
+			<div style="width:99%; padding: 5px;" class="alte">class .alt</div>
+			<div style="width:99%; padding: 5px;" class="form-invalid">class .form-invalid</div>
 			
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
