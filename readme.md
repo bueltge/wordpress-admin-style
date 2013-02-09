@@ -12,16 +12,16 @@ I have developed this small Plugin, which tinkers in the development environment
 Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
 about the idea and also the comments for a discussion.
 
-## Screenshots
+### Screenshots
  1. [Admin Style in WordPress 3.1](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-1.png)
  2. [Admin Style in WordPress 3.4](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-2.png)
  3. [Admin Style in WordPress 3.6-alpha](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-3.png)
 
-## Bugs, technical hints or contribute
+## Other Notes
+### Bugs, technical hints or contribute
 Please give me feedback, contribute and file technical bugs on this 
 [GitHub Repo](https://github.com/bueltge/WordPress-Admin-Style), use Issues.
 
-## Other Notes
 ### License
 Good news, this plugin is free for everyone! Since it's released under the GPL, 
 you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, 
