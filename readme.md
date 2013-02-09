@@ -9,6 +9,9 @@ Unfortunately, there are quite extensive opportunities in the backend to impleme
 Several different classes and HTML structures are used. To be able to look up something this simple, 
 I have developed this small Plugin, which tinkers in the development environment and quickly represents the necessary elements. 
 
+Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
+about the idea and also the comments for a discussion.
+
 ## Screenshots
  1. [Admin Style in WordPress 3.1](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-1.png)
  2. [Admin Style in WordPress 3.4](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-2.png)
