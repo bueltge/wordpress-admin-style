@@ -64,7 +64,7 @@ class Wp_Admin_Style {
 	 * @since 0.0.1
 	 * @return object
 	 */
-	public function get_object() {
+	public static function get_object() {
 		
 		if ( NULL === self :: $classobj )
 			self :: $classobj = new self;
