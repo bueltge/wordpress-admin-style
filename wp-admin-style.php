@@ -41,8 +41,6 @@ class Wp_Admin_Style {
 	
 	static private $classobj = NULL;
 	
-	static public $textdomain = NULL;
-	
 	/**
 	 * construct
 	 *
