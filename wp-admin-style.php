@@ -45,18 +45,18 @@ class Wp_Admin_Style {
 	static private $classobj = NULL;
 	
 	/**
-	 * construct
+	 * Constructer
 	 *
 	 * @uses
 	 * @access public
-	 * @since 0.0.1
+	 * @since  0.0.1
 	 * @return void
 	 */
 	public function __construct() {
 		
 		if ( ! is_admin() )
 			return NULL;
-		
+		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
 	}
 	
