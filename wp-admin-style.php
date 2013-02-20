@@ -53,6 +53,9 @@ class Wp_Admin_Style {
 	 */
 	public function __construct() {
 		
+		if ( ! is_admin )
+			return NULL;
+		
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
 	}
 	
@@ -75,7 +78,7 @@ class Wp_Admin_Style {
 	
 	public function get_textdomain() {
 		
-		return $this -> get_plugin_data( 'TextDomain' );
+		return $this->textdomain;
 	}
 	
 	
@@ -118,8 +121,8 @@ class Wp_Admin_Style {
 	public function add_menu_page() {
 		
 		add_menu_page(
-			__( 'WordPress Admin Style', $this -> get_textdomain() ),
-			__( 'Admin Style', $this -> get_textdomain() ),
+			__( 'WordPress Admin Style', $this->get_textdomain() ),
+			__( 'Admin Style', $this->get_textdomain() ),
 			'read',
 			__FILE__,
 			array( $this, 'get_style_examples' )
@@ -153,39 +156,42 @@ class Wp_Admin_Style {
 							
 							<div class="postbox">
 							
-								<h3><span><?php _e('MiniMenu', $this -> get_textdomain() ); ?></span></h3>
+								<h3><span><?php _e('MiniMenu', $this->get_textdomain() ); ?></span></h3>
 								<div class="inside">
 									
 									<table class="widefat" cellspacing="0">
 										<tr>
-											<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#two_column"><?php _e('2 Column Page Layout', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr class="alternate">
-											<td class="row-title"><a href="#headers"><?php _e('Headers', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#headers"><?php _e('Headers', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr>
-											<td class="row-title"><a href="#header_icons"><?php _e('Header Icons', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#header_icons"><?php _e('Header Icons', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr class="alternate">
-											<td class="row-title"><a href="#buttons"><?php _e('Buttons', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#buttons"><?php _e('Buttons', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr>
-											<td class="row-title"><a href="#tables"><?php _e('Tables', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#tables"><?php _e('Tables', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr class="alternate">
-											<td class="row-title"><a href="#admin_notices"><?php _e('Admin Notices', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#admin_notices"><?php _e('Admin Notices', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr>
-											<td class="row-title"><a href="#alternative_colours"><?php _e('Alternative Colours', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#alternative_colours"><?php _e('Alternative Colours', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr class="alternate">
-											<td class="row-title"><a href="#pagination"><?php _e('Pagination', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#pagination"><?php _e('Pagination', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr>
-											<td class="row-title"><a href="#form_elements"><?php _e('Form Elements', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#form_elements"><?php _e('Form Elements', $this->get_textdomain() ); ?></a></td>
 										</tr>
 										<tr>
-											<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this -> get_textdomain() ); ?></a></td>
+											<td class="row-title"><a href="#form_helpers"><?php _e( 'Form Helper Functions', $this->get_textdomain() ); ?></a></td>
+										</tr>
+										<tr>
+											<td class="row-title"><a href="#tabs"><?php _e('Tabs', $this->get_textdomain() ); ?></a></td>
 										</tr>
 									</table>
 									
@@ -204,9 +210,9 @@ class Wp_Admin_Style {
 							
 							<div class="postbox">
 								
-								<h3><span><?php _e('About the plugin', $this -> get_textdomain() ); ?></span></h3>
+								<h3><span><?php _e('About the plugin', $this->get_textdomain() ); ?></span></h3>
 								<div class="inside">
-									<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this -> get_textdomain() ); ?></p>
+									<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', $this->get_textdomain() ); ?></p>
 									<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
 								</div>
 								
@@ -221,7 +227,7 @@ class Wp_Admin_Style {
 			</div>
 			
 			<br id="two_column" class="clear"/>
-			<h3><?php _e( '2 Column Layout', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( '2 Column Layout', $this->get_textdomain() ); ?></h3>
 			
 <pre><code>
 &lt;div class=&quot;wrap&quot;&gt;
@@ -275,24 +281,24 @@ class Wp_Admin_Style {
 
 			<br/>
 
-			<?php _e('Read <a href="http://www.satoripress.com/2011/10/wordpress/plugin-development/clean-2-column-page-layout-for-plugins-70/">this tutorial</a> for details.', $this -> get_textdomain() ); ?>
+			<?php _e('Read <a href="http://www.satoripress.com/2011/10/wordpress/plugin-development/clean-2-column-page-layout-for-plugins-70/">this tutorial</a> for details.', $this->get_textdomain() ); ?>
 			
 			<br/><br/>
 			
 			<code>&lt;hr /&gt;</code>
 			<hr id="headers" />
 			
-			<h3><?php _e( 'Headers', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Headers', $this->get_textdomain() ); ?></h3>
 			<h2><code>h2</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
 			<h3><code>h3</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h3>
 			<h4><code>h4</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h4>
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="header_icons" />
 			
-			<h3><?php _e( 'Header Icons', $this -> get_textdomain() ); ?></h3>
-			<?php _e( 'php-function:' , $this -> get_textdomain() ) ?> <code>screen_icon( 'edit' );</code>
-			<?php _e( 'or via markup' , $this -> get_textdomain() ) ?>
+			<h3><?php _e( 'Header Icons', $this->get_textdomain() ); ?></h3>
+			<?php _e( 'php-function:' , $this->get_textdomain() ) ?> <code>screen_icon( 'edit' );</code>
+			<?php _e( 'or via markup' , $this->get_textdomain() ) ?>
 			<code>&lt;div id=&quot;icon-edit&quot; class=&quot;icon32&quot;&gt;&lt;/div&gt;</code>
 			<br />
 			<code>edit</code><div id="icon-edit" class="icon32"></div>
@@ -315,11 +321,11 @@ class Wp_Admin_Style {
 			<br class="clear" />
 			<code>options-general</code><div id="icon-options-general" class="icon32"></div>
 			<br class="clear" />
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="buttons" />
 			
-			<h3><?php _e( 'Buttons', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Buttons', $this->get_textdomain() ); ?></h3>
 			<code>&lt;input class=&quot;button-primary&quot; type=&quot;submit&quot; name=&quot;Example&quot; value=&quot;&lt;?php _e( 'Example Primary Button' ); ?&gt;&quot; /&gt;</code>
 			<br />
 			<input class="button-primary" type="submit" name="Example" value="<?php _e( 'Example Primary Button' ); ?>" />
@@ -331,11 +337,11 @@ class Wp_Admin_Style {
 			<code>&lt;a class=&quot;button-secondary&quot; href=&quot;#&quot; title=&quot;&lt;?php _e( 'Title for Example Link Button' ); ?&gt;&quot;&gt;&lt;?php _e( 'Example Link Button' ); ?&gt;&lt;/a&gt;</code>
 			<br />
 			<a class="button-secondary" href="#" title="<?php _e( 'Title for Example Link Button' ); ?>"><?php _e( 'Example Link Button' ); ?></a>
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="tables" />
 
-			<h3><?php _e( 'Tables', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Tables', $this->get_textdomain() ); ?></h3>
 			<pre><code>&lt;table class=&quot;form-table&quot;&gt;
 	&lt;tr&gt;
 		&lt;th class=&quot;row-title&quot;&gt;Table header cell #1&lt;/th&gt;
@@ -356,20 +362,20 @@ class Wp_Admin_Style {
 &lt;/table&gt;</code></pre>
 			<table class="form-table">
 				<tr>
-					<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
-					<th><?php _e( 'Table header cell #2', $this -> get_textdomain() ); ?></th>
+					<th class="row-title"><?php _e( 'Table header cell #1', $this->get_textdomain() ); ?></th>
+					<th><?php _e( 'Table header cell #2', $this->get_textdomain() ); ?></th>
 				</tr>
 				<tr valign="top">
-					<td scope="row"><label for="tablecell"><?php _e( 'Table data cell #1, with label', $this -> get_textdomain() ); ?></label></td>
-					<td><?php _e( 'Table Cell #2', $this -> get_textdomain() ); ?></td>
+					<td scope="row"><label for="tablecell"><?php _e( 'Table data cell #1, with label', $this->get_textdomain() ); ?></label></td>
+					<td><?php _e( 'Table Cell #2', $this->get_textdomain() ); ?></td>
 				</tr>
 				<tr valign="top" class="alternate">
-					<td scope="row"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this -> get_textdomain() ); ?> <code>alternate</code></label></td>
-					<td><?php _e( 'Table Cell #4', $this -> get_textdomain() ); ?></td>
+					<td scope="row"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this->get_textdomain() ); ?> <code>alternate</code></label></td>
+					<td><?php _e( 'Table Cell #4', $this->get_textdomain() ); ?></td>
 				</tr>
 				<tr valign="top">
-					<td scope="row"><label for="tablecell"><?php _e( 'Table Cell #5, with label', $this -> get_textdomain() ); ?></label></td>
-					<td><?php _e( 'Table Cell #6', $this -> get_textdomain() ); ?></td>
+					<td scope="row"><label for="tablecell"><?php _e( 'Table Cell #5, with label', $this->get_textdomain() ); ?></label></td>
+					<td><?php _e( 'Table Cell #6', $this->get_textdomain() ); ?></td>
 				</tr>
 			</table>
 			
@@ -398,20 +404,20 @@ class Wp_Admin_Style {
 	<br/>
 			<table class="widefat">
 				<tr>
-					<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
-					<th><?php _e( 'Table header cell #2', $this -> get_textdomain() ); ?></th>
+					<th class="row-title"><?php _e( 'Table header cell #1', $this->get_textdomain() ); ?></th>
+					<th><?php _e( 'Table header cell #2', $this->get_textdomain() ); ?></th>
 				<tr/>
 				<tr>
-					<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #1, with label', $this -> get_textdomain() ); ?></label></td>
-					<td><?php _e( 'Table Cell #2', $this -> get_textdomain() ); ?></td>
+					<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #1, with label', $this->get_textdomain() ); ?></label></td>
+					<td><?php _e( 'Table Cell #2', $this->get_textdomain() ); ?></td>
 				</tr>
 				<tr class="alternate">
-					<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this -> get_textdomain() ); ?> <code>alternate</code></label></td>
-					<td><?php _e( 'Table Cell #4', $this -> get_textdomain() ); ?></td>
+					<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this->get_textdomain() ); ?> <code>alternate</code></label></td>
+					<td><?php _e( 'Table Cell #4', $this->get_textdomain() ); ?></td>
 				</tr>
 				<tr>
-					<td class="row-title"><?php _e( 'Table Cell #5, without label', $this -> get_textdomain() ); ?></td>
-					<td><?php _e( 'Table Cell #6', $this -> get_textdomain() ); ?></td>
+					<td class="row-title"><?php _e( 'Table Cell #5, without label', $this->get_textdomain() ); ?></td>
+					<td><?php _e( 'Table Cell #6', $this->get_textdomain() ); ?></td>
 				</tr>
 			</table>
 			
@@ -459,75 +465,75 @@ class Wp_Admin_Style {
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
-						<th><?php _e( 'Table header cell #2', $this -> get_textdomain() ); ?></th>
+						<th class="row-title"><?php _e( 'Table header cell #1', $this->get_textdomain() ); ?></th>
+						<th><?php _e( 'Table header cell #2', $this->get_textdomain() ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #1, with label', $this -> get_textdomain() ); ?></label></td>
-						<td><?php _e( 'Table Cell #2', $this -> get_textdomain() ); ?></td>
+						<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #1, with label', $this->get_textdomain() ); ?></label></td>
+						<td><?php _e( 'Table Cell #2', $this->get_textdomain() ); ?></td>
 					</tr>
 					<tr class="alternate">
-						<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this -> get_textdomain() ); ?> <code>alternate</code></label></td>
-						<td><?php _e( 'Table Cell #4', $this -> get_textdomain() ); ?></td>
+						<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #3, with label and class', $this->get_textdomain() ); ?> <code>alternate</code></label></td>
+						<td><?php _e( 'Table Cell #4', $this->get_textdomain() ); ?></td>
 					</tr>
 					<tr>
-						<td class="row-title"><?php _e( 'Table Cell #5, without label', $this -> get_textdomain() ); ?></td>
-						<td><?php _e( 'Table Cell #6', $this -> get_textdomain() ); ?></td>
+						<td class="row-title"><?php _e( 'Table Cell #5, without label', $this->get_textdomain() ); ?></td>
+						<td><?php _e( 'Table Cell #6', $this->get_textdomain() ); ?></td>
 					</tr>
 					<tr class="alt">
-						<td class="row-title"><?php _e( 'Table Cell #7, without label and with class', $this -> get_textdomain() ); ?> <code>alt</code></td>
-						<td><?php _e( 'Table Cell #8', $this -> get_textdomain() ); ?></td>
+						<td class="row-title"><?php _e( 'Table Cell #7, without label and with class', $this->get_textdomain() ); ?> <code>alt</code></td>
+						<td><?php _e( 'Table Cell #8', $this->get_textdomain() ); ?></td>
 					</tr>
 					<tr class="form-invalid">
-						<td class="row-title"><?php _e( 'Table Cell #9, without label and with class', $this -> get_textdomain() ); ?> <code>form-invalid</code></td>
-						<td><?php _e( 'Table Cell #10', $this -> get_textdomain() ); ?></td>
+						<td class="row-title"><?php _e( 'Table Cell #9, without label and with class', $this->get_textdomain() ); ?> <code>form-invalid</code></td>
+						<td><?php _e( 'Table Cell #10', $this->get_textdomain() ); ?></td>
 					</tr>
 				</tbody>
 				<tfoot>
 					<tr>
-						<th class="row-title"><?php _e( 'Table header cell #1', $this -> get_textdomain() ); ?></th>
-						<th><?php _e( 'Table header cell #2', $this -> get_textdomain() ); ?></th>
+						<th class="row-title"><?php _e( 'Table header cell #1', $this->get_textdomain() ); ?></th>
+						<th><?php _e( 'Table header cell #2', $this->get_textdomain() ); ?></th>
 					</tr>
 				</tfoot>
 			</table>
 			
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="admin_notices" />
 			
-			<h3><?php _e( 'Admin Notices', $this -> get_textdomain() ); ?></h3>
-			<?php _e( 'define the style via param (same as the classes) on function <code>add_settings_error()</code> or use the class inside a div', $this -> get_textdomain() ); ?>
-			<div style="width:99%; padding: 5px;" class="updated" ><p><?php _e( 'class .updated with paragraph', $this -> get_textdomain() ); ?></p></div>
-			<div style="width:99%; padding: 5px;" class="error"><?php _e( 'class .alternate without paragraph', $this -> get_textdomain() ); ?></div>
-			<div style="width:99%; padding: 5px;" class="settings-error"><?php _e( 'class .settings-error without paragraph', $this -> get_textdomain() ); ?></div>
+			<h3><?php _e( 'Admin Notices', $this->get_textdomain() ); ?></h3>
+			<?php _e( 'define the style via param (same as the classes) on function <code>add_settings_error()</code> or use the class inside a div', $this->get_textdomain() ); ?>
+			<div style="width:99%; padding: 5px;" class="updated" ><p><?php _e( 'class .updated with paragraph', $this->get_textdomain() ); ?></p></div>
+			<div style="width:99%; padding: 5px;" class="error"><?php _e( 'class .alternate without paragraph', $this->get_textdomain() ); ?></div>
+			<div style="width:99%; padding: 5px;" class="settings-error"><?php _e( 'class .settings-error without paragraph', $this->get_textdomain() ); ?></div>
 			
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="alternative_colours" />
 			
-			<h3><?php _e( 'Alternative Colours', $this -> get_textdomain() ); ?></h3>
-			<div style="width:99%; padding: 5px;" ><?php _e( 'without class', $this -> get_textdomain() ); ?></div>
+			<h3><?php _e( 'Alternative Colours', $this->get_textdomain() ); ?></h3>
+			<div style="width:99%; padding: 5px;" ><?php _e( 'without class', $this->get_textdomain() ); ?></div>
 			<div style="width:99%; padding: 5px;" class="updated">class .updated</div>
 			<div style="width:99%; padding: 5px;" class="alternate">class .alternate</div>
 			<div style="width:99%; padding: 5px;" class="alte">class .alt</div>
 			<div style="width:99%; padding: 5px;" class="form-invalid">class .form-invalid</div>
 			
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="pagination" />
 			
-			<h3><?php _e( 'Pagination', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Pagination', $this->get_textdomain() ); ?></h3>
 			<pre><code>&lt;div class="tablenav"&gt;
 	&lt;div class="tablenav-pages"&gt;
-		//<?php _e( 'here is your pagination code', $this -> get_textdomain() ); ?>
+		//<?php _e( 'here is your pagination code', $this->get_textdomain() ); ?>
 		
 	&lt;/div&gt;
 &lt;/div&gt;</code> </pre>
 			<div class="tablenav">
 				<div class="tablenav-pages">
-					<span class="displaying-num"><?php _e( 'Example Markup for n items', $this -> get_textdomain() ); ?></span> 
+					<span class="displaying-num"><?php _e( 'Example Markup for n items', $this->get_textdomain() ); ?></span> 
 					<a class='first-page disabled' title='Go to the first page' href='#'>&laquo;</a> 
 					<a class='prev-page disabled' title='Go to the previous page' href='#'>&lsaquo;</a> 
 					<span class="paging-input"><input class='current-page' title='Current page' type='text' name='paged' value='1' size='1' /> of <span class='total-pages'>5</span></span> 
@@ -536,11 +542,11 @@ class Wp_Admin_Style {
 				</div>
 			</div>
 			
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="form_elements" />
 			
-			<h3><?php _e( 'Form Elements', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Form Elements', $this->get_textdomain() ); ?></h3>
 			<form method="post" action="options.php">
 				<table class="form-table">
 					<tr valign="top">
@@ -594,10 +600,10 @@ class Wp_Admin_Style {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Input type text <code>.regular-text</code> <?php _e( 'with description', $this -> get_textdomain() ); ?></th>
+						<th scope="row">Input type text <code>.regular-text</code> <?php _e( 'with description', $this->get_textdomain() ); ?></th>
 						<td>
 							<input type="text" value="Example string" class="regular-text" />
-							<span class="description"><?php _e( 'Here is the description for an form element', $this -> get_textdomain() ); ?></span>
+							<span class="description"><?php _e( 'Here is the description for an form element', $this->get_textdomain() ); ?></span>
 						</td>
 					</tr>
 					<tr valign="top">
@@ -704,9 +710,9 @@ class Wp_Admin_Style {
 					</tr>
 				</table>
 			</form>
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
-			<hr id="form_helper" />
+			<hr id="form_helpers" />
 			
 			<h3><?php _e( 'Form Helper Functions', $this->get_textdomain() ); ?></h3>
 			<?php _e( 'There are 3 main form functions which are very useful when you are creating
@@ -725,11 +731,11 @@ class Wp_Admin_Style {
 	&lt;option value="5" &lt;?php selected( $value, '5', true);?&gt;&gt;5&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 			<pre><code>&lt;input type="text" name="disabled_textbox" &lt;?php disabled( $value, 'disabled', true); ?&gt; /&gt;</code></pre>
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="tabs" />
 			
-			<h3><?php _e( 'Tabs', $this -> get_textdomain() ); ?></h3>
+			<h3><?php _e( 'Tabs', $this->get_textdomain() ); ?></h3>
 			<pre><code>&lt;h2 class="nav-tab-wrapper"&gt;
 	&lt;a href="#" class="nav-tab">Tab #1&lt;/a&gt;
 	&lt;a href="#" class="nav-tab nav-tab-active">Tab #2&lt;/a&gt;
@@ -740,7 +746,7 @@ class Wp_Admin_Style {
 				<a href="#" class="nav-tab nav-tab-active">Tab #2</a>
 				<a href="#" class="nav-tab">Tab #2</a>
 			</h2>
-			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this->get_textdomain() ); ?></a><br class="clear" /></p>
 			
 		</div> <!-- .wrap -->
 		<?php
