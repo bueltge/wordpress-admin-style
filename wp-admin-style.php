@@ -6,11 +6,11 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       0.0.5
+ * Version:       0.0.6
  * Licence:       GPLv3
  * Author URI:    http://bueltge.de
  * Upgrade Check: none
- * Last Change:   04/26/2012
+ * Last Change:   02/20/2013
  */
 
 /**
@@ -704,6 +704,27 @@ class Wp_Admin_Style {
 					</tr>
 				</table>
 			</form>
+			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
+			<code>&lt;hr /&gt;</code>
+			<hr id="form_helper" />
+			
+			<h3><?php _e( 'Form Helper Functions', $this->get_textdomain() ); ?></h3>
+			<?php _e( 'There are 3 main form functions which are very useful when you are creating
+			 a new form in the admin area of WordPress. When you return data from the database and 
+			 need to pre-populate the form with this data then these functions can be really useful.', $this->get_textdomain() ); ?>
+			<pre><code>&lt;?php
+ checked( $checked, $current = true, $echo = true );
+ selected( $selected, $current = true, $echo = true );
+ disabled( $disabled, $current = true, $echo = true );</code></pre>
+			<pre><code>&lt;input type="checkbox" value="1" name="checkbox" &lt;?php checked( $value, '1', true); ?&gt; /&gt;</code></pre>
+			<pre><code>&lt;select name="select"&gt;
+	&lt;option value="1" &lt;?php selected( $value, '1', true);?&gt;&gt;1&lt;/option&gt;
+	&lt;option value="2" &lt;?php selected( $value, '2', true);?&gt;&gt;2&lt;/option&gt;
+	&lt;option value="3" &lt;?php selected( $value, '3', true);?&gt;&gt;3&lt;/option&gt;
+	&lt;option value="4" &lt;?php selected( $value, '4', true);?&gt;&gt;4&lt;/option&gt;
+	&lt;option value="5" &lt;?php selected( $value, '5', true);?&gt;&gt;5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+			<pre><code>&lt;input type="text" name="disabled_textbox" &lt;?php disabled( $value, 'disabled', true); ?&gt; /&gt;</code></pre>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', $this -> get_textdomain() ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="tabs" />
