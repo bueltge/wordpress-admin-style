@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:   WordPress Admin Style
- * Plugin URI:    http://bueltge.de/
+ * Plugin URI:    https://github.com/bueltge/WordPress-Admin-Style
  * Text Domain:   wp_admin_style
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
