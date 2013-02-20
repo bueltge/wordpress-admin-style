@@ -37,6 +37,9 @@ Requirement
 This plugin requires WordPress >= 3.3-beta and tested with PHP Interpreter >= 5.3.1
 */
 
+! defined( 'ABSPATH' ) and exit;
+
+add_action( 'plugins_loaded', array( 'Wp_Admin_Style', 'get_object' ) );
 class Wp_Admin_Style {
 	
 	static private $classobj = NULL;
@@ -123,7 +126,7 @@ class Wp_Admin_Style {
 	
 	
 	/**
-	 * Echo Marku examples
+	 * Echo Markup examples
 	 * 
 	 * @uses   
 	 * @access public
@@ -136,7 +139,7 @@ class Wp_Admin_Style {
 		<div class="wrap">
 			
 			<div id="icon-options-general" class="icon32"></div>
-			<h2><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
+			<h2><?php echo $this->get_plugin_data( 'Name' ) ?></h2>
 			
 			<div id="poststuff">
 				<div id="post-body" class="metabox-holder columns-2">
@@ -281,9 +284,9 @@ class Wp_Admin_Style {
 			<hr id="headers" />
 			
 			<h3><?php _e( 'Headers', 'wp_admin_style' ); ?></h3>
-			<h2><code>h2</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h2>
-			<h3><code>h3</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h3>
-			<h4><code>h4</code><?php echo $this -> get_plugin_data( 'Name' ) ?></h4>
+			<h2><code>h2</code><?php echo $this->get_plugin_data( 'Name' ) ?></h2>
+			<h3><code>h3</code><?php echo $this->get_plugin_data( 'Name' ) ?></h3>
+			<h4><code>h4</code><?php echo $this->get_plugin_data( 'Name' ) ?></h4>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', 'wp_admin_style' ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="header_icons" />
@@ -743,7 +746,5 @@ class Wp_Admin_Style {
 		</div> <!-- .wrap -->
 		<?php
 	}
+	
 } // end class
-
-if ( function_exists( 'add_action' ) && class_exists( 'Wp_Admin_Style' ) )
-	add_action( 'plugins_loaded', array( 'Wp_Admin_Style', 'get_object' ) );
