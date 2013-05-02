@@ -39,10 +39,13 @@ This plugin requires WordPress >= 3.3-beta and tested with PHP Interpreter >= 5.
 
 ! defined( 'ABSPATH' ) and exit;
 
-add_action( 'plugins_loaded', array( 'Wp_Admin_Style', 'get_object' ) );
+add_action( 
+	'plugins_loaded',
+	array( Wp_Admin_Style::get_instance(), 'plugin_setup' )
+);
 class Wp_Admin_Style {
 	
-	static private $classobj = NULL;
+	protected static $instance = NULL;
 	
 	/**
 	 * Constructer
@@ -52,10 +55,22 @@ class Wp_Admin_Style {
 	 * @since  0.0.1
 	 * @return void
 	 */
-	public function __construct() {
+	public function __construct() {}
+
+	/**
+	 * Used for regular plugin work.
+	 * 
+	 * @wp-hook  plugins_loaded
+	 * @since    05/02/2013
+	 * @return   void
+	 */
+	public function plugin_setup() {
+		
+		$this->load_classes();
 		
 		if ( ! is_admin() )
 			return NULL;
+		
 		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
 	}
@@ -65,17 +80,28 @@ class Wp_Admin_Style {
 	 * points the class
 	 *
 	 * @access public
-	 * @since 0.0.1
+	 * @since  0.0.1
 	 * @return object
 	 */
-	public static function get_object() {
+	public static function get_instance() {
 		
-		if ( NULL === self :: $classobj )
-			self :: $classobj = new self;
+		NULL === self::$instance and self::$instance = new self;
 		
-		return self :: $classobj;
+		return self::$instance;
 	}
 	
+	/**
+	 * Scans the plugins subfolder and include files
+	 * 
+	 * @since   05/02/2013
+	 * @return  void
+	 */
+	protected function load_classes() {
+		
+		// load required classes
+		foreach( glob( dirname( __FILE__ ) . '/inc/*.php' ) as $path ) 
+			require_once $path;
+	}
 	
 	/**
 	 * return plugin comment data
