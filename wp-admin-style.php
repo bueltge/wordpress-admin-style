@@ -283,9 +283,13 @@ class Wp_Admin_Style {
 				
 				&lt;div class=&quot;meta-box-sortables&quot;&gt;
 					
-					&lt;h3&gt;&lt;span&gt;Sidebar Content Header&lt;/span&gt;&lt;/h3&gt;
 					&lt;div class=&quot;postbox&quot;&gt;
-						Content space
+					
+						&lt;h3&gt;&lt;span&gt;Sidebar Content Header&lt;/span&gt;&lt;/h3&gt;
+						&lt;div class=&quot;inside&quot;&gt;
+							Content space
+						&lt;/div&gt; &lt;!-- .inside --&gt;
+						
 					&lt;/div&gt; &lt;!-- .postbox --&gt;
 					
 				&lt;/div&gt; &lt;!-- .meta-box-sortables --&gt;
