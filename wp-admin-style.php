@@ -283,9 +283,13 @@ class Wp_Admin_Style {
 				
 				&lt;div class=&quot;meta-box-sortables&quot;&gt;
 					
-					&lt;h3&gt;&lt;span&gt;Sidebar Content Header&lt;/span&gt;&lt;/h3&gt;
 					&lt;div class=&quot;postbox&quot;&gt;
-						Content space
+					
+						&lt;h3&gt;&lt;span&gt;Sidebar Content Header&lt;/span&gt;&lt;/h3&gt;
+						&lt;div class=&quot;inside&quot;&gt;
+							Content space
+						&lt;/div&gt; &lt;!-- .inside --&gt;
+						
 					&lt;/div&gt; &lt;!-- .postbox --&gt;
 					
 				&lt;/div&gt; &lt;!-- .meta-box-sortables --&gt;
@@ -351,6 +355,14 @@ class Wp_Admin_Style {
 			<br />
 			<input class="button-primary" type="submit" name="Example" value="<?php _e( 'Example Primary Button' ); ?>" />
 			<br />
+			<code>&lt;?php submit_button( 'Example', $type = 'small', $name = 'submit', $wrap = false, $other_attributes = null );</code>
+			<br />
+			<?php submit_button( 'Example', $type = 'small', $name = 'submit', $wrap = false, $other_attributes = null ); ?>
+			<br />
+			<code>&lt;?php submit_button( 'Example', $type = 'delete', $name = 'submit', $wrap = true, $other_attributes = null );</code>
+			<br />
+			<?php submit_button( 'Example', $type = 'delete', $name = 'submit', $wrap = true, $other_attributes = null ); ?>
+			<br />
 			<code>&lt;input class=&quot;button-secondary&quot; type=&quot;submit&quot; value=&quot;&lt;?php _e( 'Example Secondary Button' ); ?&gt;&quot; /&gt;</code>
 			<br />
 			<input class="button-secondary" type="submit" value="<?php _e( 'Example Secondary Button' ); ?>" />
@@ -359,6 +371,7 @@ class Wp_Admin_Style {
 			<br />
 			<a class="button-secondary" href="#" title="<?php _e( 'Title for Example Link Button' ); ?>"><?php _e( 'Example Link Button' ); ?></a>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', 'wp_admin_style' ); ?></a><br class="clear" /></p>
+			<p><?php _e( 'Use core function <code>submit_button( $text = null, $type = \'primary\', $name = \'submit\', $wrap = true, $other_attributes = null )</code> for create buttons.' ); ?></p>
 			<code>&lt;hr /&gt;</code>
 			<hr id="tables" />
 
