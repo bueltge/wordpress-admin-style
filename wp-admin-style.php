@@ -6,11 +6,11 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       0.0.6
+ * Version:       0.1.0
  * Licence:       GPLv3
  * Author URI:    http://bueltge.de
  * Upgrade Check: none
- * Last Change:   02/20/2013
+ * Last Change:   09/27/2013
  */
 
 /**
@@ -235,6 +235,19 @@ class Wp_Admin_Style {
 								<div class="inside">
 									<p><?php _e('Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.', 'wp_admin_style' ); ?></p>
 									<p>&copy; Copyright 2008 - <?php echo date('Y'); ?> <a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
+								</div>
+							
+							</div> <!-- .postbox -->
+							
+							<div class="postbox">
+								
+								<h3><span><?php _e('Resources & Reference', 'wp_admin_style' ); ?></span></h3>
+								<div class="inside">
+									<ul>
+										<li><a href="http://dotorgstyleguide.wordpress.com/">WordPress UI Style Guide</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards (Draft)</a></li>
+										<li><a href="http://make.wordpress.org/ui/">WordPress UI Group</a></li>
+									</ul>
 								</div>
 								
 							</div> <!-- .postbox -->
