@@ -13,9 +13,9 @@ Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-o
 about the idea and also the comments for a discussion.
 
 ### Screenshots
- 1. [Admin Style in WordPress 3.1](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-1.png)
- 2. [Admin Style in WordPress 3.4](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-2.png)
- 3. [Admin Style in WordPress 3.6-alpha](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-3.png)
+ 1. [Admin Style in WordPress 3.1](img/screenshot-1.png)
+ 2. [Admin Style in WordPress 3.4](img/screenshot-2.png)
+ 3. [Admin Style in WordPress 3.6-alpha](img/screenshot-3.png)
 
 ## Other Notes
 ### Bugs, technical hints or contribute
