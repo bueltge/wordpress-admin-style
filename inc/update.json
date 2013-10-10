@@ -1,0 +1,16 @@
+{
+    "name" : "WordPress Admin Style",
+    "slug" : "WordPress-Admin-Style-master",
+    "download_url" : "https://github.com/brasofilo/WordPress-Admin-Style/archive/master.zip",
+    "version" : "'0.0.7",
+    "author" : "Frank Bültge",
+    "author_homepage" : "http://bueltge.de",
+    "homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
+    "tested" : "3.6",
+    "sections" : {
+        "description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
+        "changelog" : "<p><ul><li><strong>0.0.7</strong><p>Now with GitHub updater.</p></li></ul>"
+    },
+    "upgrade_notice" : "Version 0.0.7 Now with GitHub updater.",
+    "last_updated" : "2013.10.09"
+}

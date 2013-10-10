@@ -6,11 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       0.0.6
+ * Version:       0.0.7
  * Licence:       GPLv3
  * Author URI:    http://bueltge.de
- * Upgrade Check: none
- * Last Change:   02/20/2013
+ * Last Change:   10/11/2013
  */
 
 /**
@@ -73,6 +72,15 @@ class Wp_Admin_Style {
 		
 		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
+		add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 3);
+        add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 4 );
+        
+		include_once 'inc/plugin-updates/plugin-update-checker.php';
+		$updateChecker = new PluginUpdateChecker(
+			'https://raw.github.com/brasofilo/WordPress-Admin-Style/master/inc/update.json',
+			__FILE__,
+			'WordPress-Admin-Style-master'
+		);
 	}
 	
 	
@@ -786,4 +794,48 @@ class Wp_Admin_Style {
 		<?php
 	}
 	
+    
+    /**
+	 * Removes the prefix "-master" when updating from GitHub zip files
+	 * 
+	 * See: https://github.com/YahnisElsts/plugin-update-checker/issues/1
+	 * 
+	 * @param string $source
+	 * @param string $remote_source
+	 * @param object $thiz
+	 * @return string
+	 */
+	public function rename_github_zip( $source, $remote_source, $thiz )
+	{
+		if(  strpos( $source, 'WordPress-Admin-Style') === false )
+			return $source;
+
+		$path_parts = pathinfo($source);
+		$newsource = trailingslashit($path_parts['dirname']). trailingslashit('WordPress-Admin-Style');
+		rename($source, $newsource);
+		return $newsource;
+	}
+
+    /**
+     * Add donate link to plugin description in /wp-admin/plugins.php
+     * 
+     * @param array $plugin_meta
+     * @param string $plugin_file
+     * @param string $plugin_data
+     * @param string $status
+     * @return array
+     */
+    public function donate_link( $plugin_meta, $plugin_file, $plugin_data, $status ) 
+	{
+		if( plugin_basename( __FILE__ ) == $plugin_file )
+			$plugin_meta[] = sprintf(
+                '&hearts; <a href="%s">%s</a>',
+                'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
+                __('Donate to this plugin','wp_admin_style')
+            );
+		return $plugin_meta;
+	}
+
+
+
 } // end class
