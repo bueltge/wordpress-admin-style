@@ -831,7 +831,7 @@ class Wp_Admin_Style {
 			$plugin_meta[] = sprintf(
                 '&hearts; <a href="%s">%s</a>',
                 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
-                __('Donate to this plugin','wp_admin_style')
+                __('Donate','wp_admin_style')
             );
 		return $plugin_meta;
 	}
