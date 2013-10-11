@@ -25,6 +25,9 @@ jQuery(document).ready(function($) {
 	// Dialog Link
 	$('#dialog_link').click(function(){
 		$('#dialog').dialog('open');
+                // Make the overlay fill the whole screen
+                $('.ui-widget-overlay').width($(document).width());
+                $('.ui-widget-overlay').height($(document).height());
 		return false;
 	});
 
