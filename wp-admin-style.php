@@ -6,7 +6,7 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       0.0.6
+ * Version:       0.0.7
  * Licence:       GPLv3
  * Author URI:    http://bueltge.de
  * Last Change:   10/11/2013
@@ -73,9 +73,11 @@ class Wp_Admin_Style {
 		
 		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
+        // Workaround to remove the suffix "-master" from the unzipped directory
 		add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 3);
+        // Plugin love
         add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 4 );
-        
+        // Self hosted updates
 		include_once 'inc/plugin-updates/plugin-update-checker.php';
 		$updateChecker = new PluginUpdateChecker(
 			'https://raw.github.com/brasofilo/WordPress-Admin-Style/master/inc/update.json',
