@@ -45,8 +45,6 @@ add_action(
 
 class Wp_Admin_Style {
 	
-	protected static $instance = NULL;
-	
 	/**
 	 * Constructer
 	 *
@@ -96,9 +94,12 @@ class Wp_Admin_Style {
 	 */
 	public static function get_instance() {
 		
-		NULL === self::$instance and self::$instance = new self;
+		static $instance;
 		
-		return self::$instance;
+		if ( NULL === $instance )
+			$instance = new self();
+		
+		return $instance;
 	}
 	
 	/**
