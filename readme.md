@@ -13,14 +13,10 @@ Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-o
 about the idea and also the comments for a discussion.
 
 ### Screenshots
- 1. [Admin Style in WordPress 3.1](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-1.png)
- 2. [Admin Style in WordPress 3.4](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-2.png)
- 3. [Admin Style in WordPress 3.6-alpha](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-3.png)
- 4. [Admin Style in WordPress MP6 Design](https://github.com/bueltge/WordPress-Admin-Style/blob/master/screenshot-4.png) ([What is MP6?](http://make.wordpress.org/ui/2013/08/31/mp6-2-0/))
-=======
- 1. [Admin Style in WordPress 3.1](/images/screenshot-1.png)
- 2. [Admin Style in WordPress 3.4](/images/screenshot-2.png)
- 3. [Admin Style in WordPress 3.6-alpha](/images/screenshot-3.png)
+ 1. [Admin Style in WordPress 3.1](/assets/screenshot-1.png)
+ 2. [Admin Style in WordPress 3.4](/assets/screenshot-2.png)
+ 3. [Admin Style in WordPress 3.6-alpha](/assets/screenshot-3.png)
+ 4. [Admin Style in WordPress MP6 Design](/assets/screenshot-4.png)
 
 ## Other Notes
 ### Bugs, technical hints or contribute
