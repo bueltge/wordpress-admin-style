@@ -13,28 +13,28 @@
  */
 
 /**
-License:
-==============================================================================
-Copyright Frank Bueltge  (email : frank@bueltge.de)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-
-Requirement
-==============================================================================
-This plugin requires WordPress >= 3.3-beta and tested with PHP Interpreter >= 5.3.1
-*/
+ * License:
+ * ==============================================================================
+ * Copyright Frank Bueltge  (email : frank@bueltge.de)
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ * Requirement
+ * ==============================================================================
+ * This plugin requires WordPress >= 3.3-beta and tested with PHP Interpreter >= 5.3.1
+ */
 
 ! defined( 'ABSPATH' ) and exit;
 
@@ -72,20 +72,20 @@ class Wp_Admin_Style {
 			return NULL;
 		
 		// add menu item incl. the example source
-        add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
-        // Workaround to remove the suffix "-master" from the unzipped directory
-        add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 3 );
-        // Plugin love
-        add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 4 );
-        // Self hosted updates
-        include_once 'inc/plugin-updates/plugin-update-checker.php';
-        $updateChecker = new PluginUpdateChecker(
-            'https://raw.github.com/bueltge/WordPress-Admin-Style/master/inc/update.json', 
-            __FILE__, 
-            'WordPress-Admin-Style-master'
-        );
-    }
-	
+		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
+		// Workaround to remove the suffix "-master" from the unzipped directory
+		add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 3 );
+		// Plugin love
+		add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 4 );
+		
+		// Self hosted updates
+		include_once 'inc/plugin-updates/plugin-update-checker.php';
+		$updateChecker = new PluginUpdateChecker(
+			'https://raw.github.com/bueltge/WordPress-Admin-Style/master/inc/update.json', 
+			__FILE__, 
+			'WordPress-Admin-Style-master'
+		);
+	}
 	
 	/**
 	 * points the class
@@ -810,8 +810,7 @@ class Wp_Admin_Style {
 		<?php
 	}
 	
-    
-    /**
+	/**
 	 * Removes the prefix "-master" when updating from GitHub zip files
 	 * 
 	 * See: https://github.com/YahnisElsts/plugin-update-checker/issues/1
@@ -821,35 +820,38 @@ class Wp_Admin_Style {
 	 * @param object $thiz
 	 * @return string
 	 */
-	public function rename_github_zip( $source, $remote_source, $thiz )
-	{
-		if(  strpos( $source, 'WordPress-Admin-Style') === false )
+	public function rename_github_zip( $source, $remote_source, $thiz ) {
+		
+		if ( FALSE === strpos( $source, 'WordPress-Admin-Style') )
 			return $source;
-
-		$path_parts = pathinfo($source);
-		$newsource = trailingslashit($path_parts['dirname']). trailingslashit('WordPress-Admin-Style');
-		rename($source, $newsource);
+		
+		$path_parts = pathinfo( $source );
+		$newsource = trailingslashit( $path_parts['dirname'] ) . 
+			trailingslashit( 'WordPress-Admin-Style' );
+		rename( $source, $newsource );
+		
 		return $newsource;
 	}
-
-    /**
-     * Add donate link to plugin description in /wp-admin/plugins.php
-     * 
-     * @param array $plugin_meta
-     * @param string $plugin_file
-     * @param string $plugin_data
-     * @param string $status
-     * @return array
-     */
-    public function donate_link( $plugin_meta, $plugin_file, $plugin_data, $status ) 
-	{
-		if( plugin_basename( __FILE__ ) == $plugin_file )
+	
+	/**
+	 * Add donate link to plugin description in /wp-admin/plugins.php
+	 * 
+	 * @param array $plugin_meta
+	 * @param string $plugin_file
+	 * @param string $plugin_data
+	 * @param string $status
+	 * @return array
+	 */
+	public function donate_link( $plugin_meta, $plugin_file, $plugin_data, $status ) {
+		
+		if ( plugin_basename( __FILE__ ) == $plugin_file )
 			$plugin_meta[] = sprintf(
-                '&hearts; <a href="%s">%s</a>',
-                'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
-                __('Donate','wp_admin_style')
-            );
+				'&hearts; <a href="%s">%s</a>',
+				'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
+				__( 'Donate', 'wp_admin_style' )
+		);
+		
 		return $plugin_meta;
 	}
-
+	
 } // end class
