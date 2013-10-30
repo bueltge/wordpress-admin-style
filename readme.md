@@ -1,6 +1,12 @@
 # WordPress Admin Style
 Shows the WordPress admin styles on one page to help you to develop WordPress compliant
 
+ * List markup and examples for '2 Column Page Layout', Headers, Header Icons, Buttons, Tables, Admin Notices, 
+Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs
+ * Helper Classes
+ * jQuery UI Examples
+ * Dashicons
+
 ## Description
 WordPress is developing fast - this also applies to the design of the backend. 
 So it is important not to use your own styles in the admin area and use tags and classes of WordPress. 
