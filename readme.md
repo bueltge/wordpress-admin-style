@@ -23,7 +23,8 @@ about the idea and also the comments for a discussion.
  2. [Admin Style in WordPress 3.4](/assets/screenshot-2.png)
  3. [Admin Style in WordPress 3.6-alpha](/assets/screenshot-3.png)
  4. [Admin Style in WordPress MP6 Design](/assets/screenshot-4.png)
-
+ 5. [Dashicons in WordPress MP6 Design](/assets/screenshot-5.png)
+ 
 ## Other Notes
 ### Bugs, technical hints or contribute
 Please give me feedback, contribute and file technical bugs on this 
