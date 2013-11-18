@@ -71,8 +71,18 @@ class Wp_Admin_Dashicons {
 		?>
 		<div class="wrap">
 		<h2>Dashicons</h2>
-		<p>Dashicons icon font for MP6, currently in development. You can check out MP6 at <a href="http://wordpress.org/extend/plugins/mp6/">http://wordpress.org/extend/plugins/mp6/</a>.</p>
-		<p>See also the official <a href="http://melchoyce.github.io/dashicons/">Dashicon Page</a> for more comfort or helpful information.</p>
+		<p>Dashicons icon font for MP6, currently in development and will go live in WordPress version 3.8.<br>You can check out the WordPress Version 3.8-alpha or the MP6-plugin at <a href="http://wordpress.org/extend/plugins/mp6/">http://wordpress.org/extend/plugins/mp6/</a>.</p>
+
+		<h3>MiniMenu</h3>
+		<ul>
+			<li><a href="#instructions">Instructions</a></li>
+			<li><a href="#instructions">Photoshop Usage</a></li>
+			<li><a href="#cssusage"">CSS Usage</a></li>
+			<li><a href="#offcialpage">Official Dashicon Page</a></li>
+			<li><a href="#alternatives">Alternatives Font Awesome</a></li>
+		</ul>
+
+		<h3>Dashicon Iconlist</h3>
 		<div id="iconlist">
 			
 			<!-- admin menu -->
@@ -238,7 +248,7 @@ class Wp_Admin_Dashicons {
 			<h3>Photoshop Usage</h3>
 			<p>Use the .OTF version of the font for Photoshop mockups, the web-font versions won't work. For most accurate results, pick the "Sharp" font smoothing.</p>
 		
-			<h3>CSS Usage</h3>
+			<h3 id="cssusage">CSS Usage</h3>
 			<p>Link the stylesheet:</p>
 			<pre>&lt;link rel="stylesheet" href="css/dashicons.css"></pre>
 			<p>Now add the icons using the <code>:before</code> selector. You can insert the Star icon like this:</p>
@@ -250,7 +260,36 @@ class Wp_Admin_Dashicons {
 	font: normal 16px/1 'dashicons';
 	vertical-align: top;
 }</pre>
-		
+			<h4>Alternative Selectors</h4>
+			<p>For custom post types replace <em>{post_type}</em> with the slug name passed to <code>register_post_type()</code>.<br>
+			<code>#menu-posts-{post_type} .wp-menu-image:before</code></p>
+			<p>For top level menu pages replace <em>{menu-slug}</em> with the slug name passed to <code>add_menu_page()</code>.<br>
+			<code>#toplevel_page_{menu-slug} .wp-menu-image:before</code></p>
+
+			<h3 id="offcialpage"">The official Dashicon Page</h3>
+			<p>See also the official <a href="http://melchoyce.github.io/dashicons/">Dashicon Page</a> for more comfort or helpful information.</p>
+
+			<h3 id="alternatives">Alternatives</h3>
+			<h4>Font Awesome</h4>
+			<p>Alternative you can use another icon font, like Font Awesome.<br>
+			Include the font via function, the file was enqueued via the bootstrap CDN. Alternative use your custom URL form the plugin.</p>
+			<pre>
+add_action( 'admin_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_font_awesome() {
+	wp_enqueue_style(
+		'font-awesome',
+		'//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css',
+		FALSE,
+		NULL
+	);
+}
+</pre>
+			<p>And now set the icon via CSS.</p>
+			<pre>.myicon:before {
+	content: '\f07a';
+	font-family: FontAwesome !important;
+}</pre>
+			<p>See more hints and the icons on the <a href="http://fontawesome.io/">official page of Font Awesome</a>.</p>
 		</div>
 		<?php
 	}
