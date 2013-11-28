@@ -257,7 +257,10 @@ class Wp_Admin_Style {
 								<div class="inside">
 									<ul>
 										<li><a href="http://dotorgstyleguide.wordpress.com/">WordPress UI Style Guide</a></li>
-										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards (Draft)</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/html/">HTML Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/php/">PHP Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/javascript/">JavaScript Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/ui/">WordPress UI Group</a></li>
 									</ul>
 								</div>
