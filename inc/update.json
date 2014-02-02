@@ -2,15 +2,15 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "0.2.0",
+	"version" : "0.2.1",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
 	"tested" : "3.8-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "<p><ul><li><strong>0.1.1</strong><p>Now with GitHub updater.</p></li></ul>"
+		"changelog" : "<p><ul><li><strong>0.2.1</strong>Now with Dashicons.</li><li><strong>0.1.1</strong><p>Now with GitHub updater.</p></li></ul>"
 	},
-	"upgrade_notice" : "Version 0.1.1 Now with GitHub updater.",
-	"last_updated" : "2013.10.30"
+	"upgrade_notice" : "New hints for the new back end design and Dashicons.",
+	"last_updated" : "2013.11.13"
 }

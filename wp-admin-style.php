@@ -6,10 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       0.2.0
+ * Version:       0.2.1
  * Licence:       GPLv2
  * Author URI:    http://bueltge.de
- * Last Change:   10/30/2013
+ * Last Change:   11/18/2013
  */
 
 /**
@@ -257,7 +257,10 @@ class Wp_Admin_Style {
 								<div class="inside">
 									<ul>
 										<li><a href="http://dotorgstyleguide.wordpress.com/">WordPress UI Style Guide</a></li>
-										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards (Draft)</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/html/">HTML Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/php/">PHP Coding Standards</a></li>
+										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/javascript/">JavaScript Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/ui/">WordPress UI Group</a></li>
 									</ul>
 								</div>
