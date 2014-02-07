@@ -5,7 +5,8 @@ Shows the WordPress admin styles on one page to help you to develop WordPress co
 Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs
  * Helper Classes
  * jQuery UI Examples
- * Dashicons
+ * [Dashicons](http://melchoyce.github.io/dashicons/)
+ * [Genericons](http://genericons.com)
 
 ## Description
 WordPress is developing fast - this also applies to the design of the backend. 
@@ -24,6 +25,7 @@ about the idea and also the comments for a discussion.
  3. [Admin Style in WordPress 3.6-alpha](/assets/screenshot-3.png)
  4. [Admin Style in WordPress MP6 Design](/assets/screenshot-4.png)
  5. [Dashicons in WordPress MP6 Design](/assets/screenshot-5.png)
+ 6. Genericons
  
 ## Other Notes
 ### Bugs, technical hints or contribute

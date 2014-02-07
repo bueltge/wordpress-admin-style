@@ -89,77 +89,77 @@ class Wp_Admin_Genericons {
 			<div alt="f100" class="genericon genericon-standard"><code>.genericon-standard</code> <span>standard post</span></div>
 			<div alt="f101" class="genericon genericon-aside"><code>genericon-aside</code><span>aside</span></div>
 			<div alt="f102" class="genericon genericon-image"><code>.genericon-</code> <span>image</span></div>
-			<div alt="f103" class="genericon genericon-gallery"><code>.genericon-</code> <span>gallery</span></div>
-			<div alt="f104" class="genericon genericon-video"><code>.genericon-</code> <span>video</span></div>
-			<div alt="f105" class="genericon genericon-status"><code>.genericon-</code> <span>status</span></div>
-			<div alt="f106" class="genericon genericon-quote"><code>.genericon-</code> <span>quote</span></div>
-			<div alt="f107" class="genericon genericon-link"><code>.genericon-</code> <span>link</span></div>
-			<div alt="f108" class="genericon genericon-chat"><code>.genericon-</code> <span>chat</span></div>
-			<div alt="f109" class="genericon genericon-audio"><code>.genericon-</code> <span>audio</span></div>
+			<div alt="f103" class="genericon genericon-gallery"><code>.genericon-image</code> <span>gallery</span></div>
+			<div alt="f104" class="genericon genericon-video"><code>.genericon-video</code> <span>video</span></div>
+			<div alt="f105" class="genericon genericon-status"><code>.genericon-status</code> <span>status</span></div>
+			<div alt="f106" class="genericon genericon-quote"><code>.genericon-quote</code> <span>quote</span></div>
+			<div alt="f107" class="genericon genericon-link"><code>.genericon-link</code> <span>link</span></div>
+			<div alt="f108" class="genericon genericon-chat"><code>.genericon-chat</code> <span>chat</span></div>
+			<div alt="f109" class="genericon genericon-audio"><code>.genericon-audio</code> <span>audio</span></div>
 
 			<!-- social icons -->
-			<div alt="f200" class="genericon genericon-github"><code>.genericon-</code> <span>github</span></div>
-			<div alt="f201" class="genericon genericon-dribbble"><code>.genericon-</code> <span>dribbble</span></div>
-			<div alt="f202" class="genericon genericon-twitter"><code>.genericon-</code> <span>twitter</span></div>
-			<div alt="f203" class="genericon genericon-facebook"><code>.genericon-</code> <span>facebook</span></div>
-			<div alt="f204" class="genericon genericon-facebook-alt"><code>.genericon-</code> <span>facebook</span></div>
-			<div alt="f205" class="genericon genericon-wordpress"><code>.genericon-</code> <span>wordpress</span></div>
-			<div alt="f206" class="genericon genericon-googleplus"><code>.genericon-</code> <span>google plus googleplus google+ +</span></div>
-			<div alt="f207" class="genericon genericon-linkedin"><code>.genericon-</code> <span>linkedin</span></div>
-			<div alt="f208" class="genericon genericon-linkedin-alt"><code>.genericon-</code> <span>linkedin</span></div>
-			<div alt="f209" class="genericon genericon-pinterest"><code>.genericon-</code> <span>pinterest</span></div>
-			<div alt="f210" class="genericon genericon-pinterest-alt"><code>.genericon-</code> <span>pinterest</span></div>
-			<div alt="f211" class="genericon genericon-flickr"><code>.genericon-</code> <span>flickr</span></div>
-			<div alt="f212" class="genericon genericon-vimeo"><code>.genericon-</code> <span>vimeo</span></div>
-			<div alt="f213" class="genericon genericon-youtube"><code>.genericon-</code> <span>youtube</span></div>
-			<div alt="f214" class="genericon genericon-tumblr"><code>.genericon-</code> <span>tumblr</span></div>
-			<div alt="f215" class="genericon genericon-instagram"><code>.genericon-</code> <span>instagram</span></div>
-			<div alt="f216" class="genericon genericon-codepen"><code>.genericon-</code> <span>codepen</span></div>
-			<div alt="f217" class="genericon genericon-polldaddy"><code>.genericon-</code> <span>polldaddy</span></div>
-			<div alt="f218" class="genericon genericon-googleplus-alt"><code>.genericon-</code> <span>google plus googleplus google+ +</span></div>
-			<div alt="f219" class="genericon genericon-path"><code>.genericon-</code> <span>path</span></div>
-			<div alt="f220" class="genericon genericon-skype"><code>.genericon-</code> <span>skype</span></div>
-			<div alt="f221" class="genericon genericon-digg"><code>.genericon-</code> <span>digg</span></div>
-			<div alt="f222" class="genericon genericon-reddit"><code>.genericon-</code> <span>reddit</span></div>
-			<div alt="f223" class="genericon genericon-stumbleupon"><code>.genericon-</code> <span>stumbleupon</span></div>
-			<div alt="f224" class="genericon genericon-pocket"><code>.genericon-</code> <span>pocket</span></div>
-			<div alt="f225" class="genericon genericon-dropbox"><code>.genericon-</code> <span>dropbox</span></div>
+			<div alt="f200" class="genericon genericon-github"><code>.genericon-github</code> <span>github</span></div>
+			<div alt="f201" class="genericon genericon-dribbble"><code>.genericon-dribble</code> <span>dribbble</span></div>
+			<div alt="f202" class="genericon genericon-twitter"><code>.genericon-twitter</code> <span>twitter</span></div>
+			<div alt="f203" class="genericon genericon-facebook"><code>.genericon-facebook</code> <span>facebook</span></div>
+			<div alt="f204" class="genericon genericon-facebook-alt"><code>.genericon-facebook-alt</code> <span>facebook</span></div>
+			<div alt="f205" class="genericon genericon-wordpress"><code>.genericon-wordpress</code> <span>wordpress</span></div>
+			<div alt="f206" class="genericon genericon-googleplus"><code>.genericon-googleplus</code> <span>google plus googleplus google+ +</span></div>
+			<div alt="f207" class="genericon genericon-linkedin"><code>.genericon-linkedin</code> <span>linkedin</span></div>
+			<div alt="f208" class="genericon genericon-linkedin-alt"><code>.genericon-linkedin-alt</code> <span>linkedin</span></div>
+			<div alt="f209" class="genericon genericon-pinterest"><code>.genericon-pinterest</code> <span>pinterest</span></div>
+			<div alt="f210" class="genericon genericon-pinterest-alt"><code>.genericon-pinterest-alt</code> <span>pinterest</span></div>
+			<div alt="f211" class="genericon genericon-flickr"><code>.genericon-flickr</code> <span>flickr</span></div>
+			<div alt="f212" class="genericon genericon-vimeo"><code>.genericon-vimeo</code> <span>vimeo</span></div>
+			<div alt="f213" class="genericon genericon-youtube"><code>.genericon-youtube</code> <span>youtube</span></div>
+			<div alt="f214" class="genericon genericon-tumblr"><code>.genericon-tumblr</code> <span>tumblr</span></div>
+			<div alt="f215" class="genericon genericon-instagram"><code>.genericon-instagram</code> <span>instagram</span></div>
+			<div alt="f216" class="genericon genericon-codepen"><code>.genericon-codepen</code> <span>codepen</span></div>
+			<div alt="f217" class="genericon genericon-polldaddy"><code>.genericon-polldaddy</code> <span>polldaddy</span></div>
+			<div alt="f218" class="genericon genericon-googleplus-alt"><code>.genericon-googleplus-alt</code> <span>google plus googleplus google+ +</span></div>
+			<div alt="f219" class="genericon genericon-path"><code>.genericon-path</code> <span>path</span></div>
+			<div alt="f220" class="genericon genericon-skype"><code>.genericon-skype</code> <span>skype</span></div>
+			<div alt="f221" class="genericon genericon-digg"><code>.genericon-digg</code> <span>digg</span></div>
+			<div alt="f222" class="genericon genericon-reddit"><code>.genericon-reddit</code> <span>reddit</span></div>
+			<div alt="f223" class="genericon genericon-stumbleupon"><code>.genericon-stumbleupon</code> <span>stumbleupon</span></div>
+			<div alt="f224" class="genericon genericon-pocket"><code>.genericon-pocket</code> <span>pocket</span></div>
+			<div alt="f225" class="genericon genericon-dropbox"><code>.genericon-dropbox</code> <span>dropbox</span></div>
 
 			<!-- meta icons -->
-			<div alt="f300" class="genericon genericon-comment"><code>.genericon-</code> <span>comment</span></div>
-			<div alt="f301" class="genericon genericon-category"><code>.genericon-</code> <span>category</span></div>
-			<div alt="f302" class="genericon genericon-tag"><code>.genericon-</code> <span>tag label</span></div>
-			<div alt="f303" class="genericon genericon-time"><code>.genericon-</code> <span>time clock</span></div>
-			<div alt="f304" class="genericon genericon-user"><code>.genericon-</code> <span>user</span></div>
-			<div alt="f305" class="genericon genericon-day"><code>.genericon-</code> <span>day</span></div>
-			<div alt="f306" class="genericon genericon-week"><code>.genericon-</code> <span>week</span></div>
-			<div alt="f307" class="genericon genericon-month"><code>.genericon-</code> <span>month calendar</span></div>
-			<div alt="f308" class="genericon genericon-pinned"><code>.genericon-</code> <span>pinned</span></div>
+			<div alt="f300" class="genericon genericon-comment"><code>.genericon-comment</code> <span>comment</span></div>
+			<div alt="f301" class="genericon genericon-category"><code>.genericon-category</code> <span>category</span></div>
+			<div alt="f302" class="genericon genericon-tag"><code>.genericon-tag</code> <span>tag label</span></div>
+			<div alt="f303" class="genericon genericon-time"><code>.genericon-time</code> <span>time clock</span></div>
+			<div alt="f304" class="genericon genericon-user"><code>.genericon-user</code> <span>user</span></div>
+			<div alt="f305" class="genericon genericon-day"><code>.genericon-day</code> <span>day</span></div>
+			<div alt="f306" class="genericon genericon-week"><code>.genericon-week</code> <span>week</span></div>
+			<div alt="f307" class="genericon genericon-month"><code>.genericon-month</code> <span>month calendar</span></div>
+			<div alt="f308" class="genericon genericon-pinned"><code>.genericon-pinned</code> <span>pinned</span></div>
 
 			<!-- other icons -->
-			<div alt="f400" class="genericon genericon-search"><code>.genericon-</code> <span>search</span></div>
-			<div alt="f401" class="genericon genericon-unzoom"><code>.genericon-</code> <span>unzoom</span></div>
-			<div alt="f402" class="genericon genericon-zoom"><code>.genericon-</code> <span>zoom</span></div>
-			<div alt="f403" class="genericon genericon-show"><code>.genericon-</code> <span>show</span></div>
-			<div alt="f404" class="genericon genericon-hide"><code>.genericon-</code> <span>hide</span></div>
-			<div alt="f405" class="genericon genericon-close"><code>.genericon-</code> <span>close</span></div>
-			<div alt="f406" class="genericon genericon-close-alt"><code>.genericon-</code> <span>close</span></div>
-			<div alt="f407" class="genericon genericon-trash"><code>.genericon-</code> <span>trash trashcan</span></div>
-			<div alt="f408" class="genericon genericon-star"><code>.genericon-</code> <span>star like</span></div>
-			<div alt="f409" class="genericon genericon-home"><code>.genericon-</code> <span>home house</span></div>
-			<div alt="f410" class="genericon genericon-mail"><code>.genericon-</code> <span>mail</span></div>
-			<div alt="f411" class="genericon genericon-edit"><code>.genericon-</code> <span>edit</span></div>
-			<div alt="f412" class="genericon genericon-reply"><code>.genericon-</code> <span>reply</span></div>
-			<div alt="f413" class="genericon genericon-feed"><code>.genericon-</code> <span>feed rss</span></div>
-			<div alt="f414" class="genericon genericon-warning"><code>.genericon-</code> <span>warning alert</span></div>
-			<div alt="f415" class="genericon genericon-share"><code>.genericon-</code> <span>share social</span></div>
+			<div alt="f400" class="genericon genericon-search"><code>.genericon-search</code> <span>search</span></div>
+			<div alt="f401" class="genericon genericon-unzoom"><code>.genericon-unzoom</code> <span>unzoom</span></div>
+			<div alt="f402" class="genericon genericon-zoom"><code>.genericon-zoom</code> <span>zoom</span></div>
+			<div alt="f403" class="genericon genericon-show"><code>.genericon-show</code> <span>show</span></div>
+			<div alt="f404" class="genericon genericon-hide"><code>.genericon-hide</code> <span>hide</span></div>
+			<div alt="f405" class="genericon genericon-close"><code>.genericon-close</code> <span>close</span></div>
+			<div alt="f406" class="genericon genericon-close-alt"><code>.genericon-close-alt</code> <span>close</span></div>
+			<div alt="f407" class="genericon genericon-trash"><code>.genericon-trash</code> <span>trash trashcan</span></div>
+			<div alt="f408" class="genericon genericon-star"><code>.genericon-star</code> <span>star like</span></div>
+			<div alt="f409" class="genericon genericon-home"><code>.genericon-home</code> <span>home house</span></div>
+			<div alt="f410" class="genericon genericon-mail"><code>.genericon-mail</code> <span>mail</span></div>
+			<div alt="f411" class="genericon genericon-edit"><code>.genericon-edit</code> <span>edit</span></div>
+			<div alt="f412" class="genericon genericon-reply"><code>.genericon-reply</code> <span>reply</span></div>
+			<div alt="f413" class="genericon genericon-feed"><code>.genericon-feed</code> <span>feed rss</span></div>
+			<div alt="f414" class="genericon genericon-warning"><code>.genericon-warning</code> <span>warning alert</span></div>
+			<div alt="f415" class="genericon genericon-share"><code>.genericon-share</code> <span>share social</span></div>
 			<div alt="f416" class="genericon genericon-attachment"><code>.genericon-</code> <span>attachment</span></div>
-			<div alt="f417" class="genericon genericon-location"><code>.genericon-</code> <span>location gps</span></div>
-			<div alt="f418" class="genericon genericon-checkmark"><code>.genericon-</code> <span>checkmark</span></div>
-			<div alt="f419" class="genericon genericon-menu"><code>.genericon-</code> <span>menu hamburger</span></div>
-			<div alt="f420" class="genericon genericon-refresh"><code>.genericon-</code> <span>refresh reload</span></div>
-			<div alt="f421" class="genericon genericon-minimize"><code>.genericon-</code> <span>minimize</span></div>
-			<div alt="f422" class="genericon genericon-maximize"><code>.genericon-</code> <span>maximize</span></div>
+			<div alt="f417" class="genericon genericon-location"><code>.genericon-attachment</code> <span>location gps</span></div>
+			<div alt="f418" class="genericon genericon-checkmark"><code>.genericon-checkmark</code> <span>checkmark</span></div>
+			<div alt="f419" class="genericon genericon-menu"><code>.genericon-menu</code> <span>menu hamburger</span></div>
+			<div alt="f420" class="genericon genericon-refresh"><code>.genericon-refresh</code> <span>refresh reload</span></div>
+			<div alt="f421" class="genericon genericon-minimize"><code>.genericon-minimize</code> <span>minimize</span></div>
+			<div alt="f422" class="genericon genericon-maximize"><code>.genericon-maximize</code> <span>maximize</span></div>
 			
 			<div alt="f423" class="genericon genericon-404"><code>.genericon-404</code> <span>404</span></div>
 			
