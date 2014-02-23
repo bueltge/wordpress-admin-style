@@ -25,7 +25,7 @@ about the idea and also the comments for a discussion.
  3. [Admin Style in WordPress 3.6-alpha](/assets/screenshot-3.png)
  4. [Admin Style in WordPress MP6 Design](/assets/screenshot-4.png)
  5. [Dashicons in WordPress MP6 Design](/assets/screenshot-5.png)
- 6. Genericons
+ 6. [Genericons in WordPress 3.9-alpha](/assets/screenshot-6.png)
  
 ## Other Notes
 ### Bugs, technical hints or contribute
