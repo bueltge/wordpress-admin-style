@@ -52,7 +52,7 @@ class Wp_Admin_Jquery_Ui {
 	public function register_submenu() {
 		
 		$hook = add_submenu_page(
-			'WordPress-Admin-Style/wp-admin-style.php',
+			'WordPress_Admin_Style',
 			__( 'jQuery UI Demo' ),
 			__( 'jQuery UI' ),
 			'manage_options',

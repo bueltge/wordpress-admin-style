@@ -57,7 +57,7 @@ class Wp_Admin_Genericons {
 	public function register_submenu() {
 		
 		$hook = add_submenu_page(
-			'WordPress-Admin-Style/wp-admin-style.php',
+			'WordPress_Admin_Style',
 			__( 'Genericons' ),
 			__( 'Genericons' ),
 			'manage_options',

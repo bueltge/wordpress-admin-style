@@ -157,7 +157,7 @@ class Wp_Admin_Style {
 			__( 'WordPress Admin Style', 'wp_admin_style' ),
 			__( 'Admin Style', 'wp_admin_style' ),
 			'read',
-			__FILE__,
+			'WordPress_Admin_Style',
 			array( $this, 'get_style_examples' )
 		);
 	}
