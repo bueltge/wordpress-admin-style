@@ -57,7 +57,7 @@ class Wp_Admin_Dashicons {
 	public function register_submenu() {
 		
 		$hook = add_submenu_page(
-			'WordPress-Admin-Style/wp-admin-style.php',
+			'WordPress_Admin_Style',
 			__( 'Dashicons' ),
 			__( 'Dashicons' ),
 			'manage_options',
