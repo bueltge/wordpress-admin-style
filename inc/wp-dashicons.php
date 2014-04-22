@@ -102,7 +102,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f108" class="dashicons dashicons-admin-settings"><code>.dashicons-admin-settings</code></div>
 			<div alt="f112" class="dashicons dashicons-admin-site"><code>.dashicons-admin-site</code></div>
 			<div alt="f111" class="dashicons dashicons-admin-generic"><code>.dashicons-admin-generic</code></div>
-			<div alt="f148" class="dashicons dashicons-admin-collapse"><code>.dashicons-admin-collapse</code></div>	
+			<div alt="f148" class="dashicons	 dashicons-admin-collapse"><code>.dashicons-admin-collapse</code></div>	
 			
 			<!-- welcome screen -->
 			<div alt="f119" class="dashicons dashicons-welcome-write-blog"><code>.dashicons-welcome-write-blog</code></div>
@@ -205,6 +205,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f311" class="dashicons dashicons-jobs-performance"><code>.dashicons-jobs-performance</code></div>
 			
 			<!-- misc -->
+			<h3>Misc</h3>
 			<div alt="f120" class="dashicons dashicons-wordpress"><code>.dashicons-wordpress</code></div>
 			<div alt="f157" class="dashicons dashicons-pressthis"><code>.dashicons-pressthis</code></div>
 			<div alt="f113" class="dashicons dashicons-update"><code>.dashicons-update</code></div>
@@ -241,6 +242,23 @@ class Wp_Admin_Dashicons {
 			<div alt="f313" class="dashicons dashicons-awards"><code>.dashicons-awards</code></div>
 			<div alt="f314" class="dashicons dashicons-forms"><code>.dashicons-forms</code></div>
 			<div alt="f322" class="dashicons dashicons-portfolio"><code>.dashicons-portfolio</code></div>
+			
+			<!-- Media Icons -->
+			<h3>Media Icons</h3>
+			<div alt="f501" class="dashicons dashicons-media-archive"><code>.dashicons-media-archive</code>, <code>f501</code></div>
+			<div alt="f500" class="dashicons dashicons-media-audio"><code>.dashicons-media-audio</code>, <code>f500</code></div>
+			<div alt="f499" class="dashicons dashicons-media-code"><code>.dashicons-media-code</code>, <code>f499</code></div>
+			<div alt="f498" class="dashicons dashicons-media-default"><code>.dashicons-media-default</code>, <code>f498</code></div>
+			<div alt="f497" class="dashicons dashicons-media-document"><code>.dashicons-media-document</code>, <code>f497</code></div>
+			<div alt="f496" class="dashicons dashicons-media-interactive"><code>.dashicons-media-interactive</code>, <code>f496</code></div>
+			<div alt="f495" class="dashicons dashicons-media-spreadsheet"><code>.dashicons-media-spreadsheet</code>, <code>f495</code></div>
+			<div alt="f491" class="dashicons dashicons-media-text"><code>.dashicons-media-text</code>, <code>f491</code></div>
+			<div alt="f490" class="dashicons dashicons-media-video"><code>.dashicons-media-video</code>, <code>f490</code></div>
+			<div alt="f492" class="dashicons dashicons-playlist-audio"><code>.dashicons-playlist-audio</code>, <code>f492</code></div>
+			<div alt="f493" class="dashicons dashicons-playlist-video"><code>.dashicons-playlist-video</code>, <code>f493</code></div>
+			
+			<h3></h3>
+			<div alt="" class="dashicons dashicons-"><code>.</code>, <code></code></div>
 		</div>
 		
 		<div id="instructions">
