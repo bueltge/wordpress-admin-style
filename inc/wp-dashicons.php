@@ -86,6 +86,7 @@ class Wp_Admin_Dashicons {
 		<div id="iconlist">
 			
 			<!-- admin menu -->
+			<h3>Admin Menu</h3>
 			<div alt="f228" class="dashicons dashicons-menu"><code>.dashicons-menu</code></div>
 			<div alt="f319" class="dashicons dashicons-site"><code>.dashicons-site</code></div>
 			<div alt="f226" class="dashicons dashicons-gauge"><code>.dashicons-gauge</code></div>
@@ -105,6 +106,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f148" class="dashicons	 dashicons-admin-collapse"><code>.dashicons-admin-collapse</code></div>	
 			
 			<!-- welcome screen -->
+			<h3>Welcome Screen</h3>
 			<div alt="f119" class="dashicons dashicons-welcome-write-blog"><code>.dashicons-welcome-write-blog</code></div>
 			<!--<div alt="f119" class="dashicons dashicons-welcome-edit-page"><code>.dashicons-welcome-edit-page</code></div> Duplicate -->
 			<div alt="f133" class="dashicons dashicons-welcome-add-page"><code>.dashicons-welcome-add-page</code></div>
@@ -114,6 +116,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f118" class="dashicons dashicons-welcome-learn-more"><code>.dashicons-welcome-learn-more</code></div>			
 
 			<!-- post formats -->
+			<h3>Post Formats</h3>
 			<!--<div alt="f109" class="dashicons dashicons-format-standard"><code>.dashicons-</code></div> Duplicate -->
 			<div alt="f123" class="dashicons dashicons-format-aside"><code>.dashicons-format-aside</code></div>
 			<div alt="f128" class="dashicons dashicons-format-image"><code>.dashicons-format-image</code></div>
@@ -132,6 +135,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f236" class="dashicons dashicons-video-alt3"><code>.dashicons-video-alt3</code></div>
 			
 			<!-- image editing -->
+			<h3>Image Editing</h3>
 			<div alt="f165" class="dashicons dashicons-imgedit-crop"><code>.dashicons-imgedit-crop</code></div>
 			<div alt="f166" class="dashicons dashicons-imgedit-rleft"><code>.dashicons-imgedit-rleft</code></div>
 			<div alt="f167" class="dashicons dashicons-imgedit-rright"><code>.dashicons-imgedit-rright</code></div>
@@ -141,6 +145,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f172" class="dashicons dashicons-imgedit-redo"><code>.dashicons-imgedit-redo</code></div>		
 			
 			<!-- posts -->
+			<h3>Posts</h3>
 			<div alt="f135" class="dashicons dashicons-align-left"><code>.dashicons-align-left</code></div>
 			<div alt="f136" class="dashicons dashicons-align-right"><code>.dashicons-align-right</code></div>	
 			<div alt="f134" class="dashicons dashicons-align-center"><code>.dashicons-align-center</code></div>
@@ -151,6 +156,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f173" class="dashicons dashicons-post-status"><code>.dashicons-post-status</code></div>
 			
 			<!-- tinymce -->
+			<h3>Tiny MCE</h3>
 			<div alt="f200" class="dashicons dashicons-tinymce-bold"><code>.dashicons-tinymce-bold</code></div>
 			<div alt="f201" class="dashicons dashicons-tinymce-italic"><code>.dashicons-tinymce-italic</code></div>	
 			<div alt="f203" class="dashicons dashicons-tinymce-ul"><code>.dashicons-tinymce-ul</code></div>
@@ -177,8 +183,13 @@ class Wp_Admin_Dashicons {
 			<div alt="f224" class="dashicons dashicons-tinymce-strikethrough"><code>.dashicons-tinymce-strikethrough</code></div>
 			<div alt="f225" class="dashicons dashicons-tinymce-unlink"><code>.dashicons-tinymce-unlink</code></div>
 			<div alt="f320" class="dashicons dashicons-tinymce-rtl"><code>.dashicons-tinymce-rtl</code></div>
+			<div alt="f506" class="dashicons dashicons-editor-contract"><code>.dashicons-editor-contract</code>, <code>f506</code></div>
+			<div alt="f464" class="dashicons dashicons-editor-break"><code>.dashicons-editor-break</code>, <code>f464</code></div>
+			<div alt="f475" class="dashicons dashicons-editor-code"><code>.dashicons-editor-code</code>, <code>f475</code></div>
+			<div alt="f476" class="dashicons dashicons-editor-paragraph"><code>.dashicons-editor-paragraph</code>, <code>f476</code></div>
 			
 			<!-- sorting -->
+			<h3>Sorting</h3>
 			<div alt="f142" class="dashicons dashicons-arr-up"><code>.dashicons-arr-up</code></div>
 			<div alt="f140" class="dashicons dashicons-arr-down"><code>.dashicons-arr-down</code></div>
 			<div alt="f139" class="dashicons dashicons-arr-right"><code>.dashicons-arr-right</code></div>
@@ -189,6 +200,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f164" class="dashicons dashicons-exerpt-view"><code>.dashicons-exerpt-view</code></div>
 			
 			<!-- social -->
+			<h3>Social</h3>
 			<div alt="f237" class="dashicons dashicons-share"><code>.dashicons-share</code></div>
 			<div alt="f240" class="dashicons dashicons-share2"><code>.dashicons-share2</code></div>
 			<div alt="f242" class="dashicons dashicons-share3"><code>.dashicons-share3</code></div>
@@ -199,6 +211,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f305" class="dashicons dashicons-facebook2"><code>.dashicons-facebook2</code></div>
 			
 			<!-- jobs -->
+			<h3>Jobs</h3>
 			<div alt="f308" class="dashicons dashicons-jobs-developers"><code>.dashicons-jobs-developers</code></div>
 			<div alt="f309" class="dashicons dashicons-jobs-designers"><code>.dashicons-jobs-designers</code></div>
 			<div alt="f310" class="dashicons dashicons-jobs-migration"><code>.dashicons-jobs-migration</code></div>
@@ -258,7 +271,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f493" class="dashicons dashicons-playlist-video"><code>.dashicons-playlist-video</code>, <code>f493</code></div>
 			
 			<h3></h3>
-			<div alt="" class="dashicons dashicons-"><code>.</code>, <code></code></div>
+			<div alt="" class="dashicons "><code>.</code>, <code></code></div>
 		</div>
 		
 		<div id="instructions">
