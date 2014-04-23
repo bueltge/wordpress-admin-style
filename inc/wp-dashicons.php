@@ -198,6 +198,8 @@ class Wp_Admin_Dashicons {
 			<div alt="f229" class="dashicons dashicons-leftright"><code>.dashicons-leftright</code></div>
 			<div alt="f163" class="dashicons dashicons-list-view"><code>.dashicons-list-view</code></div>
 			<div alt="f164" class="dashicons dashicons-exerpt-view"><code>.dashicons-exerpt-view</code></div>
+			<div alt="f504" class="dashicons dashicons-external"><code>.dashicons-external</code>, <code>f504</code></div>
+			<div alt="f503" class="dashicons dashicons-randomize"><code>.dashicons-randomize</code>, <code>f503</code></div>
 			
 			<!-- social -->
 			<h3>Social</h3>
@@ -255,6 +257,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f313" class="dashicons dashicons-awards"><code>.dashicons-awards</code></div>
 			<div alt="f314" class="dashicons dashicons-forms"><code>.dashicons-forms</code></div>
 			<div alt="f322" class="dashicons dashicons-portfolio"><code>.dashicons-portfolio</code></div>
+			<div alt="f482" class="dashicons dashicons-microphone"><code>.dashicons-microphone</code>, <code>f482</code></div>
 			
 			<!-- Media Icons -->
 			<h3>Media Icons</h3>
@@ -270,8 +273,26 @@ class Wp_Admin_Dashicons {
 			<div alt="f492" class="dashicons dashicons-playlist-audio"><code>.dashicons-playlist-audio</code>, <code>f492</code></div>
 			<div alt="f493" class="dashicons dashicons-playlist-video"><code>.dashicons-playlist-video</code>, <code>f493</code></div>
 			
-			<h3></h3>
-			<div alt="" class="dashicons "><code>.</code>, <code></code></div>
+			<!-- WPorg specific -->
+			<h3>WPorg specific: Jobs, Profiles, WordCamps</h3>
+			<div alt="f483" class="dashicons dashicons-universal-access"><code>.dashicons-universal-access</code>, <code>f483</code></div>
+			<div alt="f507" class="dashicons dashicons-universal-access-alt"><code>.dashicons-universal-access-alt</code>, <code>f507</code></div>
+			<div alt="f486" class="dashicons dashicons-tickets"><code>.dashicons-tickets</code>, <code>f486</code></div>
+			<div alt="f484" class="dashicons dashicons-nametag"><code>.dashicons-nametag</code>, <code>f484</code></div>
+			<div alt="f481" class="dashicons dashicons-clipboard"><code>.dashicons-clipboard</code>, <code>f481</code></div>
+			<div alt="f487" class="dashicons dashicons-heart"><code>.dashicons-heart</code>, <code>f487</code></div>
+			<div alt="f488" class="dashicons dashicons-megaphone"><code>.dashicons-megaphone</code>, <code>f488</code></div>
+			<div alt="f489" class="dashicons dashicons-schedule"><code>.dashicons-schedule</code>, <code>f489</code></div>
+			
+			<!-- Widget -->
+			<h3>Widget</h3>
+			<div alt="f478" class="dashicons dashicons-archive"><code>.dashicons-archive</code>, <code>f478</code></div>
+			<div alt="f479" class="dashicons dashicons-tagcloud"><code>.dashicons-tagcloud</code>, <code>f479</code></div>
+			<div alt="f480" class="dashicons dashicons-text"><code>.dashicons-text</code>, <code>f480</code></div>
+			
+			<!-- Alerts/Notifications/Flags -->
+			<h3>Alerts/Notifications/Flags</h3>
+			<div alt="f502" class="dashicons dashicons-plus-alt"><code>.dashicons-plus-alt</code>, <code>f502</code></div>
 		</div>
 		
 		<div id="instructions">
