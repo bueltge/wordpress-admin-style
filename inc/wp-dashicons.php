@@ -366,7 +366,6 @@ function enqueue_font_awesome() {
 	
 	public function register_scripts() {
 		
-		wp_register_style( 'dashicons', plugin_dir_url( __FILE__ ) . '../css/dashicons.css' );
 		wp_register_style( 'dashicons-demo',
 			plugin_dir_url( __FILE__ ) . '../css/dashicons-demo.css',
 			'dashicons'
