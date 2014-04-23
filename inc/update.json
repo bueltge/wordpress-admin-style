@@ -2,15 +2,19 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "0.2.2",
+	"version" : "1.0.0",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
-	"tested" : "3.9-alpha",
+	"tested" : "4.0-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "<p><ul><li><strong>0.2.1</strong>Now with Dashicons.</li><li><strong>0.1.1</strong><p>Now with GitHub updater.</p></li></ul>"
+		"changelog" : "<ul>
+		<li><strong>1.0.0</strong>Update for WP 3.9, include all new dashicons. Small fixes with path in different directories and Genericons.</li>
+		<li><strong>0.2.1</strong>Now with Dashicons.</li>
+		<li><strong>0.1.1</strong>Now with GitHub updater.</p></li>
+		</ul>"
 	},
-	"upgrade_notice" : "New hints for the new back end design and Dashicons.",
-	"last_updated" : "2014.02.07"
+	"upgrade_notice" : "Ready for WP 3.9, include all new Dashicons.",
+	"last_updated" : "2014.02.23"
 }
