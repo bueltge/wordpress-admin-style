@@ -75,6 +75,7 @@ class Wp_Admin_Dashicons {
 
 		<h3>MiniMenu</h3>
 		<ul>
+			<li><a href="#iconpicker">Iconpicker</a></li>
 			<li><a href="#iconlist">Iconlist</a>
 				<ol>
 					<li><a href="#iconlist">Admin Menu</a></li>
@@ -100,6 +101,13 @@ class Wp_Admin_Dashicons {
 			<li><a href="#alternatives">Alternatives Font Awesome</a></li>
 		</ul>
 
+		<h3 id="iconpicker">Iconpicker for Dashicons</h3>
+		<div>
+			<label for="dashicons_picker_icon"><?php _e( 'Icon' ); ?></label>
+			<input class="regular-text" type="text" id="dashicons_picker_icon" name="dashicons_picker_settings[icon]" value="<?php if( isset( $options['icon'] ) ) { echo esc_attr( $options['icon'] ); } ?>"/>
+			<input type="button" data-target="#dashicons_picker_icon" class="button dashicons-picker" value="pick" />
+		</div>
+
 		<h3>Dashicon Iconlist</h3>
 		<div id="iconlist">
 			
@@ -121,7 +129,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f108" class="dashicons dashicons-admin-settings"><code>.dashicons-admin-settings</code>, <code>f108</code></div>
 			<div alt="f112" class="dashicons dashicons-admin-site"><code>.dashicons-admin-site</code>, <code>f112</code></div>
 			<div alt="f111" class="dashicons dashicons-admin-generic"><code>.dashicons-admin-generic</code>, <code>f111</code></div>
-			<div alt="f148" class="dashicons	 dashicons-admin-collapse"><code>.dashicons-admin-collapse</code>, <code>f148</code></div>	
+			<div alt="f148" class="dashicons dashicons-admin-collapse"><code>.dashicons-admin-collapse</code>, <code>f148</code></div>	
 			
 			<!-- welcome screen -->
 			<h3 id="welcomescreen">Welcome Screen</h3>
@@ -368,8 +376,17 @@ function enqueue_font_awesome() {
 		
 		wp_register_style( 'dashicons-demo',
 			plugin_dir_url( __FILE__ ) . '../css/dashicons-demo.css',
-			'dashicons'
+			array( 'dashicons' )
 		);
 		wp_enqueue_style ( 'dashicons-demo' );
+		
+		wp_register_script(
+			'dashicons-picker',
+			plugin_dir_url( __FILE__ ) . '../js/dashicons-picker.js',
+			array( 'jquery' ),
+			FALSE,
+			TRUE
+		);
+		wp_enqueue_script( 'dashicons-picker' );
 	}
 } // end class

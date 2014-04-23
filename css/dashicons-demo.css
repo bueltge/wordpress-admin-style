@@ -597,5 +597,69 @@
 	content:'\f318';
 }
 
+/* Dashicons Picker */
+.dashicon-picker-container {
+	position: absolute;
+	width: auto;
+	max-width: 800px;
+	height: auto;
+	font-size: 14px;
+	background-color:#fff;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	padding: 15px;
+	box-sizing: border-box;
+}
 
+	.dashicon-picker-container ul {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 10px;
+	}
+
+		.dashicon-picker-container ul .dashicons {
+			width: 20px;
+			height: 20px;
+			font-size: 20px;
+		}
+
+		.dashicon-picker-container ul li {
+			display: inline-block;
+			margin: 5px;
+			float: left;
+		}
+
+			.dashicon-picker-container ul li a {
+				display: block;
+				text-decoration: none;
+				color:#373737;
+				padding: 6px 10px;
+				border: 1px solid #eee;
+			}
+
+				.dashicon-picker-container ul li a:hover {
+					border-color:#999;
+					background: #efefef;
+				}
+
+	.dashicon-picker-control {
+		height:32px;
+	}
+
+		.dashicon-picker-control a {
+			padding:5px;
+			text-decoration: none;
+			line-height: 32px;
+			width:25px;
+		}
+
+			.dashicon-picker-control a span {
+				display: inline;
+				vertical-align: middle;
+			}
+
+		.dashicon-picker-control input {
+			width:200px;
+		}
 
