@@ -46,7 +46,7 @@ add_action(
 class Wp_Admin_Style {
 	
 	/**
-	 * Constructer
+	 * Constructor
 	 *
 	 * @uses
 	 * @access public
