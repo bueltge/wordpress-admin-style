@@ -256,7 +256,6 @@ class Wp_Admin_Style {
 								<h3><span><?php _e('Resources & Reference', 'wp_admin_style' ); ?></span></h3>
 								<div class="inside">
 									<ul>
-										<li><a href="http://dotorgstyleguide.wordpress.com/">WordPress UI Style Guide</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/html/">HTML Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/php/">PHP Coding Standards</a></li>
