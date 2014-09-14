@@ -6,10 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.0.1
- * Licence:       GPLv2
+ * Version:       1.0.2
+ * Licence:       GPLv2+
  * Author URI:    http://bueltge.de
- * Last Change:   02/23/2014
+ * Last Change:   09/14/2014
  */
 
 /**
@@ -568,8 +568,9 @@ class Wp_Admin_Style {
 			<h3><?php _e( 'Admin Notices', 'wp_admin_style' ); ?></h3>
 			<?php _e( 'define the style via param (same as the classes) on function <code>add_settings_error()</code> or use the class inside a div', 'wp_admin_style' ); ?>
 			<div style="width:99%; padding: 5px;" class="updated" ><p><?php _e( 'class .updated with paragraph', 'wp_admin_style' ); ?></p></div>
-			<div style="width:99%; padding: 5px;" class="error"><?php _e( 'class .alternate without paragraph', 'wp_admin_style' ); ?></div>
+			<div style="width:99%; padding: 5px;" class="error"><?php _e( 'class .error without paragraph', 'wp_admin_style' ); ?></div>
 			<div style="width:99%; padding: 5px;" class="settings-error"><?php _e( 'class .settings-error without paragraph', 'wp_admin_style' ); ?></div>
+			<div style="width:99%; padding: 5px;" class="error form-invalid"><?php _e( 'class .error and .form-invalid without paragraph', 'wp_admin_style' ); ?></div>
 			
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', 'wp_admin_style' ); ?></a><br class="clear" /></p>
 			<code>&lt;hr /&gt;</code>

@@ -2,20 +2,21 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.0.1",
+	"version" : "1.0.2",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
-	"tested" : "4.0-alpha",
+	"tested" : "4.1-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
 		"changelog" : "<ul>
+		<li><string>1.0.2</strong>class-error in Admin Notes and new classes for background color in admin notes</li>
 		<li><string>1.0.1</strong>Add Dashicon Picker</li>
 		<li><strong>1.0.0</strong>Update for WP 3.9, include all new dashicons. Small fixes with path in different directories and Genericons.</li>
 		<li><strong>0.2.1</strong>Now with Dashicons.</li>
 		<li><strong>0.1.1</strong>Now with GitHub updater.</p></li>
 		</ul>"
 	},
-	"upgrade_notice" : "Ready for WP 3.9, include all new Dashicons.",
-	"last_updated" : "2014.02.23"
+	"upgrade_notice" : "Ready for WP 4.1-alpha, include all new Dashicons.",
+	"last_updated" : "2014.09.14"
 }
