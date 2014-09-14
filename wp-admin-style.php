@@ -6,7 +6,7 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.0.2
+ * Version:       1.0.3
  * Licence:       GPLv2+
  * Author URI:    http://bueltge.de
  * Last Change:   09/14/2014
@@ -46,7 +46,7 @@ add_action(
 class Wp_Admin_Style {
 	
 	/**
-	 * Constructer
+	 * Constructor
 	 *
 	 * @uses
 	 * @access public
@@ -256,7 +256,6 @@ class Wp_Admin_Style {
 								<h3><span><?php _e('Resources & Reference', 'wp_admin_style' ); ?></span></h3>
 								<div class="inside">
 									<ul>
-										<li><a href="http://dotorgstyleguide.wordpress.com/">WordPress UI Style Guide</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/html/">HTML Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards</a></li>
 										<li><a href="http://make.wordpress.org/core/handbook/coding-standards/php/">PHP Coding Standards</a></li>
@@ -802,12 +801,12 @@ class Wp_Admin_Style {
 			<pre><code>&lt;h2 class="nav-tab-wrapper"&gt;
 	&lt;a href="#" class="nav-tab">Tab #1&lt;/a&gt;
 	&lt;a href="#" class="nav-tab nav-tab-active">Tab #2&lt;/a&gt;
-	&lt;a href="#" class="nav-tab">Tab #2&lt;/a&gt;
+	&lt;a href="#" class="nav-tab">Tab #3&lt;/a&gt;
 &lt;/h2&gt;</code></pre>
 			<h2 class="nav-tab-wrapper">
 				<a href="#" class="nav-tab">Tab #1</a>
 				<a href="#" class="nav-tab nav-tab-active">Tab #2</a>
-				<a href="#" class="nav-tab">Tab #2</a>
+				<a href="#" class="nav-tab">Tab #3</a>
 			</h2>
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;"><?php _e('scroll to top', 'wp_admin_style' ); ?></a><br class="clear" /></p>
 			
