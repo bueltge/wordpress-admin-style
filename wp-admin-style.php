@@ -466,7 +466,7 @@ class Wp_Admin_Style {
 				<tr>
 					<th class="row-title"><?php _e( 'Table header cell #1', 'wp_admin_style' ); ?></th>
 					<th><?php _e( 'Table header cell #2', 'wp_admin_style' ); ?></th>
-				<tr/>
+				</tr>
 				<tr>
 					<td class="row-title"><label for="tablecell"><?php _e( 'Table Cell #1, with label', 'wp_admin_style' ); ?></label></td>
 					<td><?php _e( 'Table Cell #2', 'wp_admin_style' ); ?></td>
