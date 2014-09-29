@@ -6,7 +6,7 @@
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
-	"tested" : "4.0-alpha",
+	"tested" : "4.1-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
 		"changelog" : "Version 1.0.4: HTML Fix, change admin notes classes for css"
