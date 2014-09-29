@@ -2,15 +2,15 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.0.2",
+	"version" : "1.0.4",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
 	"tested" : "4.0-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "Version 1.0.2: Fix JSON error; Version 1.0.1: Add Dashicon Picker; Version 1.0.0"
+		"changelog" : "Version 1.0.4: HTML Fix, change admin notes classes for css"
 	},
-	"upgrade_notice" : "Ready for WP 3.9, include all new Dashicons and Iconpicker.",
-	"last_updated" : "2014.02.29"
+	"upgrade_notice" : "Ready for WP 4.1-alpha, include all new Dashicons and Iconpicker.",
+	"last_updated" : "2014.09.29"
 }
