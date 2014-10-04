@@ -76,7 +76,7 @@ class Wp_Admin_Genericons {
 		<h3>MiniMenu</h3>
 		<ul>
 			<li><a href="#instructions">Instructions</a></li>
-			<li><a href="#cssusage"">CSS Usage</a></li>
+			<li><a href="#cssusage">CSS Usage</a></li>
 			<li><a href="#offcialpage">Official Genericon Page</a></li>
 		</ul>
 
@@ -124,6 +124,7 @@ class Wp_Admin_Genericons {
 			<div alt="f223" class="genericon genericon-stumbleupon"><code>.genericon-stumbleupon</code> <span>stumbleupon</span></div>
 			<div alt="f224" class="genericon genericon-pocket"><code>.genericon-pocket</code> <span>pocket</span></div>
 			<div alt="f225" class="genericon genericon-dropbox"><code>.genericon-dropbox</code> <span>dropbox</span></div>
+			<div alt="f226" class="genericon genericon-foursquare"><code>.genericon-foursquare</code> <span>foursquare</span>	</div>
 
 			<!-- meta icons -->
 			<div alt="f300" class="genericon genericon-comment"><code>.genericon-comment</code> <span>comment</span></div>
@@ -214,12 +215,34 @@ class Wp_Admin_Genericons {
 			<div alt="f472" class="genericon genericon-italic"><code>.genericon-italic</code> <span>italic wysiwyg</span></div>
 			<div alt="f473" class="genericon genericon-picture"><code>.genericon-picture</code> <span>picture wysiwyg</span></div>
 			<div alt="f474" class="genericon genericon-fullscreen"><code>.genericon-fullscreen</code> <span>fullscreen maximize wysiwyg</span></div>
+			<div alt="f475" class="genericon genericon-website"><code>.genericon-website</code> <span>website</span></div>
+			<div alt="f476" class="genericon genericon-ellipsis"><code>.genericon-ellipsis</code> <span>ellipsis</span></div>
 
 			<!-- generic shapes -->
 			<div alt="f500" class="genericon genericon-uparrow"><code>.genericon-uparrow</code> <span>up arrow</span></div>
 			<div alt="f501" class="genericon genericon-rightarrow"><code>.genericon-rightarrow</code> <span>right arrow</span></div>
 			<div alt="f502" class="genericon genericon-downarrow"><code>.genericon-downarrow</code> <span>down arrow</span></div>
 			<div alt="f503" class="genericon genericon-leftarrow"><code>.genericon-leftarrow</code> <span>left arrow</span></div>
+			<div alt="f504" class="genericon genericon-xpost"><code>.genericon-xpost</code> <span>xpost</span></div>
+			<div alt="f505" class="genericon genericon-hierarchy"><code>.genericon-hierarchy</code> <span>hierarchy</span></div>
+			<div alt="f506" class="genericon genericon-paintbrush"><code>.genericon-paintbrush</code> <span>paintbrush</span></div>
+			<div alt="f507" class="genericon genericon-sitemap"><code>.genericon-sitemap</code> <span>sitemap</span></div>
+			<div alt="f508" class="genericon genericon-activity"><code>.genericon-activity</code> <span>activity</span></div>
+			<div alt="f509" class="genericon genericon-anchor"><code>.genericon-anchor</code> <span>anchor</span></div>
+			<div alt="f50a" class="genericon genericon-bug"><code>.genericon-bug</code> <span>bug</span></div>
+			<div alt="f50b" class="genericon genericon-download"><code>.genericon-download</code> <span>download</span></div>
+			<div alt="f50c" class="genericon genericon-handset"><code>.genericon-handset</code> <span>handset</span></div>
+			<div alt="f50d" class="genericon genericon-microphone"><code>.genericon-microphone</code> <span>microphone</span></div>
+			<div alt="f50e" class="genericon genericon-minus"><code>.genericon-minus</code> <span>minus</span></div>
+			<div alt="f50f" class="genericon genericon-move"><code>.genericon-move</code> <span>move</span></div>
+			<div alt="f510" class="genericon genericon-plus"><code>.genericon-plus</code> <span>plus</span></div>
+			<div alt="f511" class="genericon genericon-rating-empty"><code>.genericon-rating-empty</code> <span>rating-empty</span></div>
+			<div alt="f512" class="genericon genericon-rating-full"><code>.genericon-rating-full</code> <span>rating-full</span></div>
+			<div alt="f513" class="genericon genericon-rating-half"><code>.genericon-rating-half</code> <span>rating-half</span></div>
+			<div alt="f514" class="genericon genericon-shuffle"><code>.genericon-shuffle</code> <span>shuffle</span></div>
+			<div alt="f515" class="genericon genericon-spotify"><code>.genericon-spotify</code> <span>spotify</span></div>
+			<div alt="f516" class="genericon genericon-twitch"><code>.genericon-twitch</code> <span>twitch</span></div>
+			<div alt="f517" class="genericon genericon-videocamera"><code>.genericon-videocamera</code> <span>videocamera</span></div>
 		</div>
 		
 		<div id="instructions">
