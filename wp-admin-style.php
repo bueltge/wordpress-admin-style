@@ -6,10 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.0.4
+ * Version:       1.1.0
  * Licence:       GPLv2+
  * Author URI:    http://bueltge.de
- * Last Change:   09/29/2014
+ * Last Change:   10/04/2014
  */
 
 /**
