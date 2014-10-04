@@ -27,7 +27,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Genericons";
-    src: url("./../fonts/genericons-regular-webfont.svg#Genericons") format("svg");
+    src: url("../fonts/genericons-regular-webfont.svg#Genericons") format("svg");
   }
 }
 
