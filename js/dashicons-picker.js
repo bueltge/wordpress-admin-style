@@ -252,7 +252,7 @@
 				$(".dashicon-picker-container").remove();
 			}
 		});
-	}
+	};
 
 	$(function() {
 		$('.dashicons-picker').dashiconsPicker();
