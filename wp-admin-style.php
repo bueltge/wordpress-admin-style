@@ -9,7 +9,7 @@
  * Version:       1.1.1
  * Licence:       GPLv2+
  * Author URI:    http://bueltge.de
- * Last Change:   2014-10-18
+ * Last Change:   2014-10-30
  */
 
 /**
