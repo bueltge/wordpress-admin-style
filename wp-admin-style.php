@@ -258,7 +258,7 @@ class Wp_Admin_Style {
 										$anker = str_replace( $this->file_replace, '', $pattern );
 
 										?>
-										<tr>
+										<tr<?php echo $class; ?>>
 											<td class="row-title">
 												<a href="#<?php echo $anker ?>">
 													<?php echo ucfirst( $pattern ); ?>
