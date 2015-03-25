@@ -4,7 +4,7 @@
 	<legend class="screen-reader-text"><span>Fieldset Example</span></legend>
 	<label for="users_can_register">
 		<input name="" type="checkbox" id="users_can_register" value="1" />
-		<span><?php esc_attr_e( 'FormCheckbox description with legend class .screen-reader-text', 'wp_admin_style' ); ?></span>
+		<span><?php esc_attr_e( 'Checkbox description with legend class .screen-reader-text', 'wp_admin_style' ); ?></span>
 	</label>
 </fieldset>
 

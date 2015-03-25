@@ -2,15 +2,15 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.1.1",
+	"version" : "1.2.0",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
 	"tested" : "4.1-alpha",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "Version 1.1.1: Added Hint to WordPress.org UI Style Guide."
+		"changelog" : "Version 1.2.0: Rewrite of loading all patters, simple and easy to enhance."
 	},
 	"upgrade_notice" : "Added Hint to WordPress.org UI Style Guide.",
-	"last_updated" : "2014-10-30"
+	"last_updated" : "2015-03-25"
 }
