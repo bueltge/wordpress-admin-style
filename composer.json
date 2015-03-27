@@ -3,7 +3,7 @@
   "description": "Shows the WordPress admin styles on one page to help you to develop WordPress compliant",
   "minimum-stability": "stable",
   "license": "GPL 2+",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "wordpress-plugin",
   "homepage": "https://github.com/bueltge/WordPress-Admin-Style",
   "authors": [
