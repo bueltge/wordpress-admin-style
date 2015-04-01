@@ -1,37 +1,74 @@
-
-<h3><?php _e( '2 Columns Layout : 35% +65%', 'wp_admin_style' ); ?></h3>
-
-<p>The cols dimensions is customize by css, exemple:<br/>
-.customposttype #col-left{ width: 25%;}<br/>
-.customposttype #col-right{ width: 75%;}
-</p>
+<h3><?php esc_attr_e( '2 Columns Layout: static (px)', 'wp_admin_style' ); ?></h3>
 
 <div class="wrap">
 
-    <div id="col-container">
+	<div id="icon-options-general" class="icon32"></div>
+	<h2><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h2>
 
-        <div id="col-right">
-            
-            <div class="col-wrap">
-                Col right content
-                <div class="inside">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+	<div id="poststuff">
 
-            </div> <!-- /col-wrap -->
-            
-        </div><!-- /col-right -->
+		<div id="post-body" class="metabox-holder columns-2">
 
-        <div id="col-left">
-            
-            <div class="col-wrap">
-                Col left content
-                <div class="inside">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div> <!-- /col-wrap -->
-            
-        </div><!-- /col-left -->
+			<!-- main content -->
+			<div id="post-body-content">
 
-    </div><!-- /col-container -->
-    
+				<div class="meta-box-sortables ui-sortable">
+
+					<div class="postbox">
+
+						<div class="handlediv" title="Click to toggle"><br></div>
+						<!-- Toggle -->
+
+						<h3 class="hndle"><span><?php esc_attr_e( 'Main Content Header', 'wp_admin_style' ); ?></span>
+						</h3>
+
+						<div class="inside">
+							<p><?php esc_attr_e( 'WordPress started in 2003 with a single bit of code to enhance the typography of everyday writing and with fewer users than you can count on your fingers and toes. Since then it has grown to be the largest self-hosted blogging tool in the world, used on millions of sites and seen by tens of millions of people every day.', 'wp_admin_style' ); ?></p>
+						</div>
+						<!-- .inside -->
+
+					</div>
+					<!-- .postbox -->
+
+				</div>
+				<!-- .meta-box-sortables .ui-sortable -->
+
+			</div>
+			<!-- post-body-content -->
+
+			<!-- sidebar -->
+			<div id="postbox-container-1" class="postbox-container">
+
+				<div class="meta-box-sortables">
+
+					<div class="postbox">
+
+						<div class="handlediv" title="Click to toggle"><br></div>
+						<!-- Toggle -->
+
+						<h3 class="hndle"><span><?php esc_attr_e(
+									'Sidebar Content Header', 'wp_admin_style'
+								); ?></span></h3>
+
+						<div class="inside">
+							<p><?php esc_attr_e( 'Everything you see here, from the documentation to the code itself, was created by and for the community. WordPress is an Open Source project, which means there are hundreds of people all over the world working on it. (More than most commercial platforms.) It also means you are free to use it for anything from your cat’s home page to a Fortune 500 web site without paying anyone a license fee and a number of other important freedoms.', 'wp_admin_style' ); ?></p>
+						</div>
+						<!-- .inside -->
+
+					</div>
+					<!-- .postbox -->
+
+				</div>
+				<!-- .meta-box-sortables -->
+
+			</div>
+			<!-- #postbox-container-1 .postbox-container -->
+
+		</div>
+		<!-- #post-body .metabox-holder .columns-2 -->
+
+		<br class="clear">
+	</div>
+	<!-- #poststuff -->
+
 </div> <!-- .wrap -->
