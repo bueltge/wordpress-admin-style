@@ -2,7 +2,7 @@
 Shows the WordPress admin styles on one page to help you to develop WordPress compliant
 
  * List markup and examples for '2 Column Page Layout', Headers, Header Icons, Buttons, Tables, Admin Notices, 
-Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs
+Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs, Default Admin Color Schemes
  * Helper Classes
  * jQuery UI Examples
  * [Dashicons](http://melchoyce.github.io/dashicons/)

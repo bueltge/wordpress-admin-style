@@ -2,14 +2,14 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.2.2",
+	"version" : "1.2.3",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
 	"tested" : "4.2-beta3",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "Version 1.2.2: Add more two column examples."
+		"changelog" : "Version 1.2.2: Add default admin color schemes to find easily the right color code."
 	},
 	"upgrade_notice" : "Added Hint to WordPress.org UI Style Guide.",
 	"last_updated" : "2015-04-01"
