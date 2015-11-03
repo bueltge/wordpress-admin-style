@@ -1,4 +1,4 @@
-<h3><?php _e( 'Form Helper Functions', 'wp_admin_style' ); ?></h3>
+<h2><?php _e( 'Form Helper Functions', 'wp_admin_style' ); ?></h2>
 <p><?php _e(
 		'There are 3 main form functions which are very useful when you are creating a new form in the admin area of WordPress. When you return data from the database and need to pre-populate the form with this data then these functions can be really useful.',
 		'wp_admin_style'

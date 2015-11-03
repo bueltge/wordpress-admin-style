@@ -6,10 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.3.0
+ * Version:       1.3.1
  * Licence:       GPLv2+
  * Author URI:    http://bueltge.de
- * Last Change:   2015-06-18
+ * Last Change:   2015-11-03
  */
 
 ! defined( 'ABSPATH' ) and exit;
@@ -198,7 +198,7 @@ class Wp_Admin_Style {
 
 		<div class="wrap">
 
-			<h2><?php echo $this->get_plugin_data( 'Name' ) ?></h2>
+			<h1><?php echo $this->get_plugin_data( 'Name' ) ?></h1>
 
 			<?php
 			$this->get_mini_menu();
@@ -246,7 +246,7 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h3><span><?php _e( 'MiniMenu', 'wp_admin_style' ); ?></span></h3>
+							<h2><span><?php _e( 'MiniMenu', 'wp_admin_style' ); ?></span></h2>
 
 							<div class="inside">
 
@@ -289,7 +289,7 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h3><span><?php _e( 'About the plugin', 'wp_admin_style' ); ?></span></h3>
+							<h2><span><?php _e( 'About the plugin', 'wp_admin_style' ); ?></span></h2>
 
 							<div class="inside">
 								<p><?php _e(
@@ -306,7 +306,7 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h3><span><?php _e( 'Resources & Reference', 'wp_admin_style' ); ?></span></h3>
+							<h2><span><?php _e( 'Resources & Reference', 'wp_admin_style' ); ?></span></h2>
 
 							<div class="inside">
 								<ul>

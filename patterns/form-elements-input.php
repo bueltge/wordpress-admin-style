@@ -1,4 +1,4 @@
-<h3><?php esc_attr_e( 'Form Elements Input Fields', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( 'Form Elements Input Fields', 'wp_admin_style' ); ?></h2>
 
 <input type="text" value="regular-text" class="regular-text" /><br>
 <input type="text" value="small-text" class="small-text" /><br>

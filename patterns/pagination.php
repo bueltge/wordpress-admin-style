@@ -1,4 +1,4 @@
-<h3><?php _e( 'Pagination', 'wp_admin_style' ); ?></h3>
+<h2><?php _e( 'Pagination', 'wp_admin_style' ); ?></h2>
 
 <div class="tablenav">
 	<div class="tablenav-pages">

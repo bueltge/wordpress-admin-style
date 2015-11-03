@@ -1,9 +1,9 @@
-<h3><?php _e( '2 Column Layout: static (px) reducing of toggle block', 'wp_admin_style' ); ?></h3>
+<h2><?php _e( '2 Column Layout: static (px) reducing of toggle block', 'wp_admin_style' ); ?></h2>
 
 <div class="wrap">
 
 	<div id="icon-options-general" class="icon32"></div>
-	<h2><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h2>
+	<h1><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h1>
 
 	<div id="poststuff">
 
@@ -16,7 +16,7 @@
 
 					<div class="postbox">
 
-						<h3><span><?php esc_attr_e( 'Main Content Header', 'wp_admin_style' ); ?></span></h3>
+						<h2><span><?php esc_attr_e( 'Main Content Header', 'wp_admin_style' ); ?></span></h2>
 
 						<div class="inside">
 							<p><?php esc_attr_e(
@@ -42,9 +42,9 @@
 
 					<div class="postbox">
 
-						<h3><span><?php esc_attr_e(
+						<h2><span><?php esc_attr_e(
 									'Sidebar Content Header', 'wp_admin_style'
-								); ?></span></h3>
+								); ?></span></h2>
 
 						<div class="inside">
 							<p><?php esc_attr_e(

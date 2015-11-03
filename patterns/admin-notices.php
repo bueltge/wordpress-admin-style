@@ -1,4 +1,4 @@
-<h3><?php esc_attr_e( 'Admin Notices', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( 'Admin Notices', 'wp_admin_style' ); ?></h2>
 <p><?php esc_attr_e( 'define the style via param (same as the classes) on function add_settings_error() or use the class inside a div', 'wp_admin_style' ); ?></p>
 <p><?php printf( __( 'Since WordPress version 4.2 give it much more classes and paths. See more information and background in this <a href="%s">post</a>.', 'wp_admin_style' ), 'https://make.wordpress.org/core/2015/04/23/spinners-and-dismissible-admin-notices-in-4-2/' ); ?></p>
 

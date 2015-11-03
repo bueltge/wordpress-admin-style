@@ -1,4 +1,4 @@
-<h3>Menu Bubble</h3>
+<h2>Menu Bubble</h2>
 
 	<ul id="adminmenu"> <!-- only for view in this plugin, not relevant in WP menu -->
 		<li style="padding:1em;"> <!-- only for view in this plugin, not relevant in WP menu -->

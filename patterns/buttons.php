@@ -1,4 +1,4 @@
-<h3><?php esc_attr_e( 'Buttons', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( 'Buttons', 'wp_admin_style' ); ?></h2>
 <p><?php esc_attr_e( 'Use core function for create buttons.' ); ?> <code>submit_button( $text = null, $type = \'primary\', $name = \'submit\', $wrap = true, $other_attributes = null )</code></p>
 
 <br>

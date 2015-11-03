@@ -1,8 +1,8 @@
-<h3><?php esc_attr_e( '2 Columns Layout: relative (%)', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( '2 Columns Layout: relative (%)', 'wp_admin_style' ); ?></h2>
 
 <div class="wrap">
 
-	<h2><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h2>
+	<h1><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h1>
 	<div id="col-container">
 
 		<div id="col-right">

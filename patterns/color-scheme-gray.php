@@ -1,4 +1,4 @@
-<h3><?php esc_attr_e( 'Color Scheme: Grays', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( 'Color Scheme: Grays', 'wp_admin_style' ); ?></h2>
 <table style="width: 80%;text-align: center;border: 0 none">
 	<tbody>
 	<tr>

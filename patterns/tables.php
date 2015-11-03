@@ -1,4 +1,4 @@
-<h3><?php esc_attr_e( 'Tables', 'wp_admin_style' ); ?></h3>
+<h2><?php esc_attr_e( 'Tables', 'wp_admin_style' ); ?></h2>
 
 <p><strong>Table with class <code>form-table</code></strong></p>
 <table class="form-table">

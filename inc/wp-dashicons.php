@@ -70,10 +70,10 @@ class Wp_Admin_Dashicons {
 	public function get_dashicon_demo() {
 		?>
 		<div class="wrap">
-		<h2>Dashicons</h2>
+		<h1>Dashicons</h1>
 		<p>Dashicons icon font for MP6, currently in development and will go live in WordPress version 3.8.<br>You can check out the WordPress Version 3.8-alpha or the MP6-plugin at <a href="http://wordpress.org/extend/plugins/mp6/">http://wordpress.org/extend/plugins/mp6/</a>.</p>
 
-		<h3>MiniMenu</h3>
+		<h2>MiniMenu</h2>
 		<ul>
 			<li><a href="#iconpicker">Iconpicker</a></li>
 			<li><a href="#iconlist">Iconlist</a>
@@ -96,23 +96,24 @@ class Wp_Admin_Dashicons {
 			</li>
 			<li><a href="#instructions">Instructions</a></li>
 			<li><a href="#instructions">Photoshop Usage</a></li>
-			<li><a href="#cssusage"">CSS Usage</a></li>
+			<li><a href="#htmlusage">HTML Usage</a></li>
+			<li><a href="#cssusage">CSS Usage</a></li>
 			<li><a href="#offcialpage">Official Dashicon Page</a></li>
 			<li><a href="#alternatives">Alternatives Font Awesome</a></li>
 		</ul>
 
-		<h3 id="iconpicker">Iconpicker for Dashicons</h3>
+		<h2 id="iconpicker">Iconpicker for Dashicons</h2>
 		<div>
 			<label for="dashicons_picker_icon"><?php _e( 'Icon' ); ?></label>
 			<input class="regular-text" type="text" id="dashicons_picker_icon" name="dashicons_picker_settings[icon]" value="<?php if( isset( $options['icon'] ) ) { echo esc_attr( $options['icon'] ); } ?>"/>
 			<input type="button" data-target="#dashicons_picker_icon" class="button dashicons-picker" value="pick" />
 		</div>
 
-		<h3>Dashicon Iconlist</h3>
+		<h2>Dashicon Iconlist</h2>
 		<div id="iconlist">
 			
 			<!-- admin menu -->
-			<h3>Admin Menu</h3>
+			<h2>Admin Menu</h2>
 			<div alt="f228" class="dashicons dashicons-menu"><code>.dashicons-menu</code>, <code>f228</code></div>
 			<div alt="f319" class="dashicons dashicons-site"><code>.dashicons-site</code>, <code>f319</code></div>
 			<div alt="f226" class="dashicons dashicons-gauge"><code>.dashicons-gauge</code>, <code>f226</code></div>
@@ -132,7 +133,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f148" class="dashicons dashicons-admin-collapse"><code>.dashicons-admin-collapse</code>, <code>f148</code></div>	
 			
 			<!-- welcome screen -->
-			<h3 id="welcomescreen">Welcome Screen</h3>
+			<h2 id="welcomescreen">Welcome Screen</h2>
 			<div alt="f119" class="dashicons dashicons-welcome-write-blog"><code>.dashicons-welcome-write-blog</code>, <code>f119</code></div>
 			<!--<div alt="f119" class="dashicons dashicons-welcome-edit-page"><code>.dashicons-welcome-edit-page</code>, <code>f119</code></div> Duplicate -->
 			<div alt="f133" class="dashicons dashicons-welcome-add-page"><code>.dashicons-welcome-add-page</code>, <code>f133</code></div>
@@ -142,7 +143,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f118" class="dashicons dashicons-welcome-learn-more"><code>.dashicons-welcome-learn-more</code>, <code>f118</code></div>			
 
 			<!-- post formats -->
-			<h3 id="postformats">Post Formats</h3>
+			<h2 id="postformats">Post Formats</h2>
 			<!--<div alt="f109" class="dashicons dashicons-format-standard"><code>.dashicons-</code>, <code>f109</code></div> Duplicate -->
 			<div alt="f123" class="dashicons dashicons-format-aside"><code>.dashicons-format-aside</code>, <code>f123</code></div>
 			<div alt="f128" class="dashicons dashicons-format-image"><code>.dashicons-format-image</code>, <code>f128</code></div>
@@ -161,7 +162,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f236" class="dashicons dashicons-video-alt3"><code>.dashicons-video-alt3</code>, <code>f236</code></div>
 			
 			<!-- image editing -->
-			<h3 id="imageediting">Image Editing</h3>
+			<h2 id="imageediting">Image Editing</h2>
 			<div alt="f165" class="dashicons dashicons-imgedit-crop"><code>.dashicons-imgedit-crop</code>, <code>f165</code></div>
 			<div alt="f166" class="dashicons dashicons-imgedit-rleft"><code>.dashicons-imgedit-rleft</code>, <code>f166</code></div>
 			<div alt="f167" class="dashicons dashicons-imgedit-rright"><code>.dashicons-imgedit-rright</code>, <code>f167</code></div>
@@ -171,7 +172,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f172" class="dashicons dashicons-imgedit-redo"><code>.dashicons-imgedit-redo</code>, <code>f172</code></div>		
 			
 			<!-- posts -->
-			<h3 id="posts">Posts</h3>
+			<h2 id="posts">Posts</h2>
 			<div alt="f135" class="dashicons dashicons-align-left"><code>.dashicons-align-left</code>, <code>f135</code></div>
 			<div alt="f136" class="dashicons dashicons-align-right"><code>.dashicons-align-right</code>, <code>f136</code></div>	
 			<div alt="f134" class="dashicons dashicons-align-center"><code>.dashicons-align-center</code>, <code>f134</code></div>
@@ -182,7 +183,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f173" class="dashicons dashicons-post-status"><code>.dashicons-post-status</code>, <code>f173</code></div>
 			
 			<!-- tinymce -->
-			<h3 id="tinymce">Tiny MCE</h3>
+			<h2 id="tinymce">Tiny MCE</h2>
 			<div alt="f200" class="dashicons dashicons-tinymce-bold"><code>.dashicons-tinymce-bold</code>, <code>f200</code></div>
 			<div alt="f201" class="dashicons dashicons-tinymce-italic"><code>.dashicons-tinymce-italic</code>, <code>f201</code></div>	
 			<div alt="f203" class="dashicons dashicons-tinymce-ul"><code>.dashicons-tinymce-ul</code>, <code>f203</code></div>
@@ -215,7 +216,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f476" class="dashicons dashicons-editor-paragraph"><code>.dashicons-editor-paragraph</code>, <code>f476</code></div>
 			
 			<!-- sorting -->
-			<h3 id="sorting">Sorting</h3>
+			<h2 id="sorting">Sorting</h2>
 			<div alt="f142" class="dashicons dashicons-arr-up"><code>.dashicons-arr-up</code>, <code>f142</code></div>
 			<div alt="f140" class="dashicons dashicons-arr-down"><code>.dashicons-arr-down</code>, <code>f140</code></div>
 			<div alt="f139" class="dashicons dashicons-arr-right"><code>.dashicons-arr-right</code>, <code>f139</code></div>
@@ -228,7 +229,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f503" class="dashicons dashicons-randomize"><code>.dashicons-randomize</code>, <code>f503</code></div>
 			
 			<!-- social -->
-			<h3 id="social">Social</h3>
+			<h2 id="social">Social</h2>
 			<div alt="f237" class="dashicons dashicons-share"><code>.dashicons-share</code>, <code>f237</code></div>
 			<div alt="f240" class="dashicons dashicons-share2"><code>.dashicons-share2</code>, <code>f240</code></div>
 			<div alt="f242" class="dashicons dashicons-share3"><code>.dashicons-share3</code>, <code>f242</code></div>
@@ -239,14 +240,14 @@ class Wp_Admin_Dashicons {
 			<div alt="f305" class="dashicons dashicons-facebook2"><code>.dashicons-facebook2</code>, <code>f305</code></div>
 			
 			<!-- jobs -->
-			<h3 id="jobs">Jobs</h3>
+			<h2 id="jobs">Jobs</h2>
 			<div alt="f308" class="dashicons dashicons-jobs-developers"><code>.dashicons-jobs-developers</code>, <code>f308</code></div>
 			<div alt="f309" class="dashicons dashicons-jobs-designers"><code>.dashicons-jobs-designers</code>, <code>f309</code></div>
 			<div alt="f310" class="dashicons dashicons-jobs-migration"><code>.dashicons-jobs-migration</code>, <code>f310</code></div>
 			<div alt="f311" class="dashicons dashicons-jobs-performance"><code>.dashicons-jobs-performance</code>, <code>f311</code></div>
 			
 			<!-- misc -->
-			<h3 id="misc">Misc</h3>
+			<h2 id="misc">Misc</h2>
 			<div alt="f120" class="dashicons dashicons-wordpress"><code>.dashicons-wordpress</code>, <code>f120</code></div>
 			<div alt="f157" class="dashicons dashicons-pressthis"><code>.dashicons-pressthis</code>, <code>f157</code></div>
 			<div alt="f113" class="dashicons dashicons-update"><code>.dashicons-update</code>, <code>f113</code></div>
@@ -277,7 +278,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f184" class="dashicons dashicons-piechart"><code>.dashicons-piechart</code>, <code>f184</code></div>
 			<div alt="f185" class="dashicons dashicons-bargraph"><code>.dashicons-bargraph</code>, <code>f185</code></div>
 			<div alt="f238" class="dashicons dashicons-bargraph2"><code>.dashicons-bargraph2</code>, <code>f238</code></div>
-			<div alt="f239" class="dashicons dashicons-bargraph3"><code>.dashicons-bargraph3</code>, <code>f239</code></div>
+			<div alt="f239" class="dashicons dashicons-bargraph2"><code>.dashicons-bargraph2</code>, <code>f239</code></div>
 			<div alt="f307" class="dashicons dashicons-groups"><code>.dashicons-groups</code>, <code>f307</code></div>
 			<div alt="f312" class="dashicons dashicons-products"><code>.dashicons-products</code>, <code>f312</code></div>
 			<div alt="f313" class="dashicons dashicons-awards"><code>.dashicons-awards</code>, <code>f313</code></div>
@@ -286,7 +287,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f482" class="dashicons dashicons-microphone"><code>.dashicons-microphone</code>, <code>f482</code></div>
 			
 			<!-- Media Icons -->
-			<h3 id="mediaicons">Media Icons</h3>
+			<h2 id="mediaicons">Media Icons</h2>
 			<div alt="f501" class="dashicons dashicons-media-archive"><code>.dashicons-media-archive</code>, <code>f501</code></div>
 			<div alt="f500" class="dashicons dashicons-media-audio"><code>.dashicons-media-audio</code>, <code>f500</code></div>
 			<div alt="f499" class="dashicons dashicons-media-code"><code>.dashicons-media-code</code>, <code>f499</code></div>
@@ -300,7 +301,7 @@ class Wp_Admin_Dashicons {
 			<div alt="f493" class="dashicons dashicons-playlist-video"><code>.dashicons-playlist-video</code>, <code>f493</code></div>
 			
 			<!-- WPorg specific -->
-			<h3 id="wporgspecific">WPorg specific: Jobs, Profiles, WordCamps</h3>
+			<h2 id="wporgspecific">WPorg specific: Jobs, Profiles, WordCamps</h2>
 			<div alt="f483" class="dashicons dashicons-universal-access"><code>.dashicons-universal-access</code>, <code>f483</code></div>
 			<div alt="f507" class="dashicons dashicons-universal-access-alt"><code>.dashicons-universal-access-alt</code>, <code>f507</code></div>
 			<div alt="f486" class="dashicons dashicons-tickets"><code>.dashicons-tickets</code>, <code>f486</code></div>
@@ -311,22 +312,27 @@ class Wp_Admin_Dashicons {
 			<div alt="f489" class="dashicons dashicons-schedule"><code>.dashicons-schedule</code>, <code>f489</code></div>
 			
 			<!-- Widget -->
-			<h3 id="widget">Widget</h3>
+			<h2 id="widget">Widget</h2>
 			<div alt="f478" class="dashicons dashicons-archive"><code>.dashicons-archive</code>, <code>f478</code></div>
 			<div alt="f479" class="dashicons dashicons-tagcloud"><code>.dashicons-tagcloud</code>, <code>f479</code></div>
 			<div alt="f480" class="dashicons dashicons-text"><code>.dashicons-text</code>, <code>f480</code></div>
 			
 			<!-- Alerts/Notifications/Flags -->
-			<h3>Alerts/Notifications/Flags</h3>
+			<h2>Alerts/Notifications/Flags</h2>
 			<div alt="f502" class="dashicons dashicons-plus-alt"><code>.dashicons-plus-alt</code>, <code>f502</code></div>
 		</div>
 		
 		<div id="instructions">
 	
-			<h3>Photoshop Usage</h3>
+			<h2>Photoshop Usage</h2>
 			<p>Use the .OTF version of the font for Photoshop mockups, the web-font versions won't work. For most accurate results, pick the "Sharp" font smoothing.</p>
-		
-			<h3 id="cssusage">CSS Usage</h3>
+
+			<h2 id="htmlusage">HTML Usage</h2>
+			<p>Use the follow html as example and load the stylesheet.</p>
+			<p><code>&lt;span class="dashicons dashicons-admin-media"&gt;&lt;/span&gt;</code></p>
+			<p>You should see this result: <span class="dashicons dashicons-admin-media"></span></p>
+			
+			<h2 id="cssusage">CSS Usage</h2>
 			<p>Link the stylesheet:</p>
 			<pre>&lt;link rel="stylesheet" href="css/dashicons.css"></pre>
 			<p>Now add the icons using the <code>:before</code> selector. You can insert the Star icon like this:</p>
@@ -338,17 +344,17 @@ class Wp_Admin_Dashicons {
 	font: normal 16px/1 'dashicons';
 	vertical-align: top;
 }</pre>
-			<h4>Alternative Selectors</h4>
+			<h3>Alternative Selectors</h3>
 			<p>For custom post types replace <em>{post_type}</em> with the slug name passed to <code>register_post_type()</code>.<br>
 			<code>#menu-posts-{post_type} .wp-menu-image:before</code></p>
 			<p>For top level menu pages replace <em>{menu-slug}</em> with the slug name passed to <code>add_menu_page()</code>.<br>
 			<code>#toplevel_page_{menu-slug} .wp-menu-image:before</code></p>
 
-			<h3 id="offcialpage"">The official Dashicon Page</h3>
+			<h2 id="offcialpage"">The official Dashicon Page</h2>
 			<p>See also the official <a href="http://melchoyce.github.io/dashicons/">Dashicon Page</a> for more comfort or helpful information.</p>
 
-			<h3 id="alternatives">Alternatives</h3>
-			<h4>Font Awesome</h4>
+			<h2 id="alternatives">Alternatives</h2>
+			<h3>Font Awesome</h3>
 			<p>Alternative you can use another icon font, like Font Awesome.<br>
 			Include the font via function, the file was enqueued via the bootstrap CDN. Alternative use your custom URL form the plugin.</p>
 			<pre>

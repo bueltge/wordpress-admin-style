@@ -70,17 +70,17 @@ class Wp_Admin_Genericons {
 	public function get_genericon_demo() {
 		?>
 		<div class="wrap">
-		<h2>Genericons</h2>
+		<h1>Genericons</h1>
 		<p><a href="http://genericons.com">Genericons</a> are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic. You can use them for instant HiDPI, to change icon colors on the fly, or with CSS effects such as drop-shadows or gradients.<br>- a free, GPL, flexible icon font for blogs!</p>
 		
-		<h3>MiniMenu</h3>
+		<h2>MiniMenu</h2>
 		<ul>
 			<li><a href="#instructions">Instructions</a></li>
 			<li><a href="#cssusage">CSS Usage</a></li>
 			<li><a href="#offcialpage">Official Genericon Page</a></li>
 		</ul>
 
-		<h3>Genericon Iconlist</h3>
+		<h2>Genericon Iconlist</h2>
 		<div id="iconlist">
 			
 			<!-- note, the text inside the HTML elements is purely for the seach -->
@@ -247,11 +247,11 @@ class Wp_Admin_Genericons {
 		
 		<div id="instructions">
 			
-			<h3 id="htmlusage">HTML Usage</h3>
+			<h2 id="htmlusage">HTML Usage</h2>
 			<p>Genericons can be displayed via HTML: <code>&lt;i alt="f202" class="genericond genericon genericon-twitter"&gt;&lt;/i&gt;</code></p>
 			</p>
 
-			<h3 id="cssusage">CSS Usage</h3>
+			<h2 id="cssusage">CSS Usage</h2>
 			<p>Link the stylesheet:</p>
 			<pre>&lt;link rel="stylesheet" href="css/dashicons.css"></pre>
 			<p>Now add the icons using the <code>:before</code> selector. You can insert the Star icon like this:</p>
@@ -264,7 +264,7 @@ class Wp_Admin_Genericons {
 	vertical-align: bottom;
 }</pre>
 
-			<h3 id="offcialpage"">The official Genericon Page</h3>
+			<h2 id="offcialpage"">The official Genericon Page</h2>
 			<p>See also the official <a href="http://genericons.com/">Genericon Page</a> for more comfort or helpful information.</p>
 			
 		</div>
