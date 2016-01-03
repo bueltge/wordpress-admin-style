@@ -80,7 +80,7 @@ class Wp_Admin_Dashicons {
 			<li><a href="#instructions">Photoshop Usage</a></li>
 			<li><a href="#htmlusage">HTML Usage</a></li>
 			<li><a href="#cssusage">CSS Usage</a></li>
-			<li><a href="#offcialpage">Official Dashicon Page</a></li>
+			<li><a href="#offcialpage">Official Dashicons Page</a></li>
 			<li><a href="#alternatives">Alternatives Font Awesome</a></li>
 		</ul>
 
@@ -119,8 +119,8 @@ class Wp_Admin_Dashicons {
 			<p>For top level menu pages replace <em>{menu-slug}</em> with the slug name passed to <code>add_menu_page()</code>.<br>
 			<code>#toplevel_page_{menu-slug} .wp-menu-image:before</code></p>
 
-			<h2 id="offcialpage"">The official Dashicon Page</h2>
-			<p>See also the official <a href="http://melchoyce.github.io/dashicons/">Dashicon Page</a> for more comfort or helpful information.</p>
+			<h2 id="offcialpage"">The official Dashicons Page</h2>
+			<p>See also the official <a href="https://developer.wordpress.org/resource/dashicons/">Dashicons Page</a> for more comfort or helpful information.</p>
 
 			<h2 id="alternatives">Alternatives</h2>
 			<h3>Font Awesome</h3>
