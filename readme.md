@@ -27,6 +27,12 @@ about the idea and also the comments for a discussion.
  5. [Dashicons in WordPress MP6 Design](/assets/screenshot-5.png)
  6. [Genericons in WordPress 3.9-alpha](/assets/screenshot-6.png)
  
+## Installing
+ 1. Download the plugin as a [ZIP file](https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip) from GitHub.
+ 2. In your WordPress admin click *Plugin -> Add New -> Upload Plugin*.
+ 3. Upload the ZIP file.
+ 4. Activate the plugin.
+
 ## Other Notes
 ### Bugs, technical hints or contribute
 Please give me feedback, contribute and file technical bugs on this 
