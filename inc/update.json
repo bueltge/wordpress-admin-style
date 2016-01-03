@@ -2,15 +2,15 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.3.1",
+	"version" : "1.3.2",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
 	"tested" : "4.4-beta2",
 	"sections" : {
 		"description" : "Shows the WordPress admin styles on one page to help you to develop WordPress compliant.",
-		"changelog" : "Version 1.3.1: Headings hierarchy changes in the admin screens."
+		"changelog" : "Version 1.3.2: Non escaping fix and changes on typos."
 	},
-	"upgrade_notice" : "Headings hierarchy changes in the admin screens.",
-	"last_updated" : "2015-11-03"
+	"upgrade_notice" : "Non escaping fix and changes on typos.",
+	"last_updated" : "2016-01-03"
 }
