@@ -1,5 +1,5 @@
 <h2><?php esc_attr_e( 'Buttons', 'wp_admin_style' ); ?></h2>
-<p><?php esc_attr_e( 'Use core function for create buttons.' ); ?> <code>submit_button( $text = null, $type = \'primary\', $name = \'submit\', $wrap = true, $other_attributes = null )</code></p>
+<p><?php esc_attr_e( 'Use core function to create buttons.' ); ?> <code>submit_button( $text = null, $type = 'primary', $name = 'submit', $wrap = true, $other_attributes = null )</code></p>
 
 <br>
 <input class="button-primary" type="submit" name="Example" value="<?php esc_attr_e( 'Example Primary Button' ); ?>" />
