@@ -4,8 +4,15 @@
 
 <p><strong><?php esc_attr_e( 'HINT: The Admin Notices class was moved on default via wp-admin/js/common.js to the top after the first h2. See on top.', 'wp_admin_style' ) ?></strong></p>
 
-<div class="updated"><p><?php esc_attr_e( 'class .updated with paragraph', 'wp_admin_style' ); ?></p></div>
-<div class="error"><?php esc_attr_e( 'class .error without paragraph', 'wp_admin_style' ); ?></div>
-<div class="settings-error"><?php esc_attr_e( 'class .settings-error without paragraph', 'wp_admin_style' ); ?></div>
-<div class="error form-invalid"><?php esc_attr_e( 'class .error and .form-invalid without paragraph', 'wp_admin_style' ); ?></div>
-<div class="notice"><p><?php esc_attr_e( 'class .notice with paragraph', 'wp_admin_style' ); ?></p></div>
+<div class="notice notice-error"><p><?php esc_attr_e( 'class .notice-error with paragraph', 'wp_admin_style' ); ?></p></div>
+<div class="notice notice-warning"><p><?php esc_attr_e( 'class .notice-warning with paragraph', 'wp_admin_style' ); ?></p></div>
+<div class="notice notice-success"><p><?php esc_attr_e( 'class .notice-success with paragraph', 'wp_admin_style' ); ?></p></div>
+<div class="notice notice-info is-dismissible"><p><?php esc_attr_e( 'class .notice-info with paragraph include .is-dismissible class', 'wp_admin_style' ); ?></p></div>
+
+<!-- Deprecated
+<div class="updated"><p><?php esc_attr_e( 'class .updated with paragraph, Deprecated', 'wp_admin_style' ); ?></p></div>
+<div class="error"><?php esc_attr_e( 'class .error WITHOUT paragraph, Deprecated', 'wp_admin_style' ); ?></div>
+<div class="settings-error"><?php esc_attr_e( 'class .settings-error WITHOUT paragraph, Deprecated', 'wp_admin_style' ); ?></div>
+<div class="error form-invalid"><?php esc_attr_e( 'class .error and .form-invalid WITHOUT paragraph, Deprecated', 'wp_admin_style' ); ?></div>
+<div class="notice"><p><?php esc_attr_e( 'class .notice only with paragraph, Deprecated', 'wp_admin_style' ); ?></p></div>
+-->
