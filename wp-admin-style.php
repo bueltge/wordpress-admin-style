@@ -7,9 +7,9 @@
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
  * Version:       1.3.2
- * Licence:       GPLv2+
+ * Licence:       GPLv3+
  * Author URI:    http://bueltge.de
- * Last Change:   2016-01-03
+ * Last Change:   2016-02-14
  */
 
 ! defined( 'ABSPATH' ) and exit;
