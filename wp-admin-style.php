@@ -139,13 +139,14 @@ class Wp_Admin_Style {
 	 */
 	public function add_menu_page() {
 
-		add_menu_page(
+		$page_hook_suffix = add_menu_page(
 			__( 'WordPress Admin Style', 'wp_admin_style' ),
 			__( 'Admin Style', 'wp_admin_style' ),
 			'read',
 			'WordPress_Admin_Style',
 			array( $this, 'get_style_examples' )
 		);
+		add_action( 'admin_print_scripts-' . $page_hook_suffix, array( $this, 'add_highlight_js' ) );
 	}
 
 	/**
@@ -214,10 +215,9 @@ class Wp_Admin_Style {
 						'Show markup and usage', 'wp_admin_style'
 					) . '</summary>';
 				echo '<section>';
-				echo '<textarea rows="10" cols="30" class="large-text code">' . htmlspecialchars(
+				echo '<pre><code class="language-php-extras">' . htmlspecialchars(
 						file_get_contents( $this->patterns_dir . '/' . $file )
-					) . '</textarea>';
-
+					) . '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
 				echo '<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
@@ -388,4 +388,36 @@ class Wp_Admin_Style {
 		return $plugin_meta;
 	}
 
+	/**
+	 * Register and enqueue script and styles for highlighting source.
+	 *
+	 * @since  2016-05-20
+	 */
+	public function add_highlight_js() {
+
+		wp_register_style(
+			'prism',
+			plugins_url( 'css/prism.css', __FILE__ ),
+			'',
+			'2016-05-20',
+			'screen'
+		);
+		wp_enqueue_style( 'prism' );
+
+		wp_register_script(
+			'prism',
+			plugins_url( 'js/prism.js', __FILE__ ),
+			array(),
+			'2016-05-20',
+			TRUE
+		);
+		wp_register_script(
+			'wpast_prism',
+			plugins_url( 'js/wpast-prism.js', __FILE__ ),
+			array( 'prism' ),
+			'2016-05-20',
+			TRUE
+		);
+		wp_enqueue_script( 'wpast_prism' );
+	}
 } // end class
