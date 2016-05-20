@@ -106,13 +106,13 @@ class Wp_Admin_Dashicons {
 			<pre>&lt;link rel="stylesheet" href="css/dashicons.css"></pre>
 			<p>Now add the icons using the <code>:before</code> selector. You can insert the Star icon like this:</p>
 		
-			<pre>.myicon:before {
+			<pre><code class="language-css">.myicon:before {
 	content: '\2605';
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1 'dashicons';
 	vertical-align: top;
-}</pre>
+}</code></pre>
 			<h3>Alternative Selectors</h3>
 			<p>For custom post types replace <em>{post_type}</em> with the slug name passed to <code>register_post_type()</code>.<br>
 			<code>#menu-posts-{post_type} .wp-menu-image:before</code></p>
@@ -126,7 +126,7 @@ class Wp_Admin_Dashicons {
 			<h3>Font Awesome</h3>
 			<p>Alternative you can use another icon font, like Font Awesome.<br>
 			Include the font via function, the file was enqueued via the bootstrap CDN. Alternative use your custom URL form the plugin.</p>
-			<pre>
+			<pre><code class="language-php">
 add_action( 'admin_enqueue_scripts', 'enqueue_font_awesome' );
 function enqueue_font_awesome() {
 	wp_enqueue_style(
@@ -136,12 +136,12 @@ function enqueue_font_awesome() {
 		NULL
 	);
 }
-</pre>
+</code></pre>
 			<p>And now set the icon via CSS.</p>
-			<pre>.myicon:before {
+			<pre><code class="language-css">.myicon:before {
 	content: '\f07a';
 	font-family: FontAwesome !important;
-}</pre>
+}</code></pre>
 			<p>See more hints and the icons on the <a href="http://fontawesome.io/">official page of Font Awesome</a>.</p>
 		</div>
 		<?php
