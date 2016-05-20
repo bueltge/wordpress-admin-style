@@ -6,10 +6,10 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.3.3
+ * Version:       1.4.0
  * Licence:       GPLv3+
  * Author URI:    http://bueltge.de
- * Last Change:   2016-02-14
+ * Last Change:   2016-05-20
  */
 
 ! defined( 'ABSPATH' ) and exit;
@@ -59,7 +59,7 @@ class Wp_Admin_Style {
 		add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 2 );
 
 		// Self hosted updates
-		include_once 'inc/plugin-updates/plugin-update-checker.php';
+		include_once dirname( __FILE__ ) . '/inc/plugin-updates/plugin-update-checker.php';
 		$update_checker = new PluginUpdateChecker(
 			'https://raw.github.com/bueltge/WordPress-Admin-Style/master/inc/update.json',
 			__FILE__,
