@@ -1,4 +1,4 @@
-<h2><?php _e( 'Headers', 'wp_admin_style' ); ?></h2>
+<h2><?php _e( 'Headings', 'wp_admin_style' ); ?></h2>
 
 <h1><code>h1</code> <?php echo $this->get_plugin_data( 'Name' ) ?></h1>
 <h2><code>h2</code> <?php echo $this->get_plugin_data( 'Name' ) ?></h2>

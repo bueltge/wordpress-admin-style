@@ -1,4 +1,4 @@
-<h2><?php esc_attr_e( 'Form Elements Fieldset & Input Field', 'wp_admin_style' ); ?></h2>
+<h2><?php esc_attr_e( 'Form Elements: Fieldset and Input Field', 'wp_admin_style' ); ?></h2>
 
 <fieldset>
 	<legend class="screen-reader-text"><span>Fieldset Example</span></legend>

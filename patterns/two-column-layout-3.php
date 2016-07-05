@@ -2,7 +2,7 @@
 
 <div class="wrap">
 
-	<h1><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h1>
+	<h1><?php esc_attr_e( 'Heading', 'wp_admin_style' ); ?></h1>
 	<div id="col-container">
 
 		<div id="col-right">
