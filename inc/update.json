@@ -2,7 +2,7 @@
 	"name" : "WordPress Admin Style",
 	"slug" : "WordPress-Admin-Style-master",
 	"download_url" : "https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip",
-	"version" : "1.4.1",
+	"version" : "1.4.2",
 	"author" : "Frank Bültge",
 	"author_homepage" : "http://bueltge.de",
 	"homepage" : "https://github.com/bueltge/WordPress-Admin-Style",
@@ -12,5 +12,5 @@
 		"changelog" : "Version 1.4.0: Add syntax highlighting."
 	},
 	"upgrade_notice" : "English and minor formatting.",
-	"last_updated" : "2016-07-06"
+	"last_updated" : "2016-07-19"
 }
