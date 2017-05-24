@@ -1,29 +1,26 @@
 <?php
-
 // avoid direct calls to this file, because now WP core and framework has been used.
 ! defined( 'ABSPATH' ) and exit;
 
 add_action( 
 	'init',
-	array( Wp_Admin_Dashicons::get_instance(), 'plugin_setup' )
+	array( WpAdminDashicons::get_instance(), 'plugin_setup' )
 );
 
-class Wp_Admin_Dashicons {
+class WpAdminDashicons {
 	
 	/**
 	 * Plugin instance.
 	 *
 	 * @see get_instance()
-	 * @type object
 	 */
-	protected static $instance = NULL;
+	protected static $instance;
 	
 	/**
 	 * Access this plugin’s working instance
 	 *
 	 * @wp-hook admin_init
 	 * @since   05/02/2013
-	 * @return  object of this class
 	 */
 	public static function get_instance() {
 		
@@ -119,7 +116,7 @@ class Wp_Admin_Dashicons {
 			<p>For top level menu pages replace <em>{menu-slug}</em> with the slug name passed to <code>add_menu_page()</code>.<br>
 			<code>#toplevel_page_{menu-slug} .wp-menu-image:before</code></p>
 
-			<h2 id="offcialpage"">The official Dashicons Page</h2>
+			<h2 id="offcialpage">The official Dashicons Page</h2>
 			<p>See also the official <a href="https://developer.wordpress.org/resource/dashicons/">Dashicons Page</a> for more comfort or helpful information.</p>
 
 			<h2 id="alternatives">Alternatives</h2>
