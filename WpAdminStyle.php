@@ -138,8 +138,8 @@ class WpAdminStyle {
 	public function add_menu_page() {
 
 		$page_hook_suffix = add_menu_page(
-			__( 'WordPress Admin Style', 'WpAdminStyle' ),
-			__( 'Admin Style', 'WpAdminStyle' ),
+			esc_html__( 'WordPress Admin Style', 'WpAdminStyle' ),
+			esc_html__( 'Admin Style', 'WpAdminStyle' ),
 			'read',
 			'WordPress_Admin_Style',
 			array( $this, 'get_style_examples' )
@@ -314,18 +314,18 @@ class WpAdminStyle {
 										<a href="http://dotorgstyleguide.wordpress.com/">WordPress.org UI Style Guide</a>
 									</li>
 									<li>
-										<a href="http://make.wordpress.org/core/handbook/coding-standards/html/">HTML Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/">HTML Coding Standards</a>
 									</li>
 									<li>
-										<a href="http://make.wordpress.org/core/handbook/coding-standards/css/">CSS Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/">CSS Coding Standards</a>
 									</li>
 									<li>
-										<a href="http://make.wordpress.org/core/handbook/coding-standards/php/">PHP Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/">PHP Coding Standards</a>
 									</li>
 									<li>
-										<a href="http://make.wordpress.org/core/handbook/coding-standards/javascript/">JavaScript Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/javascript/">JavaScript Coding Standards</a>
 									</li>
-									<li><a href="http://make.wordpress.org/ui/">WordPress UI Group</a></li>
+									<li><a href="https://make.wordpress.org/design/">WordPress UI Group</a></li>
 								</ul>
 							</div>
 
