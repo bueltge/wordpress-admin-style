@@ -1,10 +1,10 @@
 {
-  "name": "bueltge/wordPress-admin-style",
+  "name": "bueltge/wordpress-admin-style",
   "description": "Shows the WordPress admin styles on one page to help you to develop WordPress compliant",
   "minimum-stability": "stable",
   "license": "GPL 3+",
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/bueltge/wordPress-admin-style",
+  "homepage": "https://github.com/bueltge/wordpress-admin-style",
   "authors": [
     {
       "name": "Inpsyde GmbH",
