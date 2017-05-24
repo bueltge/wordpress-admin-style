@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/bueltge/WordPress-Admin-Style/compare/1.4.2...HEAD)
+* Added accessibility improvements on h1, in core since WP 4.8
 
 ## [1.4.2](https://github.com/bueltge/WordPress-Admin-Style/compare/1.4.1...1.4.2) - 2016-07-06
 ### Added
