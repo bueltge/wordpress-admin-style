@@ -34,7 +34,7 @@ class WpAdminStyle {
 
 	protected $patterns_dir = '';
 
-	protected $file_replace = array( '.php', '_', '-', ' ' );
+	protected static $file_replace = array( '.php', '_', '-', ' ' );
 
 	/**
 	 * Constructor
@@ -95,7 +95,7 @@ class WpAdminStyle {
 	protected function load_classes() {
 
 		// load required classes
-		foreach ( glob( dirname( __FILE__ ) . '/inc/*.php' ) as $path ) {
+		foreach ( glob( __DIR__ . '/inc/*.php' ) as $path ) {
 			require_once $path;
 		}
 	}
@@ -177,7 +177,7 @@ class WpAdminStyle {
 			sort( $files );
 		}
 
-		$files_h = str_replace( $this->file_replace, ' ', $files );
+		$files_h = str_replace( self::$file_replace, ' ', $files );
 
 		if ( 'headers' === $type ) {
 			return $files_h;
@@ -208,7 +208,7 @@ class WpAdminStyle {
 
 			// Load files and get data for view and list source
 			foreach ( $files as $file ) {
-				$anker = str_replace( $this->file_replace, '', $file );
+				$anker = str_replace( self::$file_replace, '', $file );
 				$patterns = $this->patterns_dir . '/' . $file;
 
 				echo '<section class="pattern" id="' . $anker . '">';
@@ -258,7 +258,7 @@ class WpAdminStyle {
 									$class = '';
 									foreach ( $patterns as $pattern ) {
 										$class = '' === $class ? $class = ' class="alternate"' : '';
-										$anker = str_replace( $this->file_replace, '', $pattern );
+										$anker = str_replace( self::$file_replace, '', $pattern );
 
 										?>
 										<tr<?php echo $class; ?>>
