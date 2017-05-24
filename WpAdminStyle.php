@@ -168,7 +168,7 @@ class WpAdminStyle {
 		$handle             = opendir( $this->patterns_dir );
 
 		while ( FALSE !== ( $file = readdir( $handle ) ) ) {
-			if ( stristr( $file, '.php' ) ) {
+			if ( FALSE !== stripos( $file, '.php' ) ) {
 				$files[ ] = $file;
 			}
 		}
@@ -181,9 +181,9 @@ class WpAdminStyle {
 
 		if ( 'headers' === $type ) {
 			return $files_h;
-		} else {
-			return $files;
 		}
+
+		return $files;
 	}
 
 	/**
