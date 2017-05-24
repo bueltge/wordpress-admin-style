@@ -1,7 +1,7 @@
-<h2><?php _e( 'Form Helper Functions', 'wp_admin_style' ); ?></h2>
+<h2><?php _e( 'Form Helper Functions', 'WpAdminStyle' ); ?></h2>
 <p><?php _e(
 		'There are 3 main form functions you can utilize for creating a new form in WP admin. When you return data from the database and need to pre-populate the form with this data, these functions can come in very handy.',
-		'wp_admin_style'
+		'WpAdminStyle'
 	); ?></p>
 <ul>
 	<li><code>checked( $checked, $current = TRUE, $echo = TRUE );</code></li>

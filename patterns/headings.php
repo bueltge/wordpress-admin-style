@@ -1,4 +1,4 @@
-<h2><?php _e( 'Headings', 'wp_admin_style' ); ?></h2>
+<h2><?php _e( 'Headings', 'WpAdminStyle' ); ?></h2>
 
 <h1 class="wp-heading-inline"><code>h1</code><?php echo $this->get_plugin_data( 'Name' ) ?></h1>
 <hr class="wp-header-end">

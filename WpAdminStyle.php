@@ -24,10 +24,13 @@ include_once( __DIR__ . '/inc/github-updater.php' );
 
 add_action(
 	'plugins_loaded',
-	array( Wp_Admin_Style::get_instance(), 'plugin_setup' )
+	array( WpAdminStyle::get_instance(), 'plugin_setup' )
 );
 
-class Wp_Admin_Style {
+/**
+ * Class WpAdminStyle
+ */
+class WpAdminStyle {
 
 	protected $patterns_dir = '';
 
@@ -37,7 +40,7 @@ class Wp_Admin_Style {
 	 * Constructor
 	 *
 	 * @since  0.0.1
-	 * @return Wp_Admin_Style
+	 * @return WpAdminStyle
 	 */
 	public function __construct() {
 	}
@@ -138,8 +141,8 @@ class Wp_Admin_Style {
 	public function add_menu_page() {
 
 		$page_hook_suffix = add_menu_page(
-			__( 'WordPress Admin Style', 'wp_admin_style' ),
-			__( 'Admin Style', 'wp_admin_style' ),
+			__( 'WordPress Admin Style', 'WpAdminStyle' ),
+			__( 'Admin Style', 'WpAdminStyle' ),
 			'read',
 			'WordPress_Admin_Style',
 			array( $this, 'get_style_examples' )
@@ -210,7 +213,7 @@ class Wp_Admin_Style {
 				include_once( $this->patterns_dir . '/' . $file );
 				echo '<details class="primer">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; ' . esc_attr__(
-						'Show markup and usage', 'wp_admin_style'
+						'Show markup and usage', 'WpAdminStyle'
 					) . '</summary>';
 				echo '<section>';
 				echo '<pre><code class="language-php-extras">' . htmlspecialchars(
@@ -219,7 +222,7 @@ class Wp_Admin_Style {
 				echo '</section>';
 				echo '</details><!--/.primer-->';
 				echo '<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
-						'scroll to top', 'wp_admin_style'
+						'scroll to top', 'WpAdminStyle'
 					) . '</a><br class="clear" /></p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
@@ -244,7 +247,7 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'MiniMenu', 'wp_admin_style' ); ?></span></h2>
+							<h2><span><?php _e( 'MiniMenu', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
 
@@ -287,12 +290,12 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'About the plugin', 'wp_admin_style' ); ?></span></h2>
+							<h2><span><?php _e( 'About the plugin', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
 								<p><?php _e(
 										'Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.',
-										'wp_admin_style'
+										'WpAdminStyle'
 									); ?></p>
 
 								<p>&copy; Copyright 2008 - <?php echo date( 'Y' ); ?>
@@ -304,7 +307,7 @@ class Wp_Admin_Style {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'Resources & Reference', 'wp_admin_style' ); ?></span></h2>
+							<h2><span><?php _e( 'Resources & Reference', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
 								<ul>
@@ -356,7 +359,7 @@ class Wp_Admin_Style {
 			$plugin_meta[ ] = sprintf(
 				'&hearts; <a href="%s">%s</a>',
 				'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
-				__( 'Donate', 'wp_admin_style' )
+				__( 'Donate', 'WpAdminStyle' )
 			);
 		}
 
