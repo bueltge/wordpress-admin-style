@@ -36,6 +36,7 @@ about the idea and also the comments for a discussion.
 
 ### Via Composer
 The plugin is available as [Composer package](https://packagist.org/packages/bueltge/wordpress-admin-style) and can be installed via Composer.
+
 `composer require bueltge/wordpress-admin-style`
 
 ### Via Git
