@@ -40,10 +40,8 @@ class WpAdminStyle {
 	 * Constructor
 	 *
 	 * @since  0.0.1
-	 * @return WpAdminStyle
 	 */
-	public function __construct() {
-	}
+	public function __construct() {}
 
 	/**
 	 * Used for regular plugin work.
@@ -60,7 +58,7 @@ class WpAdminStyle {
 			return NULL;
 		}
 
-		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';;
+		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
 
 		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
@@ -73,7 +71,6 @@ class WpAdminStyle {
 	 *
 	 * @access public
 	 * @since  0.0.1
-	 * @return object
 	 */
 	public static function get_instance() {
 
