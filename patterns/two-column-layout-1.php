@@ -3,7 +3,7 @@
 <div class="wrap">
 
 	<div id="icon-options-general" class="icon32"></div>
-	<h1><?php esc_attr_e( 'Heading String', 'wp_admin_style' ); ?></h1>
+	<h1><?php esc_attr_e( 'Heading', 'wp_admin_style' ); ?></h1>
 
 	<div id="poststuff">
 
