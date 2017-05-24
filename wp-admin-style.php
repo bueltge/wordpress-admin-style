@@ -2,17 +2,25 @@
 /**
  * Plugin Name:   WordPress Admin Style
  * Plugin URI:    https://github.com/bueltge/WordPress-Admin-Style
+ * GitHub URI:    bueltge/WordPress-Admin-Style
  * Text Domain:   wp_admin_style
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
  * Version:       1.4.2
  * Licence:       GPLv3+
- * Author URI:    http://bueltge.de
- * Last Change:   2016-07-19
+ * Author URI:    https://bueltge.de
+ * Last Change:   2017-05-24
  */
 
 ! defined( 'ABSPATH' ) and exit;
+
+/**
+ * Include the Github Updater Lite.
+ *
+ * @see https://github.com/FacetWP/github-updater-lite
+ */
+include_once( __DIR__ . '/inc/github-updater.php' );
 
 add_action(
 	'plugins_loaded',
