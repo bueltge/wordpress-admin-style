@@ -53,18 +53,8 @@ class Wp_Admin_Style {
 
 		// add menu item incl. the example source
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
-		// Workaround to remove the suffix "-master" from the unzipped directory
-		add_filter( 'upgrader_source_selection', array( $this, 'rename_github_zip' ), 1, 1 );
 		// Plugin love
 		add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 2 );
-
-		// Self hosted updates
-		include_once dirname( __FILE__ ) . '/inc/plugin-updates/plugin-update-checker.php';
-		$update_checker = new PluginUpdateChecker(
-			'https://raw.github.com/bueltge/WordPress-Admin-Style/master/inc/update.json',
-			__FILE__,
-			'WordPress-Admin-Style-master'
-		);
 	}
 
 	/**
@@ -342,29 +332,6 @@ class Wp_Admin_Style {
 			<br class="clear">
 		</div>
 	<?php
-	}
-
-	/**
-	 * Removes the prefix "-master" when updating from GitHub zip files
-	 *
-	 * See: https://github.com/YahnisElsts/plugin-update-checker/issues/1
-	 *
-	 * @param  string $source
-	 *
-	 * @return string
-	 */
-	public function rename_github_zip( $source ) {
-
-		if ( FALSE === strpos( $source, 'WordPress-Admin-Style' ) ) {
-			return $source;
-		}
-
-		$path_parts = pathinfo( $source );
-		$new_source = trailingslashit( $path_parts[ 'dirname' ] ) .
-			trailingslashit( 'WordPress-Admin-Style' );
-		rename( $source, $new_source );
-
-		return $new_source;
 	}
 
 	/**
