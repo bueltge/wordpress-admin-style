@@ -28,10 +28,23 @@ about the idea and also the comments for a discussion.
  6. [Genericons in WordPress 3.9-alpha](/assets/screenshot-6.png)
  
 ## Installing
+### Manuel
  1. Download the plugin as a [ZIP file](https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip) from GitHub.
  2. In your WordPress admin click *Plugin -> Add New -> Upload Plugin*.
  3. Upload the ZIP file.
  4. Activate the plugin.
+
+### Via Composer
+The plugin is available as [Composer package](https://packagist.org/packages/bueltge/wordpress-admin-style) and can be installed via Composer.
+`composer require bueltge/wordpress-admin-style`
+
+### Via Git
+ 1. Go to your Must Use folder `cd path`
+ 2. `git init .`
+ 3. `git remote add origin https://github.com/bueltge/wordpress-admin-style.git`
+ 4. `git fetch origin`
+ 5. `git checkout master`
+ 6. Check in the network plugin page, if it works
 
 ## Other Notes
 ### Bugs, technical hints or contribute
