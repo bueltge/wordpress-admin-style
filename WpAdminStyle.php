@@ -20,7 +20,7 @@
  *
  * @see https://github.com/FacetWP/github-updater-lite
  */
-include_once( __DIR__ . '/inc/github-updater.php' );
+include_once __DIR__ . '/inc/github-updater.php';
 
 add_action(
 	'plugins_loaded',
@@ -122,7 +122,7 @@ class WpAdminStyle {
 		}
 
 		if ( ! function_exists( 'get_plugin_data' ) ) {
-			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			require_once ABSPATH . '/wp-admin/includes/plugin.php';
 		}
 
 		$plugin_data = get_plugin_data( __FILE__ );
@@ -209,15 +209,17 @@ class WpAdminStyle {
 			// Load files and get data for view and list source
 			foreach ( $files as $file ) {
 				$anker = str_replace( $this->file_replace, '', $file );
+				$patterns = $this->patterns_dir . '/' . $file;
+
 				echo '<section class="pattern" id="' . $anker . '">';
-				include_once( $this->patterns_dir . '/' . $file );
+				include_once $patterns;
 				echo '<details class="primer">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; ' . esc_attr__(
 						'Show markup and usage', 'WpAdminStyle'
 					) . '</summary>';
 				echo '<section>';
 				echo '<pre><code class="language-php-extras">' . htmlspecialchars(
-						file_get_contents( $this->patterns_dir . '/' . $file )
+						file_get_contents( $patterns )
 					) . '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
@@ -355,11 +357,11 @@ class WpAdminStyle {
 	 */
 	public function donate_link( $plugin_meta, $plugin_file ) {
 
-		if ( plugin_basename( __FILE__ ) == $plugin_file ) {
+		if ( plugin_basename( __FILE__ ) === $plugin_file ) {
 			$plugin_meta[ ] = sprintf(
 				'&hearts; <a href="%s">%s</a>',
 				'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
-				__( 'Donate', 'WpAdminStyle' )
+				esc_html__( 'Donate', 'WpAdminStyle' )
 			);
 		}
 
