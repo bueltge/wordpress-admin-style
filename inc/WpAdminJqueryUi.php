@@ -169,7 +169,7 @@ class WpAdminJqueryUi {
 			                                               'WpAdminStyle' ); ?></a><br class="clear" /></p>
 
 			<h2 id="overlay_shadow">Overlay and Shadow Classes <em>(not currently used in UI widgets)</em></h2>
-			<div style="position: relative; width: 30%; height: 200px; padding:1% 4%; overflow:hidden;"
+			<div style="position: relative; width: 90%; height: 200px; padding:1% 4%; overflow:hidden;"
 				class="fakewindowcontain">
 				<p>Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p>
 				<p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p>

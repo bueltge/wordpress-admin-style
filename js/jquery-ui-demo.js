@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
                 // Make the overlay fill the whole screen
                 $('.ui-widget-overlay').width($(document).width());
                 $('.ui-widget-overlay').height($(document).height());
+                $('.ui-dialog').css('z-index', '9999');
 		return false;
 	});
 

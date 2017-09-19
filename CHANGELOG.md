@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.5.1
+* Fixed overlay on menu. #46
+
 ## [1.5.0](https://github.com/bueltge/wordpress-admin-style/compare/1.4.2...1.5.0) - 2017-05-24
 * Added accessibility improvements on h1, in core since WP 4.8, [see make post](https://make.wordpress.org/core/2017/05/17/cleaner-headings-in-the-admin-screens/)
 * Small Cleanup source formatting, class name PSR rule.
