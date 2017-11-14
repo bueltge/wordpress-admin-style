@@ -1,4 +1,6 @@
 # WordPress Admin Style
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style?ref=badge_shield)
+
 Shows the WordPress admin styles on one page to help you to develop WordPress compliant
 
  * List markup and examples for '2 Column Page Layout', Headers, Header Icons, Buttons, Tables, Admin Notices, 
@@ -63,6 +65,9 @@ you can thank me and leave a
 [small donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955 "Paypal Donate link") 
 for the time I've spent writing and supporting this plugin. 
 And I really don't want to know how many hours of my life this plugin has already eaten ;)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style?ref=badge_large)
 
 ### Contact & Feedback
 The plugin is designed and developed by me ([Frank Bültge](https://bueltge.de))
