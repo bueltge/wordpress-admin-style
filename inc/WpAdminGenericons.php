@@ -71,7 +71,7 @@ class WpAdminGenericons {
 		<div class="wrap">
 			<h1>Genericons</h1>
 			<p>
-				<a href="http://genericons.com">Genericons</a> are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic. You can use them for instant HiDPI, to change icon colors on the fly, or with CSS effects such as drop-shadows or gradients.<br>- a free, GPL, flexible icon font for blogs!
+				<a href="http://genericons.com">Genericons</a> are vector icons embedded in a webfont designed to be clean and simple keeping with a generic aesthetic. You can use them for instant HiDPI, to change icon colors on the fly, or with CSS effects such as drop-shadows or gradients.
 			</p>
 
 			<h2>MiniMenu</h2>

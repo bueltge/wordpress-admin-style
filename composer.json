@@ -2,19 +2,19 @@
   "name": "bueltge/wordpress-admin-style",
   "description": "Shows the WordPress admin styles on one page to help you to develop WordPress compliant",
   "minimum-stability": "stable",
-  "license": "GPL 2+",
+  "license": "MIT",
   "type": "wordpress-plugin",
   "homepage": "https://github.com/bueltge/wordpress-admin-style",
   "authors": [
     {
       "name": "Inpsyde GmbH",
-      "homepage": "http://inpsyde.com",
+      "homepage": "https://inpsyde.com",
       "email": "info@inpsyde.com",
       "role": "Company"
     },
     {
       "name": "Frank Bültge",
-      "homepage": "http://bueltge.de",
+      "homepage": "https://bueltge.de",
       "email": "frank@bueltge.de",
       "role": "Developer"
     }
