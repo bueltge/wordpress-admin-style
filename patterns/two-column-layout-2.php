@@ -16,7 +16,10 @@
 
 					<div class="postbox">
 
-						<div class="handlediv" title="Click to toggle"><br></div>
+						<button type="button" class="handlediv" aria-expanded="true" >
+							<span class="screen-reader-text">Toggle panel</span>
+							<span class="toggle-indicator" aria-hidden="true"></span>
+						</button>
 						<!-- Toggle -->
 
 						<h2 class="hndle"><span><?php esc_attr_e( 'Main Content Header', 'WpAdminStyle' ); ?></span>
@@ -44,7 +47,10 @@
 
 					<div class="postbox">
 
-						<div class="handlediv" title="Click to toggle"><br></div>
+						<button type="button" class="handlediv" aria-expanded="true" >
+							<span class="screen-reader-text">Toggle panel</span>
+							<span class="toggle-indicator" aria-hidden="true"></span>
+						</button>
 						<!-- Toggle -->
 
 						<h2 class="hndle"><span><?php esc_attr_e(
