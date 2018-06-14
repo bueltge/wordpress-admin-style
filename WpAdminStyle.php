@@ -7,13 +7,13 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
  * Author:        Frank Bültge
- * Version:       1.5.1
+ * Version:       1.5.2
  * Licence:       MIT
  * Author URI:    https://bueltge.de
- * Last Change:   2017-05-24
+ * Last Change:   2018-06-14
  */
 
-! defined( 'ABSPATH' ) and exit;
+! defined( 'ABSPATH' ) && exit;
 
 /**
  * Include the Github Updater Lite.
@@ -32,8 +32,18 @@ add_action(
  */
 class WpAdminStyle {
 
+	/**
+	 * Directory of patters of examples.
+	 *
+	 * @var string
+	 */
 	protected $patterns_dir = '';
 
+	/**
+	 * Characters there we replace in the files.
+	 *
+	 * @var array
+	 */
 	protected static $file_replace = array( '.php', '_', '-', ' ' );
 
 	/**
@@ -48,26 +58,25 @@ class WpAdminStyle {
 	 *
 	 * @wp-hook  plugins_loaded
 	 * @since    05/02/2013
-	 * @return   void
 	 */
 	public function plugin_setup() {
 
 		$this->load_classes();
 
 		if ( ! is_admin() ) {
-			return NULL;
+			return null;
 		}
 
 		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
 
-		// add menu item incl. the example source
+		// add menu item incl. the example source.
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ) );
-		// Plugin love
+		// Plugin love.
 		add_filter( 'plugin_row_meta', array( $this, 'donate_link' ), 10, 2 );
 	}
 
 	/**
-	 * points the class
+	 * Points the class, singleton.
 	 *
 	 * @access public
 	 * @since  0.0.1
@@ -76,7 +85,7 @@ class WpAdminStyle {
 
 		static $instance;
 
-		if ( NULL === $instance ) {
+		if ( null === $instance ) {
 			$instance = new self();
 		}
 
@@ -84,28 +93,29 @@ class WpAdminStyle {
 	}
 
 	/**
-	 * Scans the plugins subfolder and include files
+	 * Scans the plugins subfolder and include files.
 	 *
 	 * @since   05/02/2013
 	 * @return  void
 	 */
 	protected function load_classes() {
 
-		// load required classes
+		// Load required classes.
 		foreach ( glob( __DIR__ . '/inc/*.php' ) as $path ) {
 			require_once $path;
 		}
 	}
 
 	/**
-	 * return plugin comment data
+	 * Return plugin comment data.
 	 *
 	 * @uses   get_plugin_data
 	 * @access public
 	 * @since  0.0.1
 	 *
-	 * @param  $value string, default = 'Version'
-	 *                Name, PluginURI, Version, Description, Author, AuthorURI, TextDomain, DomainPath, Network, Title
+	 * @param string $value default = 'Version'
+	 *  also possible is: Name, PluginURI, Version, Description, Author,
+	 *                    AuthorURI, TextDomain, DomainPath, Network, Title.
 	 *
 	 * @return string
 	 */
@@ -124,7 +134,7 @@ class WpAdminStyle {
 
 		$plugin_data = get_plugin_data( __FILE__ );
 
-		return empty ( $plugin_data[ $value ] ) ? '' : $plugin_data[ $value ];
+		return empty( $plugin_data[ $value ] ) ? '' : $plugin_data[ $value ];
 	}
 
 	/**
@@ -152,7 +162,7 @@ class WpAdminStyle {
 	 *
 	 * @since 2015-03-25
 	 *
-	 * @param string $type
+	 * @param string $type Type of patters, default '', possible is 'headers'
 	 *
 	 * @param bool   $sort
 	 *
@@ -164,9 +174,9 @@ class WpAdminStyle {
 		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
 		$handle             = opendir( $this->patterns_dir );
 
-		while ( FALSE !== ( $file = readdir( $handle ) ) ) {
-			if ( FALSE !== stripos( $file, '.php' ) ) {
-				$files[ ] = $file;
+		while ( false !== ( $file = readdir( $handle ) ) ) {
+			if ( false !== stripos( $file, '.php' ) ) {
+				$files[] = $file;
 			}
 		}
 
@@ -192,37 +202,36 @@ class WpAdminStyle {
 	 * @return void
 	 */
 	public function get_style_examples() {
-
 		?>
 
 		<div class="wrap">
 
-			<h1><?php echo $this->get_plugin_data( 'Name' ) ?></h1>
+			<h1><?php echo esc_html( $this->get_plugin_data( 'Name' ) ); ?></h1>
 
 			<?php
 			$this->get_mini_menu();
 			$files = $this->get_patterns();
 
-			// Load files and get data for view and list source
+			// Load files and get data for view and list source.
 			foreach ( $files as $file ) {
-				$anker = str_replace( self::$file_replace, '', $file );
+				$anker    = str_replace( self::$file_replace, '', $file );
 				$patterns = $this->patterns_dir . '/' . $file;
 
-				echo '<section class="pattern" id="' . $anker . '">';
+				echo '<section class="pattern" id="' . esc_attr( $anker ) . '">';
 				include_once $patterns;
 				echo '<details class="primer">';
-				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; ' . esc_attr__(
-						'Show markup and usage', 'WpAdminStyle'
-					) . '</summary>';
+				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
+				     . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
+				     . '</summary>';
 				echo '<section>';
-				echo '<pre><code class="language-php-extras">' . htmlspecialchars(
-						file_get_contents( $patterns )
-					) . '</code></pre>';
+				echo '<pre><code class="language-php-extras">' . htmlspecialchars( file_get_contents( $patterns ) ) . '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
-				echo '<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
+				echo '<p>';
+				echo '<a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
 						'scroll to top', 'WpAdminStyle'
-					) . '</a><br class="clear" /></p>';
+					) . '</a><br class="clear" />';
+				echo '</p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
 			}
@@ -232,6 +241,9 @@ class WpAdminStyle {
 	<?php
 	}
 
+	/**
+	 * Print the mini menu for a short navigation.
+	 */
 	public function get_mini_menu() {
 
 		$patterns = $this->get_patterns( 'headers' );
@@ -246,7 +258,7 @@ class WpAdminStyle {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'MiniMenu', 'WpAdminStyle' ); ?></span></h2>
+							<h2><span><?php esc_attr_e( 'MiniMenu', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
 
@@ -260,8 +272,8 @@ class WpAdminStyle {
 										?>
 										<tr<?php echo $class; ?>>
 											<td class="row-title">
-												<a href="#<?php echo $anker ?>">
-													<?php echo ucfirst( $pattern ); ?>
+												<a href="#<?php echo esc_attr( $anker ); ?>">
+													<?php echo esc_attr( ucfirst( $pattern ) ); ?>
 												</a>
 											</td>
 										</tr>
@@ -289,16 +301,24 @@ class WpAdminStyle {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'About the plugin', 'WpAdminStyle' ); ?></span></h2>
+							<h2><span><?php esc_attr_e( 'About the plugin', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
-								<p><?php _e(
-										'Please read more about this small plugin on <a href="https://github.com/bueltge/WordPress-Admin-Style">github</a> or in <a href="http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/">this post</a> on the blog of WP Engineer.',
-										'WpAdminStyle'
-									); ?></p>
+								<p>
+									<?php
+									printf(
+										__(
+											'Please read more about this small plugin on <a href="%1$s">github</a> or in <a href="%2$s">this post</a> on the blog of WP Engineer.',
+											'WpAdminStyle'
+										),
+										'https://github.com/bueltge/WordPress-Admin-Style',
+										'http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/'
+									);
+									?>
+								</p>
 
-								<p>&copy; Copyright 2008 - <?php echo date( 'Y' ); ?>
-									<a href="http://bueltge.de">Frank B&uuml;ltge</a></p>
+								<p>&copy; Copyright 2008 - <?php echo esc_attr( date( 'Y' ) ); ?>
+									<a href="https://bueltge.de">Frank Bültge</a></p>
 							</div>
 
 						</div>
@@ -306,7 +326,7 @@ class WpAdminStyle {
 
 						<div class="postbox">
 
-							<h2><span><?php _e( 'Resources & Reference', 'WpAdminStyle' ); ?></span></h2>
+							<h2><span><?php esc_attr_e( 'Resources & Reference', 'WpAdminStyle' ); ?></span></h2>
 
 							<div class="inside">
 								<ul>
@@ -347,15 +367,15 @@ class WpAdminStyle {
 	/**
 	 * Add donate link to plugin description in /wp-admin/plugins.php
 	 *
-	 * @param  array  $plugin_meta
-	 * @param  string $plugin_file
+	 * @param  array  $plugin_meta All met data to a plugin.
+	 * @param  string $plugin_file The main file of the plugin with the meta data.
 	 *
 	 * @return array
 	 */
 	public function donate_link( $plugin_meta, $plugin_file ) {
 
 		if ( plugin_basename( __FILE__ ) === $plugin_file ) {
-			$plugin_meta[ ] = sprintf(
+			$plugin_meta[] = sprintf(
 				'&hearts; <a href="%s">%s</a>',
 				'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955',
 				esc_html__( 'Donate', 'WpAdminStyle' )
@@ -386,14 +406,14 @@ class WpAdminStyle {
 			plugins_url( 'js/prism.js', __FILE__ ),
 			array(),
 			'2016-05-20',
-			TRUE
+			true
 		);
 		wp_register_script(
 			'wpast_prism',
 			plugins_url( 'js/wpast-prism.js', __FILE__ ),
 			array( 'prism' ),
 			'2016-05-20',
-			TRUE
+			true
 		);
 		wp_enqueue_script( 'wpast_prism' );
 	}
