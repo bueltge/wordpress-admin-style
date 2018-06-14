@@ -29,7 +29,7 @@
 		<?php
 		printf(
 			// translators: Leave always a hint for translators to understand the placeholders.
-			esc_attr__( 'class %s with paragraph and %2$s class', 'WpAdminStyle' ),
+			esc_attr__( 'class %1$s with paragraph and %2$s class', 'WpAdminStyle' ),
 			'<code>.notice-error</code>',
 			'<code>.inline</code>'
 		);
@@ -52,7 +52,8 @@
 
 <div class="notice notice-success inline">
 	<p>
-		<?php printf(
+		<?php
+		printf(
 			// translators: Leave always a hint for translators to understand the placeholders.
 			esc_html__( 'class %1$s with paragraph and %2$s class', 'WpAdminStyle' ),
 			'<code>.notice-success</code>',
@@ -64,9 +65,10 @@
 
 <div class="notice notice-info is-dismissible inline">
 	<p>
-		<?php printf(
+		<?php
+		printf(
 			// translators: Leave always a hint for translators to understand the placeholders.
-			esc_attr__( 'class %1$s with paragraph include %2$s  and %3$s class','WpAdminStyle' ),
+			esc_attr__( 'class %1$s with paragraph include %2$s  and %3$s class', 'WpAdminStyle' ),
 			'<code>.notice-info</code>',
 			'<code>.is-dismissible</code>',
 			'<code>.inline</code>'
