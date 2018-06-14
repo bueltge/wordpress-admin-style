@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ruleset name="marksimple">
+ <description>Rules for my MarkSimple PHP projects</description>
+
+ <file>./inc</file>
+ <file>./multisite-enhancements.php</file>
+
+ <!-- Code Reviews Rules -->
+ <rule ref="WordPress"/>
+
+<!-- Security Code Reviews Rules -->
+
+<!-- Global properties -->
+<!-- Please note that not every sniff uses them and they can be overwritten by rule -->
+<!-- Paranoya mode: Will generate more alerts but will miss less vulnerabilites. Good for assisting manual code review. -->
+<config name="ParanoiaMode" value="1"/>
+
+<!-- BadFunctions -->
+<!-- PHP functions that can lead to security issues -->
+<rule ref="Security.BadFunctions.Asserts"/>
+<rule ref="Security.BadFunctions.Backticks"/>
+<rule ref="Security.BadFunctions.CallbackFunctions"/>
+<rule ref="Security.BadFunctions.CryptoFunctions"/>
+<rule ref="Security.BadFunctions.EasyRFI"/>
+<rule ref="Security.BadFunctions.EasyXSS">
+	<properties>
+		<!-- Comment out to follow global ParanoiaMode -->
+		<property name="forceParanoia" value="1"/>
+	</properties>
+</rule>
+<rule ref="Security.BadFunctions.ErrorHandling"/>
+<rule ref="Security.BadFunctions.FilesystemFunctions"/>
+<rule ref="Security.BadFunctions.FringeFunctions"/>
+<rule ref="Security.BadFunctions.FunctionHandlingFunctions"/>
+<rule ref="Security.BadFunctions.Mysqli"/>
+<rule ref="Security.BadFunctions.NoEvals"/>
+<rule ref="Security.BadFunctions.Phpinfos"/>
+<rule ref="Security.BadFunctions.PregReplace"/>
+<rule ref="Security.BadFunctions.SQLFunctions"/>
+<rule ref="Security.BadFunctions.SystemExecFunctions"/>
+
+<!-- CVE -->
+<!-- Entries from CVE database from vendor PHP and bugs.php.net -->
+<rule ref="Security.CVE.20132110"/>
+<rule ref="Security.CVE.20134113"/>
+
+<!-- Misc -->
+<rule ref="Security.Misc.BadCorsHeader"/>
+<rule ref="Security.Misc.IncludeMismatch"/>
+
+</ruleset>
+
