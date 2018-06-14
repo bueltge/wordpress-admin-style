@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ## 1.5.2
 * Fixed markup in 2 Columns Layout: static (px) section since WP change to button markup instead of div.
+* Fixed the admin notices to leave always visible.
 
 ## 1.5.1
 * Fixed overlay on menu. #46

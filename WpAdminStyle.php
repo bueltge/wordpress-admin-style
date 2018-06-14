@@ -219,7 +219,7 @@ class WpAdminStyle {
 
 				echo '<section class="pattern" id="' . esc_attr( $anker ) . '">';
 				include_once $patterns;
-				echo '<details class="primer">';
+				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
 				     . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
 				     . '</summary>';
