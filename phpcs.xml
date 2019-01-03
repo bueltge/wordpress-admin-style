@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="marksimple">
+<ruleset name="wp_admin_style">
  <description>Rules for WordPress Admin Style PHP projects</description>
 
  <file>./inc</file>
