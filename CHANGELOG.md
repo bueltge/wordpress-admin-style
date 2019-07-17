@@ -1,7 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 1.5.2
+## [1.5.3](https://github.com/bueltge/wordpress-admin-style/compare/1.5.2...1.5.3) - 2019-07-17
+* Add ressource for the Gutenberg project, the new editor
+
+## 1.5.2 - 2018-06-15
 * Fixed markup in 2 Columns Layout: static (px) section since WP change to button markup instead of div.
 * Fixed the admin notices to leave always visible.
 
