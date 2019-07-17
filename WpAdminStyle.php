@@ -5,12 +5,13 @@
  * GitHub URI:    bueltge/wordpress-admin-style
  * Text Domain:   wp_admin_style
  * Domain Path:   /languages
- * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant
+ * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant.
  * Author:        Frank Bültge
- * Version:       1.5.2
- * Licence:       MIT
+ * Version:       1.5.3
+ * Licence:       GPLv2+
+ * License URI: ./LICENSE
  * Author URI:    https://bueltge.de
- * Last Change:   2018-06-14
+ * Last Change:   2019-07-17
  */
 
 ! defined( 'ABSPATH' ) && exit;
@@ -330,6 +331,9 @@ class WpAdminStyle {
 
 							<div class="inside">
 								<ul>
+									<li>
+										<a href="https://developer.wordpress.org/block-editor/designers/">Editor Gutenberg Designer Documentation, inlcude patterns and ressources</a>
+									</li>
 									<li>
 										<a href="http://dotorgstyleguide.wordpress.com/">WordPress.org UI Style Guide</a>
 									</li>
