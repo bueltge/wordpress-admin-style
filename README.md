@@ -1,5 +1,6 @@
 # WordPress Admin Style
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbueltge%2Fwordpress-admin-style?ref=badge_shield)
+[![Latest Stable Version](https://poser.pugx.org/bueltge/wordpress-admin-style/v/stable)](https://packagist.org/packages/bueltge/wordpress-admin-style)
 
 Shows the WordPress admin styles on one page to help you to develop WordPress compliant
 
