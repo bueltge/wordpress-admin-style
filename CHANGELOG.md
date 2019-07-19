@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.4](https://github.com/bueltge/wordpress-admin-style/compare/1.5.3...1.5.4) - 2019-07-19
+* Update color overview
+* Add color table for 'Auxiliary Hues', probs @stefanpejcic
+
 ## [1.5.3](https://github.com/bueltge/wordpress-admin-style/compare/1.5.2...1.5.3) - 2019-07-17
 * Add ressource for the Gutenberg project, the new editor
 
