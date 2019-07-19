@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection HtmlUnknownTarget */
 /**
  * Plugin Name:   WordPress Admin Style
  * Plugin URI:    https://github.com/bueltge/wordpress-admin-style
@@ -7,11 +7,11 @@
  * Domain Path:   /languages
  * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant.
  * Author:        Frank Bültge
- * Version:       1.5.3
+ * Version:       1.5.4
  * Licence:       GPLv2+
- * License URI: ./LICENSE
+ * License URI:   ./LICENSE
  * Author URI:    https://bueltge.de
- * Last Change:   2019-07-17
+ * Last Change:   2019-07-19
  */
 
 ! defined( 'ABSPATH' ) && exit;
@@ -103,6 +103,7 @@ class WpAdminStyle {
 
 		// Load required classes.
 		foreach ( glob( __DIR__ . '/inc/*.php' ) as $path ) {
+			/** @noinspection PhpIncludeInspection */
 			require_once $path;
 		}
 	}
@@ -219,6 +220,7 @@ class WpAdminStyle {
 				$patterns = $this->patterns_dir . '/' . $file;
 
 				echo '<section class="pattern" id="' . esc_attr( $anker ) . '">';
+				/** @noinspection PhpIncludeInspection */
 				include_once $patterns;
 				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
@@ -263,7 +265,7 @@ class WpAdminStyle {
 
 							<div class="inside">
 
-								<table class="widefat" cellspacing="0">
+								<table class="widefat">
 									<?php
 									$class = '';
 									foreach ( $patterns as $pattern ) {

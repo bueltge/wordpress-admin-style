@@ -1,7 +1,7 @@
 <?php
 
 // avoid direct calls to this file, because now WP core and framework has been used.
-! defined( 'ABSPATH' ) and exit;
+! defined( 'ABSPATH' ) && exit;
 
 add_action(
 	'init',
@@ -72,7 +72,7 @@ class WpAdminJqueryUi {
 			<h2><span><?php _e( 'MiniMenu', 'WpAdminStyle' ); ?></span></h2>
 			<div class="inside">
 
-				<table class="widefat" cellspacing="0">
+				<table class="widefat">
 					<tr>
 						<td class="row-title"><a href="#accordion"><?php _e( 'Accordion', 'WpAdminStyle' ); ?></a></td>
 					</tr>

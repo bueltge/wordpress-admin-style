@@ -1,6 +1,6 @@
 <?php
 // avoid direct calls to this file, because now WP core and framework has been used.
-! defined( 'ABSPATH' ) and exit;
+! defined( 'ABSPATH' ) && exit;
 
 add_action(
 	'init',
@@ -24,7 +24,7 @@ class WpAdminGenericons {
 	 */
 	public static function get_instance() {
 
-		NULL === self::$instance and self::$instance = new self;
+		NULL === self::$instance && self::$instance = new self;
 
 		return self::$instance;
 	}
@@ -388,6 +388,7 @@ class WpAdminGenericons {
 		                   plugin_dir_url( __FILE__ ) . '../css/genericons-demo.css',
 		                   'genericons'
 		);
-		wp_enqueue_style( array( 'genericons', 'genericons-demo' ) );
+		wp_enqueue_style( 'genericons' );
+		wp_enqueue_style( 'genericons-demo' );
 	}
 } // end class

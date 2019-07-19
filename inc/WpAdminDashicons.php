@@ -1,6 +1,6 @@
 <?php
 // avoid direct calls to this file, because now WP core and framework has been used.
-! defined( 'ABSPATH' ) and exit;
+! defined( 'ABSPATH' ) && exit;
 
 add_action( 
 	'init',
@@ -24,7 +24,7 @@ class WpAdminDashicons {
 	 */
 	public static function get_instance() {
 		
-		NULL === self::$instance and self::$instance = new self;
+		NULL === self::$instance && self::$instance = new self;
 		
 		return self::$instance;
 	}
@@ -84,7 +84,7 @@ class WpAdminDashicons {
 		<h2 id="iconpicker">Iconpicker for Dashicons</h2>
 		<div>
 			<label for="dashicons_picker_icon"><?php _e( 'Icon' ); ?></label>
-			<input class="regular-text" type="text" id="dashicons_picker_icon" name="dashicons_picker_settings[icon]" value="<?php if( isset( $options['icon'] ) ) { echo esc_attr( $options['icon'] ); } ?>"/>
+			<input class="regular-text" type="text" id="dashicons_picker_icon" name="dashicons_picker_settings[icon]" value=""/>
 			<input type="button" data-target="#dashicons_picker_icon" class="button dashicons-picker" value="pick" />
 		</div>
 
