@@ -1,1 +1,27 @@
 * text eol=lf
+*.jpg -text
+*.png -text
+
+# git
+.git                export-ignore
+.gitignore          export-ignore
+.gitattributes      export-ignore
+
+# IDE
+.idea/              export-ignore
+
+# md & config
+CONTRIBUTING.md     export-ignore
+README.md           export-ignore
+composer.json       export-ignore
+package.json        export-ignore
+
+# scripts
+scripts/
+Gruntfile.js        export-ignore
+
+# tests
+.coveralls.yml export-ignore
+.travis.yml export-ignore
+phpunit.xml.dist export-ignore
+tests/ export-ignore
