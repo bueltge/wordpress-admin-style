@@ -14,15 +14,20 @@ Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs, Def
 ## Description
 WordPress is developing fast - this also applies to the design of the backend. 
 So it is important not to use your own styles in the admin area and use tags and classes of WordPress. 
-This is the best way you can simplify your work as a developer and you don't have to test the design with every update. 
+This is the best way you can simplify your work as a developer, and you don't have to test the design with every update. 
 Unfortunately, there are quite extensive opportunities in the backend to implement the requirements. 
 Several different classes and HTML structures are used. To be able to look up something this simple, 
-I have developed this small Plugin, which tinkers in the development environment and quickly represents the necessary elements. 
+I have developed this small plugin, which tinkers in the development environment and quickly represents the necessary elements. 
 
 Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
 about the idea and also the comments for a discussion.
 
-### Screenshots
+### Screenshots & history
+
+![Part of the Admin Style information in WordPress version 5.3](./assets/screenshot-7.png)
+
+The plugin is still active in usage and development since an early WordPress version, so you should see it on the screenshots from the different versions below.
+
  1. [Admin Style in WordPress 3.1](/assets/screenshot-1.png)
  2. [Admin Style in WordPress 3.4](/assets/screenshot-2.png)
  3. [Admin Style in WordPress 3.6-alpha](/assets/screenshot-3.png)
@@ -42,7 +47,7 @@ The plugin is available as [Composer package](https://packagist.org/packages/bue
 
 `composer require bueltge/wordpress-admin-style`
 
-If you have changed the default directory structure or just want the plugin to a specific locaion, you can create a project from the Composer package.
+If you have changed the default directory structure or just want the plugin to a specific location, you can create a project from the Composer package.
 
 `composer create-project bueltge/wordpress-admin-style <optional-name>`
 
@@ -61,7 +66,7 @@ Please give me feedback, contribute and file technical bugs on this
 
 ### License
 Good news, this plugin is free for everyone! Since it's released under the [GPLv2+](./LICENSE), 
-you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, 
+You can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, 
 you can thank me and leave a 
 [small donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955 "Paypal Donate link") 
 for the time I've spent writing and supporting this plugin. 
@@ -74,5 +79,5 @@ Please let me know if you like the plugin or you hate it or whatever ...
 Please fork it, add an issue for ideas and bugs.
 
 ### Disclaimer
-I'm German and my English might be gruesome here and there. 
+I'm German, and my English might be gruesome here and there. 
 So please be patient with me and let me know of typos or grammatical farts. Thanks
