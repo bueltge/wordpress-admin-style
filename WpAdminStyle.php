@@ -11,7 +11,7 @@
  * Licence:       GPLv2+
  * License URI:   ./LICENSE
  * Author URI:    https://bueltge.de
- * Last Change:   2019-07-19
+ * Last Change:   2019-11-15
  */
 
 ! defined( 'ABSPATH' ) && exit;
@@ -21,7 +21,7 @@
  *
  * @see https://github.com/FacetWP/github-updater-lite
  */
-include_once __DIR__ . '/inc/github-updater.php';
+require_once __DIR__ . '/inc/github-updater.php';
 
 add_action(
 	'plugins_loaded',
@@ -164,13 +164,13 @@ class WpAdminStyle {
 	 *
 	 * @since 2015-03-25
 	 *
-	 * @param string $type Type of patters, default '', possible is 'headers'
+	 * @param string $type Type of patters, default '', possible is 'headers'.
 	 *
 	 * @param bool   $sort
 	 *
 	 * @return array|mixed
 	 */
-	public function get_patterns( $type = '', $sort = TRUE ) {
+	public function get_patterns( $type = '', $sort = true ) {
 
 		$files              = array();
 		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
@@ -224,16 +224,18 @@ class WpAdminStyle {
 				include_once $patterns;
 				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
-				     . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
-				     . '</summary>';
+				. esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
+				. '</summary>';
 				echo '<section>';
 				echo '<pre><code class="language-php-extras">' . htmlspecialchars( file_get_contents( $patterns ) ) . '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
 				echo '<p>';
 				echo '<a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
-						'scroll to top', 'WpAdminStyle'
-					) . '</a><br class="clear" />';
+					'scroll to top',
+					'WpAdminStyle'
+					)
+				. '</a><br class="clear" />';
 				echo '</p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
@@ -241,7 +243,7 @@ class WpAdminStyle {
 			?>
 
 		</div> <!-- .wrap -->
-	<?php
+		<?php
 	}
 
 	/**
@@ -280,7 +282,7 @@ class WpAdminStyle {
 												</a>
 											</td>
 										</tr>
-									<?php
+										<?php
 									} // end foreach patterns
 									?>
 								</table>
@@ -310,6 +312,7 @@ class WpAdminStyle {
 								<p>
 									<?php
 									printf(
+										// translators: The two strings will be replaced by the url to the development repository and the post about the idea.
 										__(
 											'Please read more about this small plugin on <a href="%1$s">github</a> or in <a href="%2$s">this post</a> on the blog of WP Engineer.',
 											'WpAdminStyle'
@@ -334,7 +337,7 @@ class WpAdminStyle {
 							<div class="inside">
 								<ul>
 									<li>
-										<a href="https://developer.wordpress.org/block-editor/designers/">Editor Gutenberg Designer Documentation, inlcude patterns and ressources</a>
+										<a href="https://developer.wordpress.org/block-editor/designers/">Editor 'Gutenberg' Designer Documentation, include patterns and resources</a>
 									</li>
 									<li>
 										<a href="http://dotorgstyleguide.wordpress.com/">WordPress.org UI Style Guide</a>
@@ -367,7 +370,7 @@ class WpAdminStyle {
 			</div>
 			<br class="clear">
 		</div>
-	<?php
+		<?php
 	}
 
 	/**
