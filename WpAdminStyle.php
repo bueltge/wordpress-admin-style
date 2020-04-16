@@ -1,17 +1,16 @@
 <?php /** @noinspection HtmlUnknownTarget */
 /**
- * Plugin Name:   WordPress Admin Style
- * Plugin URI:    https://github.com/bueltge/wordpress-admin-style
- * GitHub URI:    bueltge/wordpress-admin-style
- * Text Domain:   wp_admin_style
- * Domain Path:   /languages
- * Description:   Shows the WordPress admin styles on one page to help you to develop WordPress compliant.
- * Author:        Frank Bültge
- * Version:       1.5.4
- * Licence:       GPLv2+
- * License URI:   ./LICENSE
- * Author URI:    https://bueltge.de
- * Last Change:   2019-11-15
+ * Plugin Name:       WordPress Admin Style
+ * Plugin URI:        https://github.com/bueltge/wordpress-admin-style
+ * GitHub URI:        bueltge/wordpress-admin-style
+ * GitHub Plugin URI: bueltge/wordpress-admin-style
+ * Description:       Shows the WordPress admin styles on one page to help you to develop WordPress compliant.
+ * Author:            Frank Bültge
+ * Version:           1.5.4
+ * Licence:           GPLv2+
+ * License URI:       ./LICENSE
+ * Author URI:        https://bueltge.de
+ * Last Change:       2020-04-16
  */
 
 ! defined( 'ABSPATH' ) && exit;
