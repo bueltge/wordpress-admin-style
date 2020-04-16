@@ -59,6 +59,9 @@ If you have changed the default directory structure or just want the plugin to a
  5. `git checkout master`
  6. Check in the network plugin page, if it works
 
+### Automatic Udates
+The plugin supports the [GitHub Updater plugin](https://github.com/afragen/github-updater) for WordPress. The plugin enable automatic updates from this GitHub Repository. You will find all information about the how and why at the [plugin wiki page](https://github.com/afragen/github-updater/wiki).
+
 ## Other Notes
 ### Bugs, technical hints or contribute
 Please give me feedback, contribute and file technical bugs on this 
