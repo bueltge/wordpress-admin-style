@@ -69,6 +69,7 @@ class WpAdminDashicons {
 		<div class="wrap">
 		<h1>Dashicons</h1>
 		<p>Dashicons icon font for MP6, currently in development and will go live in WordPress version 3.8.<br>You can check out the WordPress Version 3.8-alpha or the MP6-plugin at <a href="http://wordpress.org/extend/plugins/mp6/">http://wordpress.org/extend/plugins/mp6/</a>.</p>
+			<p><strong>Note</strong> The Dashicons project is no longer accepting icon requests. Here's why: <a href="https://make.wordpress.org/design/2020/04/20/next-steps-for-dashicons/">Next steps for Dashicons</a>.</p>
 
 		<h2>MiniMenu</h2>
 		<ul>
