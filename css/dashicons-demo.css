@@ -596,6 +596,208 @@
 .dashicons-category:before { 
 	content:'\f318';
 }
+/*
+ * New one since WP 5.5.
+ * @see https://make.wordpress.org/core/2020/07/15/dashicons-in-wordpress-5-5-the-final-update/
+*/
+.dashicons-align-pull-left:before {
+	content: '\f10a';
+}
+.dashicons-align-pull-right:before {
+	content: '\f10b';
+}
+.dashicons-block-default:before {
+	content: '\f12b';
+}
+.dashicons-cloud-saved:before {
+	content: '\f137';
+}
+.dashicons-cloud-upload:before {
+	content: '\f13b';
+}
+.dashicons-columns:before {
+	content: '\f13c';
+}
+.dashicons-cover-image:before {
+	content: '\f13d';
+}
+.dashicons-embed-audio:before {
+	content: '\f13e';
+}
+.dashicons-embed-generic:before {
+	content: '\f13f';
+}
+.dashicons-embed-photo:before {
+	content: '\f144';
+}
+.dashicons-embed-post:before {
+	content: '\f146';
+}
+.dashicons-embed-video:before {
+	content: '\f149';
+}
+.dashicons-exit:before {
+	content: '\f14a';
+}
+.dashicons-html:before {
+	content: '\f14b';
+}
+.dashicons-info-outline:before {
+	content: '\f14c';
+}
+.dashicons-insert-after:before {
+	content: '\f14d';
+}
+.dashicons-insert-before:before {
+	content: '\f14e';
+}
+.dashicons-insert:before {
+	content: '\f10f';
+}
+.dashicons-remove:before {
+	content: '\f14f';
+}
+.dashicons-shortcode:before {
+	content: '\f150';
+}
+.dashicons-table-col-after:before {
+	content: '\f151';
+}
+.dashicons-table-col-before:before {
+	content: '\f152';
+}
+.dashicons-table-col-delete:before {
+	content: '\f15a';
+}
+.dashicons-table-row-after:before {
+	content: '\f15b';
+}
+.dashicons-table-row-before:before {
+	content: '\f15c';
+}
+.dashicons-table-row-delete:before {
+	content: '\f15d';
+}
+.dashicons-saved:before {
+	content: '\f15e';
+}
+.dashicons-amazon:before {
+	content: '\f162';
+}
+.dashicons-google:before {
+	content: '\f18b';
+}
+.dashicons-linkedin:before {
+	content: '\f18d';
+}
+.dashicons-pinterest:before {
+	content: '\f192';
+}
+.dashicons-podio:before {
+	content: '\f19c';
+}
+.dashicons-reddit:before {
+	content: '\f195';
+}
+.dashicons-spotify:before {
+	content: '\f196';
+}
+.dashicons-twitch:before {
+	content: '\f199';
+}
+.dashicons-whatsapp:before {
+	content: '\f19a';
+}
+.dashicons-xing:before {
+	content: '\f19d';
+}
+.dashicons-youtube:before {
+	content: '\f19b';
+}
+.dashicons-database-add:before {
+	content: '\f170';
+}
+.dashicons-database-export:before {
+	content: '\f17a';
+}
+.dashicons-database-import:before {
+	content: '\f17b';
+}
+.dashicons-database-remove:before {
+	content: '\f17c';
+}
+.dashicons-database-view:before {
+	content: '\f17d';
+}
+.dashicons-database:before {
+	content: '\f17e';
+}
+.dashicons-bell:before {
+	content: '\f16d';
+}
+.dashicons-airplane:before {
+	content: '\f15f';
+}
+.dashicons-car:before {
+	content: '\f16b';
+}
+.dashicons-calculator:before {
+	content: '\f16e';
+}
+dasicons-games:before {
+	content: '\f18a';
+}
+.dashicons-printer:before {
+	content: '\f193';
+}
+.dashicons-beer:before {
+	content: '\f16c';
+}
+.dashicons-coffee:before {
+	content: '\f16f';
+}
+.dashicons-drumstick:before {
+	content: '\f17f';
+}
+.dashicons-food:before {
+	content: '\f187';
+}
+.dashicons-bank:before {
+	content: '\f16a';
+}
+.dashicons-hourglass:before {
+	content: '\f18c';
+}
+.dashicons-money-alt:before {
+	content: '\f18e';
+}
+.dashicons-open-folder:before {
+	content: '\f18f';
+}
+.dashicons-pdf:before {
+	content: '\f190';
+}
+.dashicons-pets:before {
+	content: '\f191';
+}
+.dashicons-privacy:before {
+	content: '\f194';
+}
+.dashicons-superhero:before {
+	content: '\f198';
+}
+.dashicons-superhero-alt:before {
+	content: '\f197';
+}
+.dashicons-edit-page:before {
+	content: '\f186';
+}
+.dashicons-fullscreen-alt:before {
+	content: '\f188';
+}
+.dashicons-fullscreen-exit-alt:before {
+	content: '\f189';
+}
 
 /* Dashicons Picker */
 .dashicon-picker-container {
