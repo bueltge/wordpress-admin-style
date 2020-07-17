@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.6](https://github.com/bueltge/wordpress-admin-style/compare/1.5.5...1.5.6) - 2020-07-17
+* Add new Dashicons', #61
+
 ## [1.5.5](https://github.com/bueltge/wordpress-admin-style/compare/1.5.4...1.5.5) - 2020-07-17
 * Add new element 'Card', #60
 * Leave hints for the Dashicon project.
