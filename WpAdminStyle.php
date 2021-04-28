@@ -33,6 +33,12 @@ add_action(
 class WpAdminStyle {
 
 	/**
+	 * Characters there we replace in the files.
+	 *
+	 * @var array
+	 */
+	protected static $file_replace = array( '.php', '_', '-', ' ' );
+	/**
 	 * Directory of patters of examples.
 	 *
 	 * @var string
@@ -40,18 +46,29 @@ class WpAdminStyle {
 	protected $patterns_dir = '';
 
 	/**
-	 * Characters there we replace in the files.
-	 *
-	 * @var array
-	 */
-	protected static $file_replace = array( '.php', '_', '-', ' ' );
-
-	/**
 	 * Constructor
 	 *
 	 * @since  0.0.1
 	 */
-	public function __construct() {}
+	public function __construct() {
+	}
+
+	/**
+	 * Points the class, singleton.
+	 *
+	 * @access public
+	 * @since  0.0.1
+	 */
+	public static function get_instance() {
+
+		static $instance;
+
+		if ( null === $instance ) {
+			$instance = new self();
+		}
+
+		return $instance;
+	}
 
 	/**
 	 * Used for regular plugin work.
@@ -76,27 +93,10 @@ class WpAdminStyle {
 	}
 
 	/**
-	 * Points the class, singleton.
-	 *
-	 * @access public
-	 * @since  0.0.1
-	 */
-	public static function get_instance() {
-
-		static $instance;
-
-		if ( null === $instance ) {
-			$instance = new self();
-		}
-
-		return $instance;
-	}
-
-	/**
 	 * Scans the plugins subfolder and include files.
 	 *
-	 * @since   05/02/2013
 	 * @return  void
+	 * @since   05/02/2013
 	 */
 	protected function load_classes() {
 
@@ -108,43 +108,12 @@ class WpAdminStyle {
 	}
 
 	/**
-	 * Return plugin comment data.
-	 *
-	 * @uses   get_plugin_data
-	 * @access public
-	 * @since  0.0.1
-	 *
-	 * @param string $value default = 'Version'
-	 *  also possible is: Name, PluginURI, Version, Description, Author,
-	 *                    AuthorURI, TextDomain, DomainPath, Network, Title.
-	 *
-	 * @return string
-	 */
-	private function get_plugin_data( $value = 'Version' ) {
-
-		static $plugin_data = array();
-
-		// fetch the data just once.
-		if ( isset( $plugin_data[ $value ] ) ) {
-			return $plugin_data[ $value ];
-		}
-
-		if ( ! function_exists( 'get_plugin_data' ) ) {
-			require_once ABSPATH . '/wp-admin/includes/plugin.php';
-		}
-
-		$plugin_data = get_plugin_data( __FILE__ );
-
-		return empty( $plugin_data[ $value ] ) ? '' : $plugin_data[ $value ];
-	}
-
-	/**
 	 * Add Menu item on WP Backend
 	 *
+	 * @return void
+	 * @since  0.0.1
 	 * @uses   add_menu_page
 	 * @access public
-	 * @since  0.0.1
-	 * @return void
 	 */
 	public function add_menu_page() {
 
@@ -159,48 +128,12 @@ class WpAdminStyle {
 	}
 
 	/**
-	 * Return list of pattern files or name of files
-	 *
-	 * @since 2015-03-25
-	 *
-	 * @param string $type Type of patters, default '', possible is 'headers'.
-	 *
-	 * @param bool   $sort
-	 *
-	 * @return array|mixed
-	 */
-	public function get_patterns( $type = '', $sort = true ) {
-
-		$files              = array();
-		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
-		$handle             = opendir( $this->patterns_dir );
-
-		while ( false !== ( $file = readdir( $handle ) ) ) {
-			if ( false !== stripos( $file, '.php' ) ) {
-				$files[] = $file;
-			}
-		}
-
-		if ( $sort ) {
-			sort( $files );
-		}
-
-		$files_h = str_replace( self::$file_replace, ' ', $files );
-
-		if ( 'headers' === $type ) {
-			return $files_h;
-		}
-
-		return $files;
-	}
-
-	/**
 	 * Echo Markup examples
 	 *
+	 * @return void
+	 * @since  0.0.1
 	 * @uses
 	 * @access public
-	 * @since  0.0.1
-	 * @return void
 	 */
 	public function get_style_examples() {
 		?>
@@ -223,18 +156,21 @@ class WpAdminStyle {
 				include_once $patterns;
 				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
-				. esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
-				. '</summary>';
+				     . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
+				     . '</summary>';
 				echo '<section>';
-				echo '<pre><code class="language-php-extras">' . htmlspecialchars( file_get_contents( $patterns ) ) . '</code></pre>';
+				echo '<pre><code class="language-php">';
+				echo htmlspecialchars( file_get_contents( $patterns,
+					FILE_USE_INCLUDE_PATH ), ENT_QUOTES );
+				echo '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
 				echo '<p>';
 				echo '<a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
-					'scroll to top',
-					'WpAdminStyle'
+						'scroll to top',
+						'WpAdminStyle'
 					)
-				. '</a><br class="clear" />';
+				     . '</a><br class="clear" />';
 				echo '</p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
@@ -243,6 +179,37 @@ class WpAdminStyle {
 
 		</div> <!-- .wrap -->
 		<?php
+	}
+
+	/**
+	 * Return plugin comment data.
+	 *
+	 * @param string $value default = 'Version'
+	 *  also possible is: Name, PluginURI, Version, Description, Author,
+	 *                    AuthorURI, TextDomain, DomainPath, Network, Title.
+	 *
+	 * @return string
+	 * @uses   get_plugin_data
+	 * @access public
+	 * @since  0.0.1
+	 *
+	 */
+	private function get_plugin_data( $value = 'Version' ) {
+
+		static $plugin_data = array();
+
+		// fetch the data just once.
+		if ( isset( $plugin_data[ $value ] ) ) {
+			return $plugin_data[ $value ];
+		}
+
+		if ( ! function_exists( 'get_plugin_data' ) ) {
+			require_once ABSPATH . '/wp-admin/includes/plugin.php';
+		}
+
+		$plugin_data = get_plugin_data( __FILE__ );
+
+		return empty( $plugin_data[ $value ] ) ? '' : $plugin_data[ $value ];
 	}
 
 	/**
@@ -311,7 +278,7 @@ class WpAdminStyle {
 								<p>
 									<?php
 									printf(
-										// translators: The two strings will be replaced by the url to the development repository and the post about the idea.
+									// translators: The two strings will be replaced by the url to the development repository and the post about the idea.
 										__(
 											'Please read more about this small plugin on <a href="%1$s">github</a> or in <a href="%2$s">this post</a> on the blog of WP Engineer.',
 											'WpAdminStyle'
@@ -336,22 +303,28 @@ class WpAdminStyle {
 							<div class="inside">
 								<ul>
 									<li>
-										<a href="https://developer.wordpress.org/block-editor/designers/">Editor 'Gutenberg' Designer Documentation, include patterns and resources</a>
+										<a href="https://developer.wordpress.org/block-editor/designers/">Editor
+											'Gutenberg' Designer Documentation, include patterns and resources</a>
 									</li>
 									<li>
-										<a href="http://dotorgstyleguide.wordpress.com/">WordPress.org UI Style Guide</a>
+										<a href="http://dotorgstyleguide.wordpress.com/">WordPress.org UI Style
+											Guide</a>
 									</li>
 									<li>
-										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/">HTML Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/">HTML
+											Coding Standards</a>
 									</li>
 									<li>
-										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/">CSS Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/">CSS
+											Coding Standards</a>
 									</li>
 									<li>
-										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/">PHP Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/">PHP
+											Coding Standards</a>
 									</li>
 									<li>
-										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/javascript/">JavaScript Coding Standards</a>
+										<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/javascript/">JavaScript
+											Coding Standards</a>
 									</li>
 									<li><a href="https://make.wordpress.org/design/">WordPress UI Group</a></li>
 								</ul>
@@ -373,10 +346,46 @@ class WpAdminStyle {
 	}
 
 	/**
+	 * Return list of pattern files or name of files
+	 *
+	 * @param string $type Type of patters, default '', possible is 'headers'.
+	 *
+	 * @param bool $sort
+	 *
+	 * @return array|mixed
+	 * @since 2015-03-25
+	 *
+	 */
+	public function get_patterns( $type = '', $sort = true ) {
+
+		$files              = array();
+		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
+		$handle             = opendir( $this->patterns_dir );
+
+		while ( false !== ( $file = readdir( $handle ) ) ) {
+			if ( false !== stripos( $file, '.php' ) ) {
+				$files[] = $file;
+			}
+		}
+
+		if ( $sort ) {
+			sort( $files );
+		}
+
+		$files_h = str_replace( self::$file_replace, ' ', $files );
+
+		if ( 'headers' === $type ) {
+			return $files_h;
+		}
+
+		return $files;
+	}
+
+	/**
 	 * Add donate link to plugin description in /wp-admin/plugins.php
 	 *
-	 * @param  array  $plugin_meta All met data to a plugin.
-	 * @param  string $plugin_file The main file of the plugin with the meta data.
+	 * @param array $plugin_meta All met data to a plugin.
+	 * @param string $plugin_file The main file of the plugin with the meta data.
 	 *
 	 * @return array
 	 */
@@ -404,7 +413,7 @@ class WpAdminStyle {
 			'prism',
 			plugins_url( 'css/prism.css', __FILE__ ),
 			'',
-			'2016-05-20',
+			'2021-05-28',
 			'screen'
 		);
 		wp_enqueue_style( 'prism' );
@@ -413,16 +422,9 @@ class WpAdminStyle {
 			'prism',
 			plugins_url( 'js/prism.js', __FILE__ ),
 			array(),
-			'2016-05-20',
+			'2021-05-28',
 			true
 		);
-		wp_register_script(
-			'wpast_prism',
-			plugins_url( 'js/wpast-prism.js', __FILE__ ),
-			array( 'prism' ),
-			'2016-05-20',
-			true
-		);
-		wp_enqueue_script( 'wpast_prism' );
+		wp_enqueue_script( 'prism' );
 	}
 } // end class

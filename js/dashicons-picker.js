@@ -4,7 +4,7 @@
  * Based on: https://github.com/bradvin/dashicons-picker/
  */
 
-( function ( $ ) {
+(function ($) {
 	'use strict';
 	/**
 	 *
@@ -326,97 +326,97 @@
 			''
 		];
 
-		return this.each( function () {
+		return this.each(function () {
 
-			var button = $( this ),
+			var button = $(this),
 				offsetTop,
 				offsetLeft;
 
-			button.on( 'click.dashiconsPicker', function ( e ) {
-				offsetTop = $( e.currentTarget ).offset().top;
-				offsetLeft = $( e.currentTarget ).offset().left;
-				createPopup( button );
-			} );
+			button.on('click.dashiconsPicker', function (e) {
+				offsetTop = $(e.currentTarget).offset().top;
+				offsetLeft = $(e.currentTarget).offset().left;
+				createPopup(button);
+			});
 
-			function createPopup( button ) {
+			function createPopup(button) {
 
-				var target = $( button.data( 'target' ) ),
-					preview = $( button.data( 'preview' ) ),
-					popup  = $( '<div class="dashicon-picker-container">' +
+				var target = $(button.data('target')),
+					preview = $(button.data('preview')),
+					popup = $('<div class="dashicon-picker-container">' +
 						'<div class="dashicon-picker-control"></div>' +
 						'<ul class="dashicon-picker-list"></ul>' +
-					'</div>' ).css( {
-						'top':  offsetTop,
+						'</div>').css({
+						'top': offsetTop,
 						'left': offsetLeft
-					} ),
-					list = popup.find( '.dashicon-picker-list' );
+					}),
+					list = popup.find('.dashicon-picker-list');
 
-				for ( var i in icons ) {
-					if ( icons.hasOwnProperty(i) ) {
+				for (var i in icons) {
+					if (icons.hasOwnProperty(i)) {
 						list.append('<li data-icon="' + icons[i] + '"><a href="#" title="' + icons[i] + '"><span class="dashicons dashicons-' + icons[i] + '"></span></a></li>');
 					}
 				}
 
-				$( 'a', list ).on( 'click', function ( e ) {
+				$('a', list).on('click', function (e) {
 					e.preventDefault();
-					var title = $( this ).attr( 'title' );
-					target.val( 'dashicons-' + title );
+					var title = $(this).attr('title');
+					target.val('dashicons-' + title);
 					preview
 						.prop('class', 'dashicons')
-						.addClass( 'dashicons-' + title );
+						.addClass('dashicons-' + title);
 					removePopup();
-				} );
+				});
 
-				var control = popup.find( '.dashicon-picker-control' );
+				var control = popup.find('.dashicon-picker-control');
 
-				control.html( '<a data-direction="back" href="#">' +
+				control.html('<a data-direction="back" href="#">' +
 					'<span class="dashicons dashicons-arrow-left-alt2"></span></a>' +
 					'<input type="text" class="" placeholder="Search" />' +
 					'<a data-direction="forward" href="#"><span class="dashicons dashicons-arrow-right-alt2"></span></a>'
 				);
 
-				$( 'a', control ).on( 'click', function ( e ) {
+				$('a', control).on('click', function (e) {
 					e.preventDefault();
-					if ( $( this ).data( 'direction' ) === 'back' ) {
-						$( 'li:gt(' + ( icons.length - 26 ) + ')', list ).prependTo( list );
+					if ($(this).data('direction') === 'back') {
+						$('li:gt(' + (icons.length - 26) + ')', list).prependTo(list);
 					} else {
-						$( 'li:lt(25)', list ).appendTo( list );
+						$('li:lt(25)', list).appendTo(list);
 					}
-				} );
+				});
 
-				popup.appendTo( 'body' ).show();
+				popup.appendTo('body').show();
 
-				$( 'input', control ).on( 'keyup', function ( e ) {
-					var search = $( this ).val();
-					if ( search === '' ) {
-						$( 'li:lt(25)', list ).show();
+				$('input', control).on('keyup', function (e) {
+					var search = $(this).val();
+					if (search === '') {
+						$('li:lt(25)', list).show();
 					} else {
-						$( 'li', list ).each( function () {
-							if ( $( this ).data( 'icon' ).toLowerCase().indexOf( search.toLowerCase() ) !== -1 ) {
-								$( this ).show();
+						$('li', list).each(function () {
+							if ($(this).data('icon').toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+								$(this).show();
 							} else {
-								$( this ).hide();
+								$(this).hide();
 							}
-						} );
+						});
 					}
-				} );
+				});
 
-				$( document ).on( 'mouseup.dashicons-picker', function ( e ) {
-					if ( ! popup.is( e.target ) && popup.has( e.target ).length === 0 ) {
+				$(document).on('mouseup.dashicons-picker', function (e) {
+					if (!popup.is(e.target) && popup.has(e.target).length === 0) {
 						removePopup();
 					}
-				} );
+				});
 			}
 
 			function removePopup() {
-				$( '.dashicon-picker-container' ).remove();
-				$( document ).off( '.dashicons-picker' );
+				$('.dashicon-picker-container').remove();
+				$(document).off('.dashicons-picker');
 			}
-		} );
+		});
 	};
 
-	$( function () {
-		$( '.dashicons-picker' ).dashiconsPicker();
-	} );
+	$(function () {
+		$('.dashicons-picker').dashiconsPicker();
+	});
 
-}( jQuery ) );
+})(jQuery);
