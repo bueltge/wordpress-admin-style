@@ -51,5 +51,3 @@
 		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound"/>
 	</rule>
 </ruleset>
-	</ruleset>
-
