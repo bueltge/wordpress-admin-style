@@ -15,13 +15,6 @@
 
 ! defined( 'ABSPATH' ) && exit;
 
-/**
- * Include the Github Updater Lite.
- *
- * @see https://github.com/FacetWP/github-updater-lite
- */
-require_once __DIR__ . '/inc/github-updater.php';
-
 add_action(
 	'plugins_loaded',
 	array( WpAdminStyle::get_instance(), 'plugin_setup' )
