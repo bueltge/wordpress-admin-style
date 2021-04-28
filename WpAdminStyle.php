@@ -124,7 +124,7 @@ class WpAdminStyle {
 			'WordPress_Admin_Style',
 			array( $this, 'get_style_examples' )
 		);
-		add_action( 'admin_print_scripts-' . $page_hook_suffix, array( $this, 'add_highlight_js' ) );
+		add_action( 'admin_print_scripts-' . $page_hook_suffix, array( $this, 'enqueue_assets' ) );
 	}
 
 	/**
@@ -407,12 +407,12 @@ class WpAdminStyle {
 	 *
 	 * @since  2016-05-20
 	 */
-	public function add_highlight_js() {
+	public function enqueue_assets() {
 
 		wp_register_style(
 			'prism',
 			plugins_url( 'css/prism.css', __FILE__ ),
-			'',
+			array(),
 			'2021-05-28',
 			'screen'
 		);
@@ -426,5 +426,14 @@ class WpAdminStyle {
 			true
 		);
 		wp_enqueue_script( 'prism' );
+
+		wp_register_script(
+			'example-color-picker',
+			plugins_url( 'js/color-picker.js', __FILE__ ),
+			array( 'jquery', 'wp-color-picker' ),
+			'2021-05-28',
+			true
+		);
+		wp_enqueue_script( 'example-color-picker' );
 	}
 } // end class

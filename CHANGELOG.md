@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. This projec
 * Maintenance of Prism library to the last stable version.
 * Enhance a note for the Datepicker Style from John, #32.
 * Add color palette support.
+* Add WP Color Picker example, #40
 
 ## [1.5.6](https://github.com/bueltge/wordpress-admin-style/compare/1.5.5...1.5.6) - 2020-07-17
 * Add new Dashicons', #61
