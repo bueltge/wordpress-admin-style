@@ -6,6 +6,7 @@ Shows the WordPress admin styles on one page to help you to develop WordPress co
 
  * List markup and examples for '2 Column Page Layout', Headers, Header Icons, Buttons, Tables, Admin Notices, 
 Alternative Colours, Pagination, Form Elements, Form Helper Functions, Tabs, Default Admin Color Schemes
+ * [WP Color Picker](https://make.wordpress.org/core/2012/11/30/new-color-picker-in-wp-3-5/)
  * Helper Classes
  * jQuery UI Examples
  * [Dashicons](https://developer.wordpress.org/resource/dashicons/)
@@ -19,7 +20,8 @@ Unfortunately, there are quite extensive opportunities in the backend to impleme
 Several different classes and HTML structures are used. To be able to look up something this simple, 
 I have developed this small plugin, which tinkers in the development environment and quickly represents the necessary elements. 
 
-Also see the [post](http://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
+Also see the [post](https://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default
+-styles/) 
 about the idea and also the comments for a discussion.
 
 ### Screenshots & history
@@ -60,7 +62,8 @@ If you have changed the default directory structure or just want the plugin to a
  6. Check in the network plugin page, if it works
 
 ### Automatic Udates
-The plugin supports the [GitHub Updater plugin](https://github.com/afragen/github-updater) for WordPress. The plugin enable automatic updates from this GitHub Repository. You will find all information about the how and why at the [plugin wiki page](https://github.com/afragen/github-updater/wiki).
+The plugin supports the [GitHub Updater plugin](https://github.com/afragen/github-updater) for WordPress. The plugin 
+enables automatic updates from this GitHub Repository. You will find all information about the how and why at the [plugin wiki page](https://github.com/afragen/github-updater/wiki).
 
 ## Other Notes
 ### Bugs, technical hints or contribute
@@ -78,7 +81,7 @@ And I really don't want to know how many hours of my life this plugin has alread
 ### Contact & Feedback
 The plugin is designed and developed by me ([Frank Bültge](https://bueltge.de))
 
-Please let me know if you like the plugin or you hate it or whatever ... 
+Please let me know if you like the plugin, or you hate it or whatever ... 
 Please fork it, add an issue for ideas and bugs.
 
 ### Disclaimer
