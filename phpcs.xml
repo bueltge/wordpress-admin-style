@@ -1,12 +1,55 @@
 <?xml version="1.0"?>
-<ruleset name="wp_admin_style">
- <description>Rules for WordPress Admin Style PHP projects</description>
+<ruleset name="WpAdminStyle">
+	<description>Rules for WordPress Admin Style projects</description>
 
- <file>./inc</file>
- <file>./WpAdminStyle.php</file>
+	<file>./inc</file>
+	<file>./WpAdminStyle.php</file>
 
- <!-- Code Reviews Rules -->
- <rule ref="WordPress"/>
+	<!-- Code Reviews Rules -->
+	<rule ref="WordPress"/>
 
+	<!-- How to scan -->
+	<arg value="sp"/> <!-- Show sniff and progress -->
+	<arg name="colors"/> <!-- Show results with colors -->
+	<arg name="basepath" value="."/> <!-- Strip the file paths down to the relevant bit -->
+	<arg name="parallel" value="50"/> <!-- Enables parallel processing when available for faster results. -->
+	<arg name="extensions" value="php"/> <!-- Limit to PHP files -->
+	<!-- Rules: Check PHP version compatibility - see
+	   https://github.com/PHPCompatibility/PHPCompatibilityWP -->
+	<rule ref="PHPCompatibilityWP"/>
+	<!-- For help in understanding this testVersion:
+		https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
+	<config name="testVersion" value="5.6-"/>
+	<!-- Rules: WordPress Coding Standards - see
+	   https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
+	<rule ref="WordPress-Extra"/><!-- Includes WordPress-Core -->
+	<rule ref="WordPress-Docs"/>
+	<!-- For help in understanding these custom sniff properties:
+		https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki/Customizable-sniff-properties -->
+	<config name="minimum_supported_wp_version" value="4.0"/>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="WpAdminStyle"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="WpAdminStyle"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
+		<properties>
+			<property name="blank_line_check" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="WordPress">
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound"/>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound"/>
+	</rule>
 </ruleset>
+	</ruleset>
 
