@@ -3,7 +3,9 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [1.6.0](https://github.com/bueltge/wordpress-admin-style/compare/1.5.6...1.6.0) - 2021-05-28
 * Maintenance scripts to run with jQuery 3.5*
-* Maintenance of Prism library to the last stable version
+* Maintenance of Prism library to the last stable version.
+* Enhance a note for the Datepicker Style from John, #32.
+* Add color palette support.
 
 ## [1.5.6](https://github.com/bueltge/wordpress-admin-style/compare/1.5.5...1.5.6) - 2020-07-17
 * Add new Dashicons', #61
