@@ -25,7 +25,7 @@ about the idea and also the comments for a discussion.
 
 ### Screenshots & history
 
-![Part of the Admin Style information in WordPress version 5.3](./assets/screenshot-7.png)
+![Part of the Admin Style information in WordPress version 5.7](./assets/screenshot-8.png)
 
 The plugin is still active in usage and development since an early WordPress version, so you should see it on the screenshots from the different versions below.
 
@@ -35,7 +35,8 @@ The plugin is still active in usage and development since an early WordPress ver
  4. [Admin Style in WordPress MP6 Design](/assets/screenshot-4.png)
  5. [Dashicons in WordPress MP6 Design](/assets/screenshot-5.png)
  6. [Genericons in WordPress 3.9-alpha](/assets/screenshot-6.png)
- 
+ 7. [Admin Style in WordPress 5.3](/assets/screenshot-7.png)
+
 ## Installing
 ### Manual
  1. Download the plugin as a [ZIP file](https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip) from GitHub.
