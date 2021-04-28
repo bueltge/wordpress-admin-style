@@ -55,7 +55,6 @@ class WpAdminStyle {
 	 * @since  0.0.1
 	 */
 	public static function get_instance() {
-
 		static $instance;
 
 		if ( null === $instance ) {
@@ -72,7 +71,6 @@ class WpAdminStyle {
 	 * @since    05/02/2013
 	 */
 	public function plugin_setup() {
-
 		$this->load_classes();
 
 		if ( ! is_admin() ) {
@@ -111,7 +109,6 @@ class WpAdminStyle {
 	 * @access public
 	 */
 	public function add_menu_page() {
-
 		$page_hook_suffix = add_menu_page(
 			esc_html__( 'WordPress Admin Style', 'WpAdminStyle' ),
 			esc_html__( 'Admin Style', 'WpAdminStyle' ),
@@ -151,21 +148,26 @@ class WpAdminStyle {
 				include_once $patterns;
 				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
-				     . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
-				     . '</summary>';
+					 . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
+					 . '</summary>';
 				echo '<section>';
 				echo '<pre><code class="language-php">';
-				echo htmlspecialchars( file_get_contents( $patterns,
-					FILE_USE_INCLUDE_PATH ), ENT_QUOTES );
+				echo htmlspecialchars(
+					file_get_contents(
+						$patterns,
+						FILE_USE_INCLUDE_PATH
+					),
+					ENT_QUOTES
+				);
 				echo '</code></pre>';
 				echo '</section>';
 				echo '</details><!--/.primer-->';
 				echo '<p>';
 				echo '<a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);" style="margin:3px 0 0 30px;">' . esc_attr__(
-						'scroll to top',
-						'WpAdminStyle'
-					)
-				     . '</a><br class="clear" />';
+					'scroll to top',
+					'WpAdminStyle'
+				)
+					 . '</a><br class="clear" />';
 				echo '</p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
@@ -187,10 +189,8 @@ class WpAdminStyle {
 	 * @uses   get_plugin_data
 	 * @access public
 	 * @since  0.0.1
-	 *
 	 */
 	private function get_plugin_data( $value = 'Version' ) {
-
 		static $plugin_data = array();
 
 		// fetch the data just once.
@@ -211,7 +211,6 @@ class WpAdminStyle {
 	 * Print the mini menu for a short navigation.
 	 */
 	public function get_mini_menu() {
-
 		$patterns = $this->get_patterns( 'headers' );
 		?>
 		<div id="poststuff">
@@ -345,14 +344,12 @@ class WpAdminStyle {
 	 *
 	 * @param string $type Type of patters, default '', possible is 'headers'.
 	 *
-	 * @param bool $sort
+	 * @param bool   $sort
 	 *
 	 * @return array|mixed
 	 * @since 2015-03-25
-	 *
 	 */
 	public function get_patterns( $type = '', $sort = true ) {
-
 		$files              = array();
 		$this->patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns';
 		$handle             = opendir( $this->patterns_dir );
@@ -379,13 +376,12 @@ class WpAdminStyle {
 	/**
 	 * Add donate link to plugin description in /wp-admin/plugins.php
 	 *
-	 * @param array $plugin_meta All met data to a plugin.
+	 * @param array  $plugin_meta All met data to a plugin.
 	 * @param string $plugin_file The main file of the plugin with the meta data.
 	 *
 	 * @return array
 	 */
 	public function donate_link( $plugin_meta, $plugin_file ) {
-
 		if ( plugin_basename( __FILE__ ) === $plugin_file ) {
 			$plugin_meta[] = sprintf(
 				'&hearts; <a href="%s">%s</a>',
@@ -403,7 +399,6 @@ class WpAdminStyle {
 	 * @since  2016-05-20
 	 */
 	public function enqueue_assets() {
-
 		wp_register_style(
 			'prism',
 			plugins_url( 'css/prism.css', __FILE__ ),

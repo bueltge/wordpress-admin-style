@@ -1,6 +1,6 @@
 <?php
 // avoid direct calls to this file, because now WP core and framework has been used.
-! defined( 'ABSPATH' ) && exit;
+ ! defined( 'ABSPATH' ) && exit;
 
 add_action(
 	'init',
@@ -23,8 +23,7 @@ class WpAdminGenericons {
 	 * @since   05/02/2013
 	 */
 	public static function get_instance() {
-
-		NULL === self::$instance && self::$instance = new self;
+		null === self::$instance && self::$instance = new self();
 
 		return self::$instance;
 	}
@@ -37,9 +36,7 @@ class WpAdminGenericons {
 	 * @return   void
 	 */
 	public function plugin_setup() {
-
 		add_action( 'admin_menu', array( $this, 'register_submenu' ) );
-
 	}
 
 	/**
@@ -53,7 +50,6 @@ class WpAdminGenericons {
 	}
 
 	public function register_submenu() {
-
 		$hook = add_submenu_page(
 			'WordPress_Admin_Style',
 			esc_html__( 'Genericons' ),
@@ -113,7 +109,7 @@ class WpAdminGenericons {
 				<div title="f204" class="genericon genericon-facebook-alt"><code>.genericon-facebook-alt</code>
 					<span>facebook</span></div>
 				<div title="f205" class="genericon genericon-wordpress"><code>.genericon-wordpress</code>
-					<span>wordpress</span></div>
+					<span>WordPress</span></div>
 				<div title="f206" class="genericon genericon-googleplus"><code>.genericon-googleplus</code>
 					<span>google plus googleplus google+ +</span></div>
 				<div title="f207" class="genericon genericon-linkedin"><code>.genericon-linkedin</code>
@@ -382,11 +378,11 @@ class WpAdminGenericons {
 	}
 
 	public function register_scripts() {
-
 		wp_register_style( 'genericons', plugin_dir_url( __FILE__ ) . '../css/genericons.css' );
-		wp_register_style( 'genericons-demo',
-		                   plugin_dir_url( __FILE__ ) . '../css/genericons-demo.css',
-		                   'genericons'
+		wp_register_style(
+			'genericons-demo',
+			plugin_dir_url( __FILE__ ) . '../css/genericons-demo.css',
+			'genericons'
 		);
 		wp_enqueue_style( 'genericons' );
 		wp_enqueue_style( 'genericons-demo' );

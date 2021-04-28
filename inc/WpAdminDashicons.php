@@ -1,21 +1,21 @@
 <?php
 // avoid direct calls to this file, because now WP core and framework has been used.
-! defined( 'ABSPATH' ) && exit;
+ ! defined( 'ABSPATH' ) && exit;
 
-add_action( 
+add_action(
 	'init',
 	array( WpAdminDashicons::get_instance(), 'plugin_setup' )
 );
 
 class WpAdminDashicons {
-	
+
 	/**
 	 * Plugin instance.
 	 *
 	 * @see get_instance()
 	 */
 	protected static $instance;
-	
+
 	/**
 	 * Access this plugin’s working instance
 	 *
@@ -23,36 +23,32 @@ class WpAdminDashicons {
 	 * @since   05/02/2013
 	 */
 	public static function get_instance() {
-		
-		NULL === self::$instance && self::$instance = new self;
-		
+		null === self::$instance && self::$instance = new self();
+
 		return self::$instance;
 	}
-	
+
 	/**
 	 * Used for regular plugin work.
-	 * 
+	 *
 	 * @wp-hook  admin_init
 	 * @since    05/02/2013
 	 * @return   void
 	 */
 	public function plugin_setup() {
-		
 		add_action( 'admin_menu', array( $this, 'register_submenu' ) );
-		
 	}
-	
+
 	/**
-	* Constructor.
-	* Intentionally left empty and public.
-	*
-	* @see    plugin_setup()
-	* @since  05/02/2013
-	*/
+	 * Constructor.
+	 * Intentionally left empty and public.
+	 *
+	 * @see    plugin_setup()
+	 * @since  05/02/2013
+	 */
 	public function __construct() {}
-	
+
 	public function register_submenu() {
-		
 		$hook = add_submenu_page(
 			'WordPress_Admin_Style',
 			__( 'Dashicons' ),
@@ -63,7 +59,7 @@ class WpAdminDashicons {
 		);
 		add_action( 'load-' . $hook, array( $this, 'register_scripts' ) );
 	}
-	
+
 	public function get_dashicon_demo() {
 		?>
 		<div class="wrap">
@@ -144,21 +140,21 @@ function enqueue_font_awesome() {
 		</div>
 		<?php
 	}
-	
+
 	public function register_scripts() {
-		
-		wp_register_style( 'dashicons-demo',
+		wp_register_style(
+			'dashicons-demo',
 			plugin_dir_url( __FILE__ ) . '../css/dashicons-demo.css',
 			array( 'dashicons' )
 		);
-		wp_enqueue_style ( 'dashicons-demo' );
-		
+		wp_enqueue_style( 'dashicons-demo' );
+
 		wp_register_script(
 			'dashicons-picker',
 			plugin_dir_url( __FILE__ ) . '../js/dashicons-picker.js',
 			array( 'jquery' ),
-			FALSE,
-			TRUE
+			false,
+			true
 		);
 		wp_enqueue_script( 'dashicons-picker' );
 	}
