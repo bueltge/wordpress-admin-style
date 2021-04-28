@@ -607,6 +607,9 @@ class WpAdminJqueryUi {
 			<!-- Datepicker -->
 			<h2>Datepicker</h2>
 			<div id="datepicker"></div>
+			<p><strong>Note:</strong> jQuery UI Datepicker CSS for WordPress</p>
+			<p>John maintain a CSS file that you can include with WordPress plugins or themes to make the jQuery UI
+				Datepicker widget match WordPress color schemes. <a href="https://github.com/stuttter/wp-datepicker-styling">WP Datepicker Styling</a></p>
 
 			<p><a class="alignright button" href="javascript:void(0);" onclick="window.scrollTo(0,0);"
 			      style="margin:3px 0 0 30px;"><?php _e( 'scroll to top',

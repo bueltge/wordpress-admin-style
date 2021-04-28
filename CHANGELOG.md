@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.6.0](https://github.com/bueltge/wordpress-admin-style/compare/1.5.6...1.6.0) - 2021-05-28
+* Maintenance scripts to run with jQuery 3.5*
+* Maintenance of Prism library to the last stable version
+
 ## [1.5.6](https://github.com/bueltge/wordpress-admin-style/compare/1.5.5...1.5.6) - 2020-07-17
 * Add new Dashicons', #61
 
