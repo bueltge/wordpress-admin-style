@@ -20,8 +20,7 @@ Unfortunately, there are quite extensive opportunities in the backend to impleme
 Several different classes and HTML structures are used. To be able to look up something this simple, 
 I have developed this small plugin, which tinkers in the development environment and quickly represents the necessary elements. 
 
-Also see the [post](https://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default
--styles/) 
+Also see the [post](https://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
 about the idea and also the comments for a discussion.
 
 ### Screenshots & history
