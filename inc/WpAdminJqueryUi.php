@@ -748,7 +748,7 @@ class WpAdminJqueryUi {
 		$wp_scripts = wp_scripts();
 		wp_register_style(
 			'jquery-ui',
-			'http://ajax.googleapis.com/ajax/libs/jqueryui/' . $wp_scripts->registered['jquery-ui-core']->ver . '/themes/smoothness/jquery-ui.css'
+			'https://ajax.googleapis.com/ajax/libs/jqueryui/' . $wp_scripts->registered['jquery-ui-core']->ver . '/themes/smoothness/jquery-ui.css'
 		);
 
 		if ( 'classic' === get_user_option( 'admin_color' ) ) {
