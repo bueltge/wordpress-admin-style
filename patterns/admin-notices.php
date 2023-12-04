@@ -4,7 +4,7 @@
 	<?php
 	printf(
 		// translators: Leave always a hint for translators to understand the placeholders.
-		__( 'Define type via parameter (same as CSS classes) with <a href="%s" target="_blank">function add_settings_error()</a>, or use class(es) on a wrapping <code>div</code>.',
+		__( 'Define type via parameter (same as CSS classes) with function <a href="#" target="_blank"><code>add_settings_error()</code></a>, or use class(es) on a wrapping <code>div</code>.',
 		'WpAdminStyle' ), 'https://developer.wordpress.org/reference/functions/add_settings_error/'
 	);
 	?>
@@ -15,6 +15,16 @@
 		// translators: Leave always a hint for translators to understand the placeholders.
 		__( 'Since WordPress version 4.2 there are more classes and paths available. See <a href="%s" target="_blank">this post on make.w.org</a> for further details.', 'WpAdminStyle' ),
 		'https://make.wordpress.org/core/2015/04/23/spinners-and-dismissible-admin-notices-in-4-2/'
+	);
+	?>
+</p>
+<p>
+	<?php
+	printf(
+		// translators: Leave always a hint for translators to understand the placeholders.
+		__( 'Since WordPress version 6.4, the core includes function <a href="%s" target="_blank"><code>wp_admin_notice()</code></a> to standardize admin notices. See <a href="%s" target="_blank">this changeset on core.trac.wordpress.org</a> for further details.', 'WpAdminStyle' ),
+		'https://developer.wordpress.org/reference/functions/wp_admin_notice/',
+		'https://core.trac.wordpress.org/changeset/56408'
 	);
 	?>
 </p>
