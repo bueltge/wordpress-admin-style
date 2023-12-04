@@ -745,7 +745,6 @@ class WpAdminJqueryUi {
 			)
 		);
 
-		// wp_enqueue_style( 'jquery-ui-demo', plugin_dir_url( __FILE__ ) . '../css/jquery-ui-demo.css' );
 		$wp_scripts = wp_scripts();
 		wp_register_style(
 			'jquery-ui',
@@ -765,6 +764,8 @@ class WpAdminJqueryUi {
 				array( 'jquery-ui' )
 			);
 		}
+
+		wp_enqueue_style( 'jquery-ui-demo', plugin_dir_url( dirname(__FILE__) ) . 'css/jquery-ui-demo.css', ['jquery-ui', 'jquery-ui-css'] );
 	}
 
 } // end class
