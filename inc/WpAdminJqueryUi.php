@@ -253,6 +253,7 @@ class WpAdminJqueryUi {
 			</div>
 
 			<h2>Framework Icons (content color preview)</h2>
+
 			<ul id="icons" class="ui-widget ui-helper-clearfix">
 
 				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-n"><span
@@ -736,7 +737,6 @@ class WpAdminJqueryUi {
 				'jquery-ui-slider',
 				'jquery-ui-progressbar',
 				'jquery-ui-autocomplete',
-				'jquery-ui-progressbar',
 			), 
 			false,
 			array(
