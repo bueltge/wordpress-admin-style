@@ -148,8 +148,8 @@ class WpAdminStyle {
 				include_once $patterns;
 				echo '<details class="primer" style="display: inline-block; width: 100%;">';
 				echo '<summary title="Show markup and usage">&#8226;&#8226;&#8226; '
-					 . esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
-					 . '</summary>';
+					. esc_attr__( 'Show markup and usage', 'WpAdminStyle' )
+					. '</summary>';
 				echo '<section>';
 				echo '<pre><code class="language-php">';
 				echo htmlspecialchars(
@@ -167,7 +167,7 @@ class WpAdminStyle {
 					'scroll to top',
 					'WpAdminStyle'
 				)
-					 . '</a><br class="clear" />';
+					. '</a><br class="clear" />';
 				echo '</p>';
 				echo '</section><!--/.pattern-->';
 				echo '<hr>';
