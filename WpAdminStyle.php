@@ -8,11 +8,11 @@
  * GitHub Plugin URI: https://github.com/bueltge/wordpress-admin-style
  * Description:       Shows the WordPress admin styles on one page to help you to develop WordPress compliant.
  * Author:            Frank Bültge
- * Version:           1.6.0
+ * Version:           1.6.1
  * Licence:           GPLv2+
  * License URI:       ./LICENSE
  * Author URI:        https://bueltge.de
- * Last Change:       2021-04-28
+ * Last Change:       2023-12-22
  */
 
 ! defined( 'ABSPATH' ) && exit;
