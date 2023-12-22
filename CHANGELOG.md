@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.6.1](https://github.com/bueltge/wordpress-admin-style/compare/1.6.0...1.6.1) - 2023-12-22
+* Add a link to the new function wp_admin_notice() documentation (available since 6.4) - Fixes Update Admin Notices #67
+* Add a columns to display notices with the css class .notice-alt examples
+* Fix demo page Javascript execution (in footer & defer) - Fix jQuery features not working #64
+* Fix some HTML errors on scroll to top buttons (probably caused by phpcsfix on commit 92c86f8)
+* Fix jQuery UI image sources (unable to open files)
+* Reactivate demo page custom CSS
+
 ## [1.6.0](https://github.com/bueltge/wordpress-admin-style/compare/1.5.6...1.6.0) - 2021-05-28
 * Maintenance scripts to run with jQuery 3.5*
 * Maintenance of Prism library to the last stable version.
