@@ -36,6 +36,7 @@ about the idea and also the comments for a discussion.
 ​The Misconception: Since these themes are shipped pre-installed with WordPress, it seemed to many users as if the icons were firmly anchored in the system. Technically, however, the files were located in the respective theme folder (/wp-content/themes/...) and not in the core system (/wp-includes/).
 
 ​#### What is actually in Core?
+
 ​The icons that are actually firmly integrated into the WordPress Core are called Dashicons.
 
 ​Introduction: They were introduced with WordPress 3.8 (in 2013) when the admin design was completely overhauled (the "MP6" update).
