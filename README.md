@@ -45,7 +45,7 @@ Availability: Developers can use these icons in the frontend as well, but they a
 #### Summery for the usage in the admin area
 Use the Dashicons, because they are active in development, maintenance and inside the core.
 
-#### Screenshots
+### Screenshots
 The plugin is still active in usage and development since an early WordPress version, so you should see it on the screenshots from the different versions below.
 
  1. [Admin Style in WordPress 3.1](/assets/screenshot-1.png)
