@@ -23,10 +23,29 @@ I have developed this small plugin, which tinkers in the development environment
 Also see the [post](https://wpengineer.com/2226/new-plugin-to-style-your-plugin-on-wordpress-admin-with-default-styles/) 
 about the idea and also the comments for a discussion.
 
-### Screenshots & history
+## Screenshots & history
 
 ![Part of the Admin Style information in WordPress version 5.7](./assets/screenshot-8.png)
 
+### Some notes for the differences in case of Icons
+#### What are Genericons?
+​Genericons was a free, GPL-licensed icon font project by Automattic (the creators of WordPress.com and Jetpack). They were developed to provide simple, generic icons for blogs.
+
+​Where they were found: They were very frequently used in the standard themes (like Twenty Thirteen, Twenty Fourteen, Twenty Fifteen, or Twenty Sixteen) and in the Jetpack plugin.
+
+​The Misconception: Since these themes are shipped pre-installed with WordPress, it seemed to many users as if the icons were firmly anchored in the system. Technically, however, the files were located in the respective theme folder (/wp-content/themes/...) and not in the core system (/wp-includes/).
+
+​#### What is actually in Core?
+​The icons that are actually firmly integrated into the WordPress Core are called Dashicons.
+
+​Introduction: They were introduced with WordPress 3.8 (in 2013) when the admin design was completely overhauled (the "MP6" update).
+​Purpose: Dashicons are the official icon font for the WordPress Admin Dashboard (backend).
+Availability: Developers can use these icons in the frontend as well, but they are primarily part of the wp-includes files.
+
+#### Summery for the usage in the admin area
+Use the Dashicons, because they are active in development, maintenance and inside the core.
+
+#### Screenshots
 The plugin is still active in usage and development since an early WordPress version, so you should see it on the screenshots from the different versions below.
 
  1. [Admin Style in WordPress 3.1](/assets/screenshot-1.png)
